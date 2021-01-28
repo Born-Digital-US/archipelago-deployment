@@ -1,0 +1,9 @@
+uuid: 4d304c5a-8c8a-4826-98ab-32c486c6ebe2
+langcode: en
+status: true
+dependencies: {  }
+id: publisherrole
+label: publisherRole
+category: PBCore
+likert: false
+options: "'http://pbcore.org/pbcore-controlled-vocabularies/publisherrole-vocabulary/#Distributor': 'Distributor'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/publisherrole-vocabulary/#Presenter': 'Presenter'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/publisherrole-vocabulary/#Publisher': 'Publisher'\r\n"
