@@ -1,0 +1,9 @@
+uuid: 389157bb-7649-46b8-adb0-c6efe979389f
+langcode: en
+status: true
+dependencies: {  }
+id: instantiationrelationtype
+label: instantiationRelationType
+category: PBCore
+likert: false
+options: "'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#IsCloneOf': 'Is Clone Of'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#ClonedTo': 'Cloned To'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#IsDubOf': 'Is Dub Of'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#DubbedTo': 'Dubbed To'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#IsFormatOf': 'Is Format Of'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#HasFormat': 'Has Format'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#IsPartOf': 'Is Part Of'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#HasPart': 'Has Part'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#Replaces': 'Replaces'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary/#IsReplacedBy': 'Is Replaced By'\r\n"

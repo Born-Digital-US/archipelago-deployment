@@ -1,0 +1,9 @@
+uuid: eefa2ade-260b-4f6b-8468-beb78ec9e3c7
+langcode: en
+status: true
+dependencies: {  }
+id: pbcorerelationtype
+label: pbcoreRelationType
+category: PBCore
+likert: false
+options: "'http://pbcore.org/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary/#HasDerivative': 'Derived From'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary/#References': 'References'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary/#IsReferencedBy': 'Is Referenced By'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary/#IsRelatedTo': 'Is Related To'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary/#IsPartOf': 'Is Part Of'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary/#HasVersion': 'Has Version'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary/#IsVersionOf': 'Is Version Of'\r\n"
