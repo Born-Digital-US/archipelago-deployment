@@ -40,11 +40,7 @@ merge_esmero:
 
 
 rebase_esmero_webform_strawberryfield:
-	cd web/modules/contrib/webform_strawberryfield
-	git stash
-	git checkout $(WEBFORM_SBF_BRANCH)
-	git rebase upstream/$(WEBFORM_SBF_BRANCH)
-	git stash apply
+	cd web/modules/contrib/webform_strawberryfield && git stash && git checkout $(WEBFORM_SBF_BRANCH) && git rebase upstream/$(WEBFORM_SBF_BRANCH) && git stash apply
 
 build_linux:
 	cp docker-compose-linux.yml docker-compose.yml
