@@ -18,7 +18,7 @@ merge_esmero:
 	git config remote.origin.url >&- || git remote add origin $(CAR_DEPLOYMENT_REPO)
 	git config remote.upstream.url >&- || git remote add upstream $(ESMERO_DEPLOYMENT_REPO)
 	echo "Stash any changes, then rebase upstream deploy branch to this branch"
-	git stash
+	git stash || true
 	git fetch --all
 	git checkout $(CAR_DEPLOYMENT_BRANCH)
 	git pull
@@ -28,7 +28,7 @@ merge_esmero:
 	git rebase $(ESMERO_DEPLOYMENT_BRANCH)
 	echo "Resolve composer.lock conflicts, reapply the stash to get any local composer.json changes, then delete composer.lock"
 	git checkout --ours composer.lock
-	git stash apply
+	git stash apply || true
   # Re-create composer.lock
 	rm composer.lock
 	echo "Restart containers"
