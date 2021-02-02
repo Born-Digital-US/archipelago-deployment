@@ -33,11 +33,13 @@ module:
   datetime_range: 0
   dblog: 0
   devel: 0
+  devel_php: 0
   display_field_copy: 0
   ds_devel: 0
   ds_switch_view_mode: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
   entity_reference: 0
   facets: 0
   facets_range_widget: 0
@@ -101,6 +103,7 @@ module:
   strawberryfield: 0
   system: 0
   taxonomy: 0
+  taxonomy_import: 0
   telephone: 0
   text: 0
   token: 0
@@ -112,6 +115,7 @@ module:
   twig_tweak: 0
   update: 0
   user: 0
+  variationcache: 0
   views_bootstrap: 0
   views_bulk_operations: 0
   views_ui: 0
