@@ -1,0 +1,19 @@
+uuid: 86cdecb3-3336-4165-9413-7ae48358ce29
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_physical_processed
+    - workflow.state.car_withdrawn
+id: car_withdrawn_physical_processed
+label: null
+module: workflow
+from_sid: car_withdrawn
+to_sid: car_physical_processed
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

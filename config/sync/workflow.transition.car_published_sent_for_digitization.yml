@@ -1,0 +1,19 @@
+uuid: e0989aee-ca86-4b0b-a739-9148a092e519
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_published
+    - workflow.state.car_sent_for_digitization
+id: car_published_sent_for_digitization
+label: null
+module: workflow
+from_sid: car_published
+to_sid: car_sent_for_digitization
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

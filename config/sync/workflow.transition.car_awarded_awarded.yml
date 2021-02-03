@@ -1,0 +1,12 @@
+uuid: 26e37589-9e63-4871-8f09-538da8a57eb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_awarded
+id: car_awarded_awarded
+label: null
+module: workflow
+from_sid: car_awarded
+to_sid: car_awarded
+roles: {  }

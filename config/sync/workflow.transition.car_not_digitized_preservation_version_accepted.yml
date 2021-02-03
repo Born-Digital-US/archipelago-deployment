@@ -1,0 +1,19 @@
+uuid: 338df054-3e43-4e78-a817-0007bca83a54
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_not_digitized
+    - workflow.state.car_preservation_version_accepted
+id: car_not_digitized_preservation_version_accepted
+label: null
+module: workflow
+from_sid: car_not_digitized
+to_sid: car_preservation_version_accepted
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

@@ -1,0 +1,19 @@
+uuid: 7b3ca356-44af-41a4-9ecd-8a9d87ca9123
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_darkened
+    - workflow.state.car_preservation_version_requested
+id: car_preservation_version_requested_darkened
+label: null
+module: workflow
+from_sid: car_preservation_version_requested
+to_sid: car_darkened
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

@@ -1,5 +1,6 @@
 module:
   action: 0
+  address: 0
   aggregator: 0
   ami: 0
   automated_cron: 0
@@ -34,6 +35,7 @@ module:
   dblog: 0
   devel: 0
   devel_php: 0
+  diff: 0
   display_field_copy: 0
   ds_devel: 0
   ds_switch_view_mode: 0
@@ -55,7 +57,9 @@ module:
   form_mode_manager: 0
   form_mode_manager_theme_switcher: 0
   format_strawberryfield: 0
+  gnode: 0
   google_api_client: 0
+  group: 0
   hal: 0
   help: 0
   history: 0
@@ -103,7 +107,6 @@ module:
   strawberryfield: 0
   system: 0
   taxonomy: 0
-  taxonomy_import: 0
   telephone: 0
   text: 0
   token: 0
@@ -130,6 +133,8 @@ module:
   webform_ui: 0
   webform_views: 0
   webprofiler: 0
+  workflow: 0
+  workflow_ui: 0
   workflows: 0
   ds: 1
   menu_link_content: 1

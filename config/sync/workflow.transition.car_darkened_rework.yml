@@ -1,0 +1,19 @@
+uuid: 7950c9c4-e786-47a7-a4f7-7a56abe74fdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_darkened
+    - workflow.state.car_rework
+id: car_darkened_rework
+label: null
+module: workflow
+from_sid: car_darkened
+to_sid: car_rework
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

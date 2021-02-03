@@ -1,0 +1,19 @@
+uuid: 78067597-fba2-42e3-bd61-a171b3278bd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_awarded
+    - workflow.state.car_not_digitized
+id: car_awarded_not_digitized
+label: null
+module: workflow
+from_sid: car_awarded
+to_sid: car_not_digitized
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

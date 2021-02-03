@@ -1,0 +1,19 @@
+uuid: f53b6ebb-c33e-4928-9f32-68800b33d274
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_physical_processed
+    - workflow.state.car_physical_received
+id: car_physical_received_physical_processed
+label: null
+module: workflow
+from_sid: car_physical_received
+to_sid: car_physical_processed
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

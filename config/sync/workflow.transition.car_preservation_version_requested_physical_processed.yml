@@ -1,0 +1,19 @@
+uuid: c7e4a73d-4564-4052-b644-078845e2a38f
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_physical_processed
+    - workflow.state.car_preservation_version_requested
+id: car_preservation_version_requested_physical_processed
+label: null
+module: workflow
+from_sid: car_preservation_version_requested
+to_sid: car_physical_processed
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

@@ -1,0 +1,19 @@
+uuid: 2292bd27-085f-4e93-ace0-3dc3e6293fe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_physical_processed
+    - workflow.state.car_published
+id: car_published_physical_processed
+label: null
+module: workflow
+from_sid: car_published
+to_sid: car_physical_processed
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

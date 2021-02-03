@@ -1,0 +1,12 @@
+uuid: a5df0244-c78a-41ef-996e-dc7341d3af99
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_qc_version_received
+id: car_qc_version_received_qc_version_received
+label: null
+module: workflow
+from_sid: car_qc_version_received
+to_sid: car_qc_version_received
+roles: {  }

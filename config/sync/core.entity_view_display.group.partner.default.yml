@@ -1,0 +1,53 @@
+uuid: 0ed2dae0-d2a5-4d44-80b1-6f270b835814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.partner.field_marc_code
+    - field.field.group.partner.field_partner_description
+    - field.field.group.partner.field_partner_shipping_address
+    - group.type.partner
+  module:
+    - address
+    - text
+id: group.partner.default
+targetEntityType: group
+bundle: partner
+mode: default
+content:
+  field_marc_code:
+    weight: -4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_partner_description:
+    weight: -3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_partner_shipping_address:
+    weight: -2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  label:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,12 @@
+uuid: 4477dac6-f101-495a-b47d-1d72c828e781
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_declined
+label: Declined
+module: workflow
+wid: car
+weight: 1
+sysid: 0

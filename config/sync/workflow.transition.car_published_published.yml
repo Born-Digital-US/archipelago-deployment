@@ -1,0 +1,12 @@
+uuid: c005ca55-4f30-4ad7-b0a9-99f421f2fc11
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_published
+id: car_published_published
+label: null
+module: workflow
+from_sid: car_published
+to_sid: car_published
+roles: {  }

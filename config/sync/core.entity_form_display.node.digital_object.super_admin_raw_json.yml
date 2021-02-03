@@ -6,6 +6,7 @@ dependencies:
     - core.entity_form_mode.node.super_admin_raw_json
     - field.field.node.digital_object.body
     - field.field.node.digital_object.field_descriptive_metadata
+    - field.field.node.digital_object.field_workflow_state
     - node.type.digital_object
     - workflows.workflow.editorial
   module:
@@ -55,6 +56,7 @@ content:
 hidden:
   body: true
   created: true
+  field_workflow_state: true
   langcode: true
   path: true
   promote: true

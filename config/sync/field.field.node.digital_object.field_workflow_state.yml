@@ -1,0 +1,21 @@
+uuid: b98971f7-e482-4344-99a1-23d52a851a2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_workflow_state
+    - node.type.digital_object
+  module:
+    - workflow
+id: node.digital_object.field_workflow_state
+field_name: field_workflow_state
+entity_type: node
+bundle: digital_object
+label: 'Workflow state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: workflow

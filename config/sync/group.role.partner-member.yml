@@ -1,0 +1,18 @@
+uuid: 47a02c5c-b087-4def-9486-4b8d9671e642
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.partner
+id: partner-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: partner
+permissions_ui: true
+permissions:
+  - 'access content overview'
+  - 'access group_node overview'
+  - 'view group'
+  - 'view group_membership content'

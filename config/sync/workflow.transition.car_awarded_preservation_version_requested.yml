@@ -1,0 +1,19 @@
+uuid: cbd3b744-0283-46b6-af36-b88a5dc8565e
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_awarded
+    - workflow.state.car_preservation_version_requested
+id: car_awarded_preservation_version_requested
+label: null
+module: workflow
+from_sid: car_awarded
+to_sid: car_preservation_version_requested
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

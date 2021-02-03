@@ -1,0 +1,12 @@
+uuid: cbc214d4-884e-4cb1-bcd8-e31cfbb572bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_physical_received
+label: 'Physical Received'
+module: workflow
+wid: car
+weight: -7
+sysid: 0

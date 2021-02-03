@@ -13,6 +13,8 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'create car workflow_transition'
+  - 'create carevealed_workflow workflow_transition'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

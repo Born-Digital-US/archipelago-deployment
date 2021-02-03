@@ -1,0 +1,19 @@
+uuid: d310d261-a964-46a1-a446-48c7641330bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_qc_version_received
+    - workflow.state.car_withdrawn
+id: car_withdrawn_qc_version_received
+label: null
+module: workflow
+from_sid: car_withdrawn
+to_sid: car_qc_version_received
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

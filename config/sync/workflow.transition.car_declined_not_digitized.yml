@@ -1,0 +1,19 @@
+uuid: 2990f02c-cdba-4840-bc3c-fbe4c7446cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_declined
+    - workflow.state.car_not_digitized
+id: car_declined_not_digitized
+label: null
+module: workflow
+from_sid: car_declined
+to_sid: car_not_digitized
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

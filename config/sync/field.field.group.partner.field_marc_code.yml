@@ -1,0 +1,19 @@
+uuid: 0480a76d-4cd8-43d2-b9b1-fc52e8324cd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_marc_code
+    - group.type.partner
+id: group.partner.field_marc_code
+field_name: field_marc_code
+entity_type: group
+bundle: partner
+label: 'MARC Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

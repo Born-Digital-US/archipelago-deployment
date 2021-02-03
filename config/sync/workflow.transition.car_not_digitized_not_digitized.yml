@@ -1,0 +1,12 @@
+uuid: 200c3ed7-2921-4e96-927e-b05535012e14
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_not_digitized
+id: car_not_digitized_not_digitized
+label: null
+module: workflow
+from_sid: car_not_digitized
+to_sid: car_not_digitized
+roles: {  }

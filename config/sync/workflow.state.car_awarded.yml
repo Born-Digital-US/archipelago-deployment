@@ -1,0 +1,12 @@
+uuid: b9eea6bb-3a9f-4cfa-a5f0-166c94f8b9c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_awarded
+label: Awarded
+module: workflow
+wid: car
+weight: -8
+sysid: 0
