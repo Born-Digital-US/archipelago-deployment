@@ -5,11 +5,15 @@ build_update:
 	git pull
 	docker-compose up -d
 	mv web/modules/contrib/webform_strawberryfield webform_strawberryfield
+	mv web/modules/contrib/strawberryfield strawberryfield	
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
 	rm -rf web/modules/contrib/webform_strawberryfield
+	rm -rf web/modules/contrib/strawberryfield
 	docker-compose exec -T -w /var/www/html php bash -c "chown -R :www-data /var/www/html/web"
 	mv webform_strawberryfield web/modules/contrib/webform_strawberryfield
+	mv strawberryfield web/modules/contrib/strawberryfield
 	docker exec -t -w /var/www/html/web $(APACHE_CONTAINER) bash -c "drush updb -y && drush cr"
+	
 
 merge_esmero:
 	echo "Stop containers"
