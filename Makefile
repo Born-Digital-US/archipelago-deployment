@@ -4,6 +4,7 @@ build_update:
 	docker-compose down
 	git pull
 	docker-compose up -d
+	docker-compose exec -T -w /var/www/html php bash -c "chown -R :www-data /var/www/html/web"
 	mv web/modules/contrib/webform_strawberryfield webform_strawberryfield
 	mv web/modules/contrib/strawberryfield strawberryfield	
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
