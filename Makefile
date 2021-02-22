@@ -23,7 +23,7 @@ merge_esmero:
 	git checkout $(CAR_DEPLOYMENT_BRANCH)
 	git pull
 	git checkout $(ESMERO_DEPLOYMENT_BRANCH)
-	git rebase upstream $(ESMERO_DEPLOYMENT_BRANCH)
+	git rebase upstream/$(ESMERO_DEPLOYMENT_BRANCH)
 	git checkout $(CAR_DEPLOYMENT_BRANCH)
 	git rebase $(ESMERO_DEPLOYMENT_BRANCH)
 	echo "Resolve composer.lock conflicts, reapply the stash to get any local composer.json changes, then delete composer.lock"
