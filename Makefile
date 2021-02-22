@@ -20,6 +20,8 @@ merge_esmero:
 	echo "Stash any changes, then rebase upstream deploy branch to this branch"
 	git stash || true
 	git fetch --all
+	# Ensure that local version of esmero deployment branch exists.
+	git checkout -b $(ESMERO_DEPLOYMENT_BRANCH) origin/$(ESMERO_DEPLOYMENT_BRANCH) || true
 	git checkout $(CAR_DEPLOYMENT_BRANCH)
 	git pull
 	git checkout $(ESMERO_DEPLOYMENT_BRANCH)
