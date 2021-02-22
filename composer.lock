@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3fe7b9e11c9d5941b93431b20ab48bbc",
+    "content-hash": "804314206c612ac85be206910cf59793",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3922,6 +3922,84 @@
             }
         },
         {
+            "name": "drupal/config_split",
+            "version": "2.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_split.git",
+                "reference": "2.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "ca365f987fa1f7ac6c62a1b13b0e5e43b81e4808"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "conflict": {
+                "drush/drush": "<10"
+            },
+            "require-dev": {
+                "drupal/config_filter": "^1||^2"
+            },
+            "suggest": {
+                "drupal/chosen": "Chosen uses the Chosen jQuery plugin to make the <select> elements more user-friendly.",
+                "drupal/select2_all": "Applies the Select2 library to all select fields on the site similar to the Chosen module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1605524409",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "email": "opensource@fabianbircher.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nuvole Web",
+                    "homepage": "http://nuvole.org",
+                    "email": "info@nuvole.org",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Configuration filter for importing and exporting extra config",
+            "homepage": "https://www.drupal.org/project/config_split",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_split",
+                "issues": "https://www.drupal.org/project/issues/config_split",
+                "slack": "https://drupal.slack.com/archives/C45342CDD"
+            }
+        },
+        {
             "name": "drupal/config_update",
             "version": "1.7.0",
             "source": {
@@ -7732,29 +7810,26 @@
         },
         {
             "name": "drupal/workflow",
-            "version": "1.4.0",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/workflow.git",
-                "reference": "8.x-1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/workflow-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "5f4777371a002f44524e23b5b3717fac87b5c0ea"
+                "reference": "b691e1951bcb810dc2b0a367d7871741eb5ec4b7"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1590740708",
+                    "version": "8.x-1.4+4-dev",
+                    "datestamp": "1592938472",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -14459,12 +14534,12 @@
             "version": "dev-1.0.0-RC1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/esmero/strawberryfield.git",
+                "url": "https://github.com/Born-Digital-US/strawberryfield.git",
                 "reference": "9d3a7d7530df32c3e880cbad3369fc7695470d00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/esmero/strawberryfield/zipball/9d3a7d7530df32c3e880cbad3369fc7695470d00",
+                "url": "https://api.github.com/repos/Born-Digital-US/strawberryfield/zipball/9d3a7d7530df32c3e880cbad3369fc7695470d00",
                 "reference": "9d3a7d7530df32c3e880cbad3369fc7695470d00",
                 "shasum": ""
             },
@@ -14486,7 +14561,6 @@
                     }
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -14501,8 +14575,7 @@
             "description": "A strawberry field for Drupal 8",
             "homepage": "https://github.com/esmero/strawberryfield",
             "support": {
-                "issues": "https://github.com/esmero/strawberryfield/issues",
-                "source": "https://github.com/esmero/strawberryfield/tree/1.0.0-RC1"
+                "source": "https://github.com/Born-Digital-US/strawberryfield/tree/1.0.0-RC1"
             },
             "time": "2021-01-12T20:55:37+00:00"
         },
@@ -14511,12 +14584,12 @@
             "version": "dev-1.0.0-RC1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/esmero/webform_strawberryfield.git",
+                "url": "https://github.com/Born-Digital-US/webform_strawberryfield.git",
                 "reference": "0f56751db9c429968f5433466431bfee1c45cd3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/esmero/webform_strawberryfield/zipball/0f56751db9c429968f5433466431bfee1c45cd3b",
+                "url": "https://api.github.com/repos/Born-Digital-US/webform_strawberryfield/zipball/0f56751db9c429968f5433466431bfee1c45cd3b",
                 "reference": "0f56751db9c429968f5433466431bfee1c45cd3b",
                 "shasum": ""
             },
@@ -14529,7 +14602,6 @@
                 "strawberryfield/strawberryfield": "dev-1.0.0-RC1"
             },
             "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -14544,8 +14616,7 @@
             "description": "A Webform/strawberryfield integration module for Drupal 8",
             "homepage": "https://github.com/esmero/webform_strawberryfield",
             "support": {
-                "issues": "https://github.com/esmero/webform_strawberryfield/issues",
-                "source": "https://github.com/esmero/webform_strawberryfield/tree/1.0.0-RC1"
+                "source": "https://github.com/Born-Digital-US/webform_strawberryfield/tree/1.0.0-RC1"
             },
             "time": "2021-01-20T20:57:01+00:00"
         },
@@ -18641,6 +18712,7 @@
         "drupal/search_api_attachments": 10,
         "drupal/webform_entity_handler": 20,
         "drupal/webformnavigation": 15,
+        "drupal/workflow": 20,
         "frictionlessdata/datapackage": 20,
         "strawberryfield/format_strawberryfield": 20,
         "strawberryfield/strawberry_runners": 20,

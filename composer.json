@@ -11,6 +11,14 @@
     ],
     "repositories": [
         {
+            "type": "vcs",
+            "url": "https://github.com/Born-Digital-US/strawberryfield"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/Born-Digital-US/webform_strawberryfield"
+        },
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -29,6 +37,7 @@
         "drupal/bootstrap_barrio": "^5.1",
         "drupal/config_inspector": "dev-1.x",
         "drupal/config_installer": "^1.7",
+        "drupal/config_split": "^2",
         "drupal/config_update": "^1.6",
         "drupal/config_update_ui": "^1.6",
         "drupal/console": "~1.0",
@@ -79,7 +88,7 @@
         "drupal/webform_entity_handler": "1.x-dev",
         "drupal/webform_views": "^5.0",
         "drupal/webformnavigation": "^1.0@alpha",
-        "drupal/workflow": "^1.1",
+        "drupal/workflow": "dev-1.x",
         "drush/drush": "10.3",
         "egulias/email-validator": "^2.0",
         "fileeye/mimemap": "^1.1.1",
