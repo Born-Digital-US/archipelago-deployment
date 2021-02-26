@@ -1,0 +1,21 @@
+uuid: 267680b5-c7ae-4995-9b0b-8d48754dbeda
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: workflow_transition.car.default
+targetEntityType: workflow_transition
+bundle: car
+mode: default
+content: {  }
+hidden:
+  langcode: true

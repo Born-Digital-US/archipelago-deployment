@@ -1,0 +1,71 @@
+uuid: a6796917-eebd-4c9a-9ec1-aa5650387fc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - workflow
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_workflow_state
+field_name: field_workflow_state
+entity_type: node
+type: workflow
+settings:
+  workflow_type: car
+  allowed_values:
+    -
+      value: car_creation
+      label: Nominated
+    -
+      value: car_awarded
+      label: Awarded
+    -
+      value: car_physical_received
+      label: 'Physical Received'
+    -
+      value: car_physical_processed
+      label: 'Physical Processed'
+    -
+      value: car_sent_for_digitization
+      label: 'Sent for Digitization'
+    -
+      value: car_qc_version_received
+      label: 'QC Version Received'
+    -
+      value: car_qc_complete
+      label: 'QC Complete'
+    -
+      value: car_published
+      label: Published
+    -
+      value: car_preservation_version_requested
+      label: 'Preservation Version Requested'
+    -
+      value: car_preservation_version_accepted
+      label: 'Preservation Version Accepted'
+    -
+      value: car_declined
+      label: Declined
+    -
+      value: car_darkened
+      label: Darkened
+    -
+      value: car_not_digitized
+      label: 'Not Digitized'
+    -
+      value: car_rework
+      label: Rework
+    -
+      value: car_withdrawn
+      label: Withdrawn
+  allowed_values_function: ''
+module: workflow
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

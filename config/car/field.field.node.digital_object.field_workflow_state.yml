@@ -1,0 +1,22 @@
+uuid: 9951f0a1-4b1c-4b50-b20c-3e6c3e103178
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_workflow_state
+    - node.type.digital_object
+  module:
+    - workflow
+id: node.digital_object.field_workflow_state
+field_name: field_workflow_state
+entity_type: node
+bundle: digital_object
+label: 'Workflow State'
+description: 'Specific phase within project that the item is in.'
+required: true
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: workflow

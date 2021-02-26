@@ -1,0 +1,12 @@
+uuid: 2c4dc80f-e6c6-4f40-b2ac-9a3cd77bf3ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_declined
+id: car_declined_declined
+label: ''
+module: workflow
+from_sid: car_declined
+to_sid: car_declined
+roles: {  }

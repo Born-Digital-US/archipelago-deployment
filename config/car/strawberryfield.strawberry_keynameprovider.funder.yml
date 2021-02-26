@@ -1,0 +1,12 @@
+uuid: 7b65a279-94f9-4a25-ac21-41119aaf0e24
+langcode: en
+status: true
+dependencies: {  }
+id: funder
+label: Funder
+pluginid: entityjmespath
+pluginconfig:
+  source_key: obj_adm_funder
+  entity_type: taxonomy_term
+  exposed_key: sbf_term_reference_obj_adm_funder
+active: true

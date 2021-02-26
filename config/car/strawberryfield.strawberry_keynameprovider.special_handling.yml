@@ -1,0 +1,12 @@
+uuid: 6eba4ba6-c713-4c04-8248-7f83761d65d8
+langcode: en
+status: true
+dependencies: {  }
+id: special_handling
+label: 'Special Handling'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: obj_adm_special_handling
+  entity_type: taxonomy_term
+  exposed_key: obj_adm_special_handling
+active: true

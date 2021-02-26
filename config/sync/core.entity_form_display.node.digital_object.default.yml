@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.digital_object.body
     - field.field.node.digital_object.field_descriptive_metadata
-    - field.field.node.digital_object.field_workflow_state
     - node.type.digital_object
     - workflows.workflow.editorial
   module:
@@ -13,7 +12,6 @@ dependencies:
     - field_layout
     - layout_discovery
     - webform_strawberryfield
-    - workflow
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -31,12 +29,6 @@ content:
       placeholder: 'Descriptive Metadata'
     third_party_settings: {  }
     type: strawberryfield_webform_inline_widget
-    region: content
-  field_workflow_state:
-    weight: 26
-    settings: {  }
-    third_party_settings: {  }
-    type: workflow_default
     region: content
   moderation_state:
     type: moderation_state_default

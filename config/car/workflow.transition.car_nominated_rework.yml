@@ -1,0 +1,19 @@
+uuid: 79de39f0-c092-4cf0-8d58-cbfeb8ab4a88
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_nominated
+    - workflow.state.car_rework
+id: car_nominated_rework
+label: null
+module: workflow
+from_sid: car_nominated
+to_sid: car_rework
+roles:
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  administrator: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

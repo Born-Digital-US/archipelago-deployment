@@ -1,0 +1,19 @@
+uuid: ea464091-30e1-43d3-87db-f332d11766fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_darkened
+    - workflow.state.car_sent_for_digitization
+id: car_sent_for_digitization_darkened
+label: ''
+module: workflow
+from_sid: car_sent_for_digitization
+to_sid: car_darkened
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

@@ -1,0 +1,19 @@
+uuid: 16574b25-6f0c-4f68-9cb8-4197211b3671
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_physical_processed
+    - workflow.state.car_sent_for_digitization
+id: car_physical_processed_sent_for_digitization
+label: ''
+module: workflow
+from_sid: car_physical_processed
+to_sid: car_sent_for_digitization
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

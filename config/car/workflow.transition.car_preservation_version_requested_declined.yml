@@ -1,0 +1,19 @@
+uuid: 015ef65d-c48a-4e38-a50d-b757a7032e17
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_declined
+    - workflow.state.car_preservation_version_requested
+id: car_preservation_version_requested_declined
+label: ''
+module: workflow
+from_sid: car_preservation_version_requested
+to_sid: car_declined
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

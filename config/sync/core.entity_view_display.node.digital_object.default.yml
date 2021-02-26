@@ -5,12 +5,10 @@ dependencies:
   config:
     - field.field.node.digital_object.body
     - field.field.node.digital_object.field_descriptive_metadata
-    - field.field.node.digital_object.field_workflow_state
     - node.type.digital_object
   module:
     - ds
     - field_layout
-    - options
     - strawberryfield
     - text
     - user
@@ -91,13 +89,6 @@ content:
       limit_access: edit
     third_party_settings: {  }
     type: strawberry_default_formatter
-    region: content
-  field_workflow_state:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
     region: content
   links:
     weight: 0

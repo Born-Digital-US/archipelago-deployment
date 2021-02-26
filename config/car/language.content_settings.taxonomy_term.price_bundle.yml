@@ -1,0 +1,11 @@
+uuid: 2ecacf1e-cfd7-460c-90bd-c45842018467
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.price_bundle
+id: taxonomy_term.price_bundle
+target_entity_type_id: taxonomy_term
+target_bundle: price_bundle
+default_langcode: site_default
+language_alterable: false

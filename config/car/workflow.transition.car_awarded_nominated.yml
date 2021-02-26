@@ -1,0 +1,19 @@
+uuid: 352519cb-8a56-44c0-9ea1-132732069aba
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_awarded
+    - workflow.state.car_nominated
+id: car_awarded_nominated
+label: null
+module: workflow
+from_sid: car_awarded
+to_sid: car_nominated
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

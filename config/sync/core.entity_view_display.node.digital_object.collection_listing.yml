@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.collection_listing
     - field.field.node.digital_object.body
     - field.field.node.digital_object.field_descriptive_metadata
-    - field.field.node.digital_object.field_workflow_state
     - node.type.digital_object
   module:
     - ds
@@ -58,7 +57,6 @@ hidden:
   body: true
   content_moderation_control: true
   field_descriptive_metadata: true
-  field_workflow_state: true
   langcode: true
   links: true
   search_api_excerpt: true

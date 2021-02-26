@@ -12,8 +12,6 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
-  - 'create car workflow_transition'
-  - 'create carevealed_workflow workflow_transition'
   - 'search content'
   - 'use search_api_autocomplete for solr_search_content'
   - 'use text format restricted_html'
