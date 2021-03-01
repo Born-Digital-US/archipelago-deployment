@@ -33,7 +33,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal/address": "^1.9",
         "drupal/adminimal_theme": "^1.6",
-        "drupal/backup_migrate": "^4.1",
+        "drupal/backup_migrate": "^5.0",
         "drupal/bamboo_twig": "dev-5.x",
         "drupal/bootstrap_barrio": "^5.1",
         "drupal/config_filter": "^2.2",
@@ -192,6 +192,9 @@
             },
             "drupal/search_api": {
                 "Fix Content Entity Tracker in 1.18": "patches/1.18-3178941-metrocustom-referenced_entities_reindexing_fatal_error-D8.patch"
+            },
+            "drupal/backup_migrate": {
+                "Fix s3fs compatibility": "https://git.drupalcode.org/project/backup_migrate/-/merge_requests/7.patch"
             }
         }
     }
