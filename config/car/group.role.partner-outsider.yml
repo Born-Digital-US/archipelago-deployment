@@ -1,0 +1,16 @@
+uuid: c5dd0764-57a8-424e-9223-32f7e244a9eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.partner
+id: partner-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: partner
+permissions_ui: true
+permissions:
+  - 'access group_node overview'
+  - 'view group'

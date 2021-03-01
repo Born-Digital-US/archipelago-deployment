@@ -1,0 +1,9 @@
+uuid: 5e97bd41-24d4-454f-b6b8-b80a006f156b
+langcode: en
+status: true
+dependencies: {  }
+id: pbcore_instantiationmediatype
+label: instantiationMediaType
+category: PBCore
+likert: false
+options: "'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Audio': Audio\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#MovingImage': 'Moving Image'"

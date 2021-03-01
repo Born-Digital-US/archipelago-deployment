@@ -1,0 +1,9 @@
+uuid: 4715e7c3-5d68-4c0b-a00f-79a420ff9b04
+langcode: en
+status: true
+dependencies: {  }
+id: instantiationphysical_film
+label: 'instantiationPhysical Film'
+category: PBCore
+likert: false
+options: "'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#Film': 'Film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#8mmFilm': '8mm film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#9andaHalfmmFilm': '9.5mm film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#Super8mmFilm': 'Super 8mm film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#16mmFilm': '16mm film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#Super16mmFilm': 'Super 16mm film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#22mmFilm': '22mm film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#28mmFilm': '28mm film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#35mmFilm': '35mm film'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary/#70mmFilm': '70mm film'\r\n"

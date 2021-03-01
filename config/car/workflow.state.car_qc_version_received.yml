@@ -1,0 +1,12 @@
+uuid: 9f7765be-c629-4639-be0d-3865e29cc3af
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_qc_version_received
+label: 'QC Version Received'
+module: workflow
+wid: car
+weight: -4
+sysid: 0
