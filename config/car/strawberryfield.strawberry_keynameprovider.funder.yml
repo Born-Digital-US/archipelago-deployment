@@ -6,7 +6,7 @@ id: funder
 label: Funder
 pluginid: entityjmespath
 pluginconfig:
-  source_key: obj_adm_funder
+  source_key: obj_funder
   entity_type: taxonomy_term
-  exposed_key: sbf_term_reference_obj_adm_funder
+  exposed_key: sbf_term_reference_obj_funder
 active: true

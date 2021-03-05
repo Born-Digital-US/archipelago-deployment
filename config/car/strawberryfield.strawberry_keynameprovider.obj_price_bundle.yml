@@ -1,12 +1,12 @@
-uuid: 8c93cd1f-be7a-43e8-8ea1-b3720b15bdb6
+uuid: f2b95384-570d-41c3-a6ab-c72b00b7521d
 langcode: en
 status: true
 dependencies: {  }
-id: obj_adm_price_bundle
+id: obj_price_bundle
 label: 'Price Bundle'
 pluginid: entityjmespath
 pluginconfig:
-  source_key: obj_adm_price_bundle
+  source_key: obj_price_bundle
   entity_type: taxonomy_term
-  exposed_key: obj_adm_price_bundle
+  exposed_key: obj_price_bundle
 active: true

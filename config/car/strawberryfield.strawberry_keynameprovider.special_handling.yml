@@ -6,7 +6,7 @@ id: special_handling
 label: 'Special Handling'
 pluginid: entityjmespath
 pluginconfig:
-  source_key: obj_adm_special_handling
+  source_key: obj_special_handling
   entity_type: taxonomy_term
-  exposed_key: obj_adm_special_handling
+  exposed_key: obj_special_handling
 active: true

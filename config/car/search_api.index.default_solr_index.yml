@@ -7,13 +7,15 @@ dependencies:
     - node
     - user
     - strawberryfield
+    - taxonomy
     - search_api
     - file
     - group
-    - taxonomy
   config:
     - field.storage.node.field_tags
     - field.storage.node.field_descriptive_metadata
+    - field.storage.taxonomy_term.field_abbreviation
+    - field.storage.taxonomy_term.field_price
     - search_api.server.esmero_solr_7_5
     - core.entity_view_mode.node.digital_object_image_only_for_carousel
     - core.entity_view_mode.node.search_index
@@ -65,14 +67,6 @@ name: 'Drupal Content to Solr 7'
 description: 'Basic Content'
 read_only: false
 field_settings:
-  agents:
-    label: '🍓 Strawberry (Descriptive Metadata source) » agents'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:name_label'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   aggregated_field:
     label: 'Aggregated field'
     property_path: aggregated_field
@@ -105,14 +99,6 @@ field_settings:
       module:
         - node
         - user
-  author_1:
-    label: '🍓 Strawberry (Descriptive Metadata source) » author'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:author'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   changed:
     label: Changed
     datasource_id: 'entity:node'
@@ -126,14 +112,6 @@ field_settings:
     datasource_id: strawberryfield_flavor_datasource
     property_path: checksum
     type: string
-  city:
-    label: '🍓 Strawberry (Descriptive Metadata source) » city'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:city'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   created:
     label: 'Authored on'
     datasource_id: 'entity:node'
@@ -181,32 +159,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_descriptive_metadata
-  ismemberof:
-    label: '🍓 Strawberry (Descriptive Metadata source) » ismemberof'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:ismemberof'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-  ismemberof__title:
-    label: '🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ismemberof » Title'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:sbf_entity_reference_ismemberof:title'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-      module:
-        - node
-  label_1:
-    label: '🍓 Strawberry (Descriptive Metadata source) » Full text labels'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:label'
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   label_2:
     label: '🍓 Strawberry (Descriptive Metadata source) » label'
     datasource_id: 'entity:node'
@@ -215,18 +167,10 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_descriptive_metadata
-  license:
-    label: '🍓 Strawberry (Descriptive Metadata source) » license'
+  label_fulltext:
+    label: '🍓 Strawberry (Descriptive Metadata source) » Full text labels'
     datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:license'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-  name_1:
-    label: '🍓 Strawberry (Descriptive Metadata source) » name'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:name'
+    property_path: 'field_descriptive_metadata:label'
     type: text
     dependencies:
       config:
@@ -282,6 +226,48 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: 'search_api_reverse_entity_references_group_content__entity_id:entity_id:entity:title'
     type: string
+  price_bundle_abbreviation:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_price_bundle » Abbreviation'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_price_bundle:field_abbreviation'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+        - field.storage.taxonomy_term.field_abbreviation
+      module:
+        - taxonomy
+  price_bundle_description:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_price_bundle » Description'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_price_bundle:description'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  price_bundle_name:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_price_bundle » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_price_bundle:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  price_bundle_price:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_price_bundle » Price'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_price_bundle:field_price'
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+        - field.storage.taxonomy_term.field_price
+      module:
+        - taxonomy
   processor_id:
     label: 'Processor Plugin id that populated this data'
     datasource_id: strawberryfield_flavor_datasource
@@ -330,6 +316,38 @@ field_settings:
     datasource_id: strawberryfield_flavor_datasource
     property_path: sequence_id
     type: string
+  special_handling_abbreviation:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_special_handling » Abbreviation'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_special_handling:field_abbreviation'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+        - field.storage.taxonomy_term.field_abbreviation
+      module:
+        - taxonomy
+  special_handling_name:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_special_handling » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_special_handling:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  special_handling_price:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_special_handling » Price'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_special_handling:field_price'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+        - field.storage.taxonomy_term.field_price
+      module:
+        - taxonomy
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
@@ -359,14 +377,6 @@ field_settings:
     label: '🍓 Strawberry (Descriptive Metadata source) » JSON keys defined in this field'
     datasource_id: 'entity:node'
     property_path: 'field_descriptive_metadata:str_flatten_keys'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-  subject_labels:
-    label: '🍓 Strawberry (Descriptive Metadata source) » subject_labels'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:subject_labels'
     type: string
     dependencies:
       config:
@@ -426,14 +436,6 @@ field_settings:
     dependencies:
       module:
         - node
-  type_1:
-    label: '🍓 Strawberry (Descriptive Metadata source) » type'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:type'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   uid:
     label: 'Author ID'
     datasource_id: 'entity:node'
@@ -518,31 +520,23 @@ processor_settings:
   html_filter:
     all_fields: false
     fields:
-      - agents
       - aggregated_field
       - as_image_exif_focallength
       - as_image_exif_mimetype
       - author
-      - author_1
-      - city
       - digital_object_type
       - hocr
-      - ismemberof
-      - label_1
       - label_2
-      - license
-      - name_1
+      - label_fulltext
       - rendered_item
       - rendered_item_iiif_img
       - str_flatten_keys
-      - subject_labels
       - title
       - title_1
       - title_autocomplete
       - title_string
       - title_unstemmed
       - type
-      - type_1
     title: true
     alt: true
     tags:
