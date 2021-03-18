@@ -4,14 +4,22 @@ build_update:
 	docker-compose down
 	git pull
 	docker-compose up -d
-	mv web/modules/contrib/webform_strawberryfield webform_strawberryfield
-	mv web/modules/contrib/strawberryfield strawberryfield
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
-	rm -rf web/modules/contrib/webform_strawberryfield
-	rm -rf web/modules/contrib/strawberryfield
 	docker-compose exec -T -w /var/www/html php bash -c "chown -R :www-data /var/www/html/web"
-	mv webform_strawberryfield web/modules/contrib/
-	mv strawberryfield web/modules/contrib/
+	docker exec -t -w /var/www/html/web $(APACHE_CONTAINER) bash -c "drush updb -y && drush cr"
+
+local_build_update:
+	docker-compose down
+	git pull
+	docker-compose up -d
+	sudo mv web/modules/contrib/webform_strawberryfield webform_strawberryfield
+	sudo mv web/modules/contrib/strawberryfield strawberryfield
+	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
+	sudo rm -rf web/modules/contrib/webform_strawberryfield
+	sudo rm -rf web/modules/contrib/strawberryfield
+	docker-compose exec -T -w /var/www/html php bash -c "chown -R 1000:www-data /var/www/html/web"
+	sudo mv webform_strawberryfield web/modules/contrib/
+	sudo mv strawberryfield web/modules/contrib/
 	docker exec -t -w /var/www/html/web $(APACHE_CONTAINER) bash -c "drush updb -y && drush cr"
 
 merge_esmero:
