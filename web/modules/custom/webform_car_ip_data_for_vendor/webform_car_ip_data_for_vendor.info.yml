@@ -1,0 +1,7 @@
+name: 'Webform CAR Item Part Data Composite'
+type: module
+description: 'Webform composite element for item part data destined for the vendor.'
+package: 'CAR'
+core_version_requirement: ^8.8
+dependencies:
+  - 'webform:webform'

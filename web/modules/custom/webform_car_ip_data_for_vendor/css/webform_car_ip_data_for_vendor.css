@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Item part data for vendor styles.
+ */
+
+.webform_car_ip_data_for_vendor_multiple-table--first_name {}
+
+.webform_car_ip_data_for_vendor_multiple-table--last_name {}
+
+.webform_car_ip_data_for_vendor_multiple-table--date_of_birth {}
+
+.webform_car_ip_data_for_vendor_multiple-table--gender {
+  min-width: 100px;
+}

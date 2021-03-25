@@ -1,0 +1,7 @@
+webform_car_ip_data_for_vendor:
+  version: VERSION
+  css:
+    theme:
+      css/webform_car_ip_data_for_vendor.css: {}
+  dependencies:
+    - webform/webform.composite
