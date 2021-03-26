@@ -46,11 +46,19 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     $elements['ip_call_number'] = [
       '#type' => 'textfield',
       '#title' => t('Item Call Number'),
+      '#after_build' => [[get_called_class(), 'afterBuild']],
+    ];
+
+    $elements['ip_identifiers_delimiter'] = [
+      '#type' => 'item',
+      '#markup' => t(' -OR- '),
+      '#after_build' => [[get_called_class(), 'afterBuild']],
     ];
 
     $elements['ip_temporary_id'] = [
       '#type' => 'textfield',
       '#title' => t('Item Temporary Identifier'),
+      '#after_build' => [[get_called_class(), 'afterBuild']],
     ];
 
     $elements['ip_relation_type'] = [
@@ -215,6 +223,38 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         $element['#states']['disabled'] = [
           [':input[name="' . $composite_name . '[ip_av_physical_asset_type]"]' => ['!value' => 'Video']],
         ];
+        break;
+
+        // Identifiers. Disable one if the other has a value.
+      case 'ip_call_number':
+        $element['#states']['visible'] = [
+          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['value' => '' ]],
+        ];
+        $element['#states']['disabled'] = [
+          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['!value' => '' ]],
+        ];
+        break;
+      case'ip_temporary_id':
+        $element['#states']['visible'] = [
+          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['value' => '' ]],
+        ];
+        $element['#states']['disabled'] = [
+          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['!value' => '' ]],
+        ];
+        break;
+        // Show "-or" between the two
+      case 'ip_identifiers_delimiter':
+        $element['#states']['visible'] = [
+          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['value' => '' ]],
+          'and',
+          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['value' => '' ]],
+        ];
+        $element['#states']['invisible'] = [
+          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['!value' => '' ]],
+          'or',
+          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['!value' => '' ]],
+        ];
+
         break;
     }
     // Add .js-form-wrapper to wrapper (ie td) to prevent #states API from

@@ -18,11 +18,8 @@
       {% if content.ip_item_part_label %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_item_part_label }}</div></div>
       {% endif %}
-      {% if content.ip_call_number %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_call_number }}</div></div>
-      {% endif %}
-      {% if content.ip_temporary_id %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_temporary_id }}</div></div>
+      {% if content.ip_call_number or content.ip_temporary_id %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_call_number }}{{ content.ip_identifiers_delimiter }}{{ content.ip_temporary_id }}</div></div>
       {% endif %}
       {% if content.ip_relation_type %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_relation_type }}</div></div>
