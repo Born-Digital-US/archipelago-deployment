@@ -36,6 +36,9 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
   public static function getCompositeElements(array $element): array {
     $elements = parent::getCompositeElements($element);
 
+    // Use the #multiple property to determine whether to show av fields or non-av fields.
+    $is_av = !empty($element['#multiple']);
+
     $elements['ip_item_part_label'] = [
       '#type' => 'textfield',
       '#title' => t('Item Identifier/Label'),
@@ -133,7 +136,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     $elements['ip_gauge_and_format']['#options'] = WebformOptions::getElementOptions($elements['ip_gauge_and_format']);
 
     $elements['ip_generation'] = [
-      '#type' => 'webform_term_select',
+      '#type' => 'select',
       '#options' => 'pbcore_instantiationgenerations',
       '#title' => t('Item Generation'),
     ];
