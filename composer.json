@@ -19,13 +19,17 @@
             "url": "https://github.com/Born-Digital-US/webform_strawberryfield"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/Born-Digital-US/ami"
+        },
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
     ],
     "require": {
         "php": ">=7.3",
-        "archipelago/ami": "dev-main",
+        "archipelago/ami": "dev-car-main as dev-main",
         "archipelago/archipelago_subtheme": "dev-1.0.0-RC1",
         "aws/aws-php-sns-message-validator": "^1.5",
         "aws/aws-sdk-php": "^3.63",

@@ -4,19 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d88f33ec4eea48a9c690ff81af2da8e7",
+    "content-hash": "e7f30f3c74c00da1601e3867f6d5221e",
     "packages": [
         {
             "name": "archipelago/ami",
-            "version": "dev-main",
+            "version": "dev-car-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/esmero/ami.git",
+                "url": "https://github.com/Born-Digital-US/ami.git",
                 "reference": "ea6313f1f667703895ba8dd88de970d207c51024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/esmero/ami/zipball/ea6313f1f667703895ba8dd88de970d207c51024",
+                "url": "https://api.github.com/repos/Born-Digital-US/ami/zipball/ea6313f1f667703895ba8dd88de970d207c51024",
                 "reference": "ea6313f1f667703895ba8dd88de970d207c51024",
                 "shasum": ""
             },
@@ -41,7 +41,6 @@
                     }
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -56,8 +55,7 @@
             "description": "Archipelago Multi Importer for Drupal 8/9. A module of mass ingest/edits made for the masses",
             "homepage": "https://github.com/esmero/ami",
             "support": {
-                "issues": "https://github.com/esmero/ami/issues",
-                "source": "https://github.com/esmero/ami/tree/main"
+                "source": "https://github.com/Born-Digital-US/ami/tree/car-main"
             },
             "time": "2021-02-24T21:30:49+00:00"
         },
@@ -215,16 +213,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.175.3",
+            "version": "3.176.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "836564a2cef648e60fee63d3f9c5a74757aa3217"
+                "reference": "cfd62d9d159df12e8e1fc3c486e0a010a4c39f80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/836564a2cef648e60fee63d3f9c5a74757aa3217",
-                "reference": "836564a2cef648e60fee63d3f9c5a74757aa3217",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/cfd62d9d159df12e8e1fc3c486e0a010a4c39f80",
+                "reference": "cfd62d9d159df12e8e1fc3c486e0a010a4c39f80",
                 "shasum": ""
             },
             "require": {
@@ -299,9 +297,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.175.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.176.2"
             },
-            "time": "2021-03-24T18:14:18+00:00"
+            "time": "2021-03-26T18:16:22+00:00"
         },
         {
             "name": "behat/mink",
@@ -1268,16 +1266,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "1.4.5",
+            "version": "1.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "f28d44c286812c714741478d968104c5e604a1d4"
+                "reference": "f27e06cd9675801df441b3656569b328e04aa37c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/f28d44c286812c714741478d968104c5e604a1d4",
-                "reference": "f28d44c286812c714741478d968104c5e604a1d4",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/f27e06cd9675801df441b3656569b328e04aa37c",
+                "reference": "f27e06cd9675801df441b3656569b328e04aa37c",
                 "shasum": ""
             },
             "require": {
@@ -1285,7 +1283,8 @@
                 "psr/log": "^1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8"
+                "phpstan/phpstan": "^0.12.55",
+                "symfony/phpunit-bridge": "^4.2 || ^5"
             },
             "type": "library",
             "autoload": {
@@ -1311,7 +1310,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/1.4.5"
+                "source": "https://github.com/composer/xdebug-handler/tree/1.4.6"
             },
             "funding": [
                 {
@@ -1327,7 +1326,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-13T08:04:11+00:00"
+            "time": "2021-03-25T17:01:18+00:00"
         },
         {
             "name": "consolidation/annotated-command",
@@ -6169,17 +6168,17 @@
         },
         {
             "name": "drupal/restui",
-            "version": "1.19.0",
+            "version": "1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/restui.git",
-                "reference": "8.x-1.19"
+                "reference": "8.x-1.20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/restui-8.x-1.19.zip",
-                "reference": "8.x-1.19",
-                "shasum": "71c9aef89976c273f9b9025c9b6200de8c2d226c"
+                "url": "https://ftp.drupal.org/files/projects/restui-8.x-1.20.zip",
+                "reference": "8.x-1.20",
+                "shasum": "df1d3c486ee0e7b4e9a24e6523a69c9efe73caff"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -6187,8 +6186,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.19",
-                    "datestamp": "1606482499",
+                    "version": "8.x-1.20",
+                    "datestamp": "1616839543",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8249,16 +8248,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.165.0",
+            "version": "v0.166.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "c8d7ff2c9cb6cad6e88bc5825491c47b8b2e52fd"
+                "reference": "46b71684a100f3d976e0321cf24f487b314add68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/c8d7ff2c9cb6cad6e88bc5825491c47b8b2e52fd",
-                "reference": "c8d7ff2c9cb6cad6e88bc5825491c47b8b2e52fd",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/46b71684a100f3d976e0321cf24f487b314add68",
+                "reference": "46b71684a100f3d976e0321cf24f487b314add68",
                 "shasum": ""
             },
             "require": {
@@ -8284,9 +8283,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client-services/issues",
-                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.165.0"
+                "source": "https://github.com/googleapis/google-api-php-client-services/tree/v0.166.0"
             },
-            "time": "2021-03-21T11:20:02+00:00"
+            "time": "2021-03-22T11:26:04+00:00"
         },
         {
             "name": "google/auth",
@@ -11926,12 +11925,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ProfessionalWiki/EDTF.git",
-                "reference": "c88aa2e344c256b875641557746be0b2b4e600f5"
+                "reference": "52e48be75e704e47297a279e86a428d77c4b3d22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ProfessionalWiki/EDTF/zipball/c88aa2e344c256b875641557746be0b2b4e600f5",
-                "reference": "c88aa2e344c256b875641557746be0b2b4e600f5",
+                "url": "https://api.github.com/repos/ProfessionalWiki/EDTF/zipball/52e48be75e704e47297a279e86a428d77c4b3d22",
+                "reference": "52e48be75e704e47297a279e86a428d77c4b3d22",
                 "shasum": ""
             },
             "require": {
@@ -11987,7 +11986,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-03-22T14:42:12+00:00"
+            "time": "2021-03-29T16:00:02+00:00"
         },
         {
             "name": "psr/cache",
@@ -16556,16 +16555,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.4.20",
+            "version": "v4.4.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "a1eab2f69906dc83c5ddba4632180260d0ab4f7f"
+                "reference": "0da0e174f728996f5d5072d6a9f0a42259dbc806"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a1eab2f69906dc83c5ddba4632180260d0ab4f7f",
-                "reference": "a1eab2f69906dc83c5ddba4632180260d0ab4f7f",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/0da0e174f728996f5d5072d6a9f0a42259dbc806",
+                "reference": "0da0e174f728996f5d5072d6a9f0a42259dbc806",
                 "shasum": ""
             },
             "require": {
@@ -16625,7 +16624,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v4.4.20"
+                "source": "https://github.com/symfony/var-dumper/tree/v4.4.21"
             },
             "funding": [
                 {
@@ -16641,7 +16640,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T09:09:26+00:00"
+            "time": "2021-03-27T19:49:03+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -18708,6 +18707,12 @@
         }
     ],
     "aliases": [
+        {
+            "package": "archipelago/ami",
+            "version": "dev-car-main",
+            "alias": "dev-main",
+            "alias_normalized": "dev-main"
+        },
         {
             "package": "strawberryfield/strawberryfield",
             "version": "dev-car-main",
