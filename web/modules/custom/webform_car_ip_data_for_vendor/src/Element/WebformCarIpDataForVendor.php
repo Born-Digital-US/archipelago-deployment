@@ -283,17 +283,16 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
   }
 
   public static function ip_id_validate($element, FormState &$form_state) {
-    // Because this runs for each element, we don't want to run it twice.
     // TODO some day - do this as a webform handler: https://www.drupal.org/docs/8/modules/webform/webform-cookbook/how-to-add-custom-validation-to-a-webform-element#s-method-2-using-webform-handlers
-    $has_run = &drupal_static(__FUNCTION__);
+    // Because this runs for each element, we don't want to run it twice.
+    $delta = $element['#parents'][2];
+    $has_run = &drupal_static(__FUNCTION__ . $delta);
     if(!isset($has_run)) {
       $has_run = TRUE;
       $parent = $element['#parents'];
       array_pop($parent);
-      $call_number_path = array_merge($parent, ['ip_call_number']);
-      $temporary_id_path = array_merge($parent, ['ip_temporary_id']);
-      $call_number = $form_state->getValue($call_number_path);
-      $temporary_id = $form_state->getValue($temporary_id_path);
+      $call_number = $form_state->getValue(array_merge($parent, ['ip_call_number']));
+      $temporary_id = $form_state->getValue(array_merge($parent, ['ip_temporary_id']));
       if (!(empty($call_number) XOR empty($temporary_id))) {
         if (empty($temporary_id)) {
           $form_state->setError($element, t('A call number or a temporary ID must be provided in Descriptive Metadata.'));
