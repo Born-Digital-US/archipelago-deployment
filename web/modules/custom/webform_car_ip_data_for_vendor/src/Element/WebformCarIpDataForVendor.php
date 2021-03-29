@@ -2,6 +2,7 @@
 
 namespace Drupal\webform_car_ip_data_for_vendor\Element;
 
+use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\webform\Element\WebformCompositeBase;
 use Drupal\webform\Entity\WebformOptions;
@@ -45,8 +46,9 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     ];
     $elements['ip_call_number'] = [
       '#type' => 'textfield',
-      '#title' => t('Item Call Number'),
+      '#title' => t('<span class="form-required">Item Call Number</span>'),
       '#after_build' => [[get_called_class(), 'afterBuild']],
+      '#element_validate' => [[get_called_class(), 'ip_id_validate']],
     ];
 
     $elements['ip_identifiers_delimiter'] = [
@@ -57,8 +59,9 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
 
     $elements['ip_temporary_id'] = [
       '#type' => 'textfield',
-      '#title' => t('Item Temporary Identifier'),
+      '#title' => t('<span class="form-required">Item Temporary Identifier</span>'),
       '#after_build' => [[get_called_class(), 'afterBuild']],
+      '#element_validate' => [[get_called_class(), 'ip_id_validate']],
     ];
 
     $elements['ip_relation_type'] = [
@@ -228,31 +231,47 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         // Identifiers. Disable one if the other has a value.
       case 'ip_call_number':
         $element['#states']['visible'] = [
-          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['value' => '' ]],
+          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['filled' => FALSE ]],
         ];
+        // required/optional is not working. Required a custom validate function.
+//        $element['#states']['optional'] = [
+//          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['filled' => TRUE ]],
+//        ];
+//        $element['#states']['required'] = [
+//          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['filled' => FALSE ]],
+//        ];
         $element['#states']['disabled'] = [
-          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['!value' => '' ]],
+          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['filled' => TRUE ]],
         ];
         break;
       case'ip_temporary_id':
         $element['#states']['visible'] = [
-          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['value' => '' ]],
+          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['filled' => FALSE ]],
         ];
+        // required/optional is not working. Required a custom validate function.
+//        $element['#states']['optional'] = [
+//          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['filled' => TRUE ]],
+//        ];
+//        $element['#states']['required'] = [
+//          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['filled' => FALSE ]],
+//        ];
         $element['#states']['disabled'] = [
-          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['!value' => '' ]],
+          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['filled' => TRUE ]],
         ];
         break;
-        // Show "-or" between the two
+        // Show "-OR" between the two
+      // TODO: this is not working reliably.
+      // TODO: When deleting a previously saved value for ip_temporary_id, it does not appear.
       case 'ip_identifiers_delimiter':
         $element['#states']['visible'] = [
-          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['value' => '' ]],
+          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['filled' => FALSE ]],
           'and',
-          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['value' => '' ]],
+          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['filled' => FALSE ]],
         ];
         $element['#states']['invisible'] = [
-          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['!value' => '' ]],
+          [':input[name="' . $composite_name . '[ip_call_number]"]' => ['filled' => TRUE ]],
           'or',
-          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['!value' => '' ]],
+          [':input[name="' . $composite_name . '[ip_temporary_id]"]' => ['filled' => TRUE ]],
         ];
 
         break;
@@ -261,6 +280,29 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     // disabling the entire table row when this element is disabled.
     $element['#wrapper_attributes']['class'][] = 'js-form-wrapper';
     return $element;
+  }
+
+  public static function ip_id_validate($element, FormState &$form_state) {
+    // Because this runs for each element, we don't want to run it twice.
+    // TODO some day - do this as a webform handler: https://www.drupal.org/docs/8/modules/webform/webform-cookbook/how-to-add-custom-validation-to-a-webform-element#s-method-2-using-webform-handlers
+    $has_run = &drupal_static(__FUNCTION__);
+    if(!isset($has_run)) {
+      $has_run = TRUE;
+      $parent = $element['#parents'];
+      array_pop($parent);
+      $call_number_path = array_merge($parent, ['ip_call_number']);
+      $temporary_id_path = array_merge($parent, ['ip_temporary_id']);
+      $call_number = $form_state->getValue($call_number_path);
+      $temporary_id = $form_state->getValue($temporary_id_path);
+      if (!(empty($call_number) XOR empty($temporary_id))) {
+        if (empty($temporary_id)) {
+          $form_state->setError($element, t('A call number or a temporary ID must be provided in Descriptive Metadata.'));
+        }
+        else {
+          $form_state->setError($element, t('You provided both a call number and a temporary ID in Descriptive Metadata. You must provide one or the other - you cannot provide both.'));
+        }
+      }
+    }
   }
 
 }
