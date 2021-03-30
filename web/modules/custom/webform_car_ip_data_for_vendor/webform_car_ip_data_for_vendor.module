@@ -15,6 +15,9 @@ function webform_car_ip_data_for_vendor_theme() {
     'webform_car_ip_data_for_vendor' => [
       'render element' => 'element',
     ],
+    'car_print_data_for_vendor' => [
+      'render element' => 'element',
+    ],
   ];
 }
 
@@ -28,6 +31,20 @@ function webform_car_ip_data_for_vendor_theme() {
  *   - element: An associative array containing the properties of the element.
  */
 function template_preprocess_webform_car_ip_data_for_vendor(array &$variables) {
+  // Here you can get the composite element and alter it.
+  _template_preprocess_webform_composite($variables);
+}
+
+/**
+ * Prepares variables for print item data for vendor templates.
+ *
+ * Default template: car-print-data-for-vendor.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ */
+function template_preprocess_car_print_data_for_vendor(array &$variables) {
   // Here you can get the composite element and alter it.
   _template_preprocess_webform_composite($variables);
 }

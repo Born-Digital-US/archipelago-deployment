@@ -12,23 +12,29 @@
  */
 #}
 {{ attach_library('webform_car_ip_data_for_vendor/webform_car_ip_data_for_vendor') }}
-{% if flexbox %}
+
+{#      {{ devel_dump(content) }}#}
     <div class="webform-flexbox">
-    {#  {{ devel_dump() }} #}
       {% if content.ip_item_part_label %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_item_part_label }}</div></div>
       {% endif %}
       {% if content.ip_call_number or content.ip_temporary_id %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_call_number }}{{ content.ip_identifiers_delimiter }}{{ content.ip_temporary_id }}</div></div>
       {% endif %}
+      {% if content.ip_container_item_annotations %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_container_item_annotations }}</div></div>
+      {% endif %}
       {% if content.ip_relation_type %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_relation_type }}</div></div>
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_related_entity }}{{ content.ip_language_of_material }}{{ content.ip_relation_type }}</div></div>
       {% endif %}
-      {% if content.ip_av_part_type %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_av_part_type }}</div></div>
+      {% if content.ip_media_type %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_media_type }}</div></div>
       {% endif %}
-      {% if content.ip_base_type %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_base_type }}</div></div>
+      {% if content.ip_gauge_and_format %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_gauge_and_format }}</div></div>
+      {% endif %}
+      {% if content.ip_generation %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_generation }}</div></div>
       {% endif %}
       {% if content.ip_sides_parts %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_sides_parts }}</div></div>
@@ -41,22 +47,8 @@
       {% if content.ip_condition_notes %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_condition_notes }}</div></div>
       {% endif %}
-      {% if content.ip_gauge_and_format %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_gauge_and_format }}</div></div>
-      {% endif %}
-      {% if content.ip_av_physical_asset_type %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">
-            {{ content.ip_av_physical_asset_type }}
-            {{ content.ip_gauge_and_format_audio }}
-            {{ content.ip_gauge_and_format_film }}
-            {{ content.ip_gauge_and_format_video }}
-          </div></div>
-      {% endif %}
-      {% if content.ip_generation %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_generation }}</div></div>
-      {% endif %}
-      {% if content.ip_language_of_material %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_language_of_material }}</div></div>
+      {% if content.ip_base_type %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_base_type }}</div></div>
       {% endif %}
       {% if content.ip_additional_technical_notes %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_additional_technical_notes }}</div></div>
@@ -64,8 +56,8 @@
       {% if content.ip_price_bundle %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_price_bundle }}</div></div>
       {% endif %}
+      {% if content.ip_special_handling %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_special_handling }}</div></div>
+      {% endif %}
     </div>
-{% else %}
-  {{ content }}
-{% endif %}
 
