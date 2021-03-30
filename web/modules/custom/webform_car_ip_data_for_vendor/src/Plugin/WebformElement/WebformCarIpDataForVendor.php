@@ -49,23 +49,4 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
       ($value['ip_price_bundle'] ? ' (' . $value['ip_price_bundle'] . ')' : '');
     return $lines;
   }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function form(array $form, FormStateInterface $form_state) {
-    $form = parent::form($form, $form_state);
-    // Here you can define and alter a webform element's properties UI.
-    // Form element property visibility and default values are defined via
-    // ::defaultProperties.
-    //
-    // @see \Drupal\webform\Plugin\WebformElementBase::form
-    // @see \Drupal\webform\Plugin\WebformElement\TextBase::form
-
-
-    $form['element']['multiple']['#description'] = $this->t('Choose <strong>"Limited"</strong>, with a <strong>value of 1</strong>, to display the <strong>Non-AV</strong> version of the form (fewer fields). Choose <strong>"Multiple"</strong> or <strong>"Limited"</strong> with a <strong>value greater than 1</strong>, to display the <strong>AV</strong> version of the form.');
-    $form['element']['multiple']['#title'] = $this->t('AV or Print (multiple or single)');
-
-    return $form;
-  }
 }
