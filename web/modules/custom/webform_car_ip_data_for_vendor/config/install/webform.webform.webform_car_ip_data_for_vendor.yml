@@ -12,9 +12,9 @@ uid: null
 template: false
 archive: false
 id: webform_car_ip_data_for_vendor
-title: 'Example: Webform Composite'
-description: 'An example of a custom Webform composite.'
-category: Example
+title: 'CAR: Item part metadata for vendor'
+description: ''
+category: CAR
 elements: |
   webform_car_ip_data_for_vendor:
     '#type': webform_car_ip_data_for_vendor

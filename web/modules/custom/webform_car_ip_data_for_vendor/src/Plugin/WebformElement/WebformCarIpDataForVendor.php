@@ -12,8 +12,8 @@ use Drupal\webform\WebformSubmissionInterface;
  * @WebformElement(
  *   id = "webform_car_ip_data_for_vendor",
  *   label = @Translation("Item part data for vendor"),
- *   description = @Translation("Provides a webform element example."),
- *   category = @Translation("Example elements"),
+ *   description = @Translation("Provides a webform element for item part metadata."),
+ *   category = @Translation("CAR elements"),
  *   multiline = TRUE,
  *   composite = TRUE,
  *   states_wrapper = TRUE,

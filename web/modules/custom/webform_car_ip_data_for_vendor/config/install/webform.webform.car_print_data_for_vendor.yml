@@ -12,9 +12,9 @@ uid: null
 template: false
 archive: false
 id: car_print_data_for_vendor
-title: 'Example: Webform Composite'
-description: 'An example of a custom Webform composite.'
-category: Example
+title: 'CAR: Print item metadata for vendor'
+description: ''
+category: CAR
 elements: |
   car_print_data_for_vendor:
     '#type': car_print_data_for_vendor

@@ -12,8 +12,8 @@ use Drupal\webform\WebformSubmissionInterface;
  * @WebformElement(
  *   id = "car_print_data_for_vendor",
  *   label = @Translation("Print item data for vendor"),
- *   description = @Translation("Provides a webform element example."),
- *   category = @Translation("Example elements"),
+ *   description = @Translation("Provides a composite webform element for print item technical metadata."),
+ *   category = @Translation("CAR Elements"),
  *   multiline = TRUE,
  *   composite = TRUE,
  *   states_wrapper = TRUE,

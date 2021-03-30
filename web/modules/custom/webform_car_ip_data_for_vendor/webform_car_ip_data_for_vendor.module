@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Provides an example that shows how to create a Webform composite.
+ * Provides two custom Webform composite elements for item metadata for vendor.
  */
 
 module_load_include('inc', 'webform', 'includes/webform.theme.template');
