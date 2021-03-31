@@ -106,7 +106,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
 
         $elements['ip_gauge_and_format'] = [
           '#type' => 'select',
-          '#options' => 'av_format',
+          '#options' => 'voc_guage_and_format',
           '#title' => t('Item Gauge and Format'),
         ];
         $elements['ip_gauge_and_format']['#options'] = WebformOptions::getElementOptions($elements['ip_gauge_and_format']);
@@ -165,7 +165,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
 
         $elements['ip_special_handling'] = [
           '#type' => 'webform_term_select',
-          '#vocabulary' => 'special_handling',
+          '#vocabulary' => 'voc_av_special_handling',
           '#title' => t('Special Handling'),
         ];
     }
