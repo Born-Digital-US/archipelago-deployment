@@ -4,6 +4,7 @@ namespace Drupal\webform_car_ip_data_for_vendor\Element;
 
 use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\taxonomy\Entity\Term;
 use Drupal\webform\Element\WebformCompositeBase;
 use Drupal\webform\Entity\WebformOptions;
 
@@ -293,6 +294,13 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
       $has_run = TRUE;
 
       $media_type = $form_state->getValue(['obj_media_type']);
+      // Handle if we're using a term reference field.
+      if(is_numeric($media_type)) {
+        $term = Term::load($media_type);
+        if(!empty($term)) {
+          $media_type = $term->getName();
+        }
+      }
       $is_av = preg_match('/(Moving Image|Audio|Sound)/', $media_type);
       if($is_av) {
         $parent = $element['#parents'];
