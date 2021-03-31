@@ -157,10 +157,10 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
 
         $elements['ip_price_bundle'] = [
           '#type' => 'webform_term_select',
-          '#vocabulary' => 'price_bundle',
+          '#vocabulary' => 'av_price_bundle',
           '#title' => t('Price Bundle'),
           //      '#after_build' => [[get_called_class(), 'afterBuild']], // TODO Setting required doesn't work.
-          '#element_validate' => [[get_called_class(), 'price_bundle_validate']],
+          '#element_validate' => [[get_called_class(), 'av_price_bundle_validate']],
         ];
 
         $elements['ip_special_handling'] = [
@@ -187,37 +187,6 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     $composite_name = $match[1];
     $element_name = $match[2];
     switch ($element_name) {
-      // Audio formats.
-      case 'ip_gauge_and_format_audio':
-        // Show this element only when the appropriate value is selected in the physical asset type.
-        $element['#states']['visible'] = [
-          [':input[name="' . $composite_name . '[ip_av_physical_asset_type]"]' => ['value' => 'Audio']],
-        ];
-        // Prevent value from being saved if a different physical asset type is selected by setting a
-        // conditional disaled state.
-        $element['#states']['disabled'] = [
-          [':input[name="' . $composite_name . '[ip_av_physical_asset_type]"]' => ['!value' => 'Audio']],
-        ];
-        break;
-      // Film formats.
-      case 'ip_gauge_and_format_film':
-        $element['#states']['visible'] = [
-          [':input[name="' . $composite_name . '[ip_av_physical_asset_type]"]' => ['value' => 'Film']],
-        ];
-        $element['#states']['disabled'] = [
-          [':input[name="' . $composite_name . '[ip_av_physical_asset_type]"]' => ['!value' => 'Film']],
-        ];
-        break;
-      // Video formats.
-      case 'ip_gauge_and_format_video':
-        $element['#states']['visible'] = [
-          [':input[name="' . $composite_name . '[ip_av_physical_asset_type]"]' => ['value' => 'Video']],
-        ];
-        $element['#states']['disabled'] = [
-          [':input[name="' . $composite_name . '[ip_av_physical_asset_type]"]' => ['!value' => 'Video']],
-        ];
-        break;
-
         // Identifiers. Disable one if the other has a value.
       case 'ip_call_number':
         $element['#states']['visible'] = [
@@ -293,14 +262,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     if(!isset($has_run)) {
       $has_run = TRUE;
 
-      $media_type = $form_state->getValue(['obj_media_type']);
-      // Handle if we're using a term reference field.
-      if(is_numeric($media_type)) {
-        $term = Term::load($media_type);
-        if(!empty($term)) {
-          $media_type = $term->getName();
-        }
-      }
+      $media_type = self::getMediaTypeInput($form_state);
       $is_av = preg_match('/(Moving Image|Audio|Sound)/', $media_type);
       if($is_av) {
         $parent = $element['#parents'];
@@ -329,13 +291,32 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
    * @param $element
    * @param  \Drupal\Core\Form\FormState  $form_state
    */
-  public static function price_bundle_validate($element, FormState &$form_state) {
+  public static function av_price_bundle_validate($element, FormState &$form_state) {
     $wfs = $form_state->getValue(['obj_workflow_state']);
-    $media_type = $form_state->getValue(['obj_media_type']);
+    $media_type = self::getMediaTypeInput($form_state);
     $is_av = preg_match('/(Moving Image|Audio|Sound)/', $media_type);
-
     if ($is_av && empty($element['#value']) && !empty($wfs) && $wfs != 'car_nominated') {
       $form_state->setError($element, t('Price bundle is required once the workflow state has changed from "Nominated".'));
     }
+  }
+
+  /**
+   * @param  \Drupal\Core\Form\FormState  $form_state
+   *
+   * @return int|mixed|string
+   */
+  public static function getMediaTypeInput(FormState $form_state) {
+    $media_type = &drupal_static(__FUNCTION__);
+    if(!isset($media_type)) {
+      $media_type = $form_state->getValue(['obj_media_type']);
+      // Handle if we're using a term reference field.
+      if(is_numeric($media_type)) {
+        $term = Term::load($media_type);
+        if(!empty($term)) {
+          $media_type = $term->getName();
+        }
+      }
+    }
+    return $media_type;
   }
 }
