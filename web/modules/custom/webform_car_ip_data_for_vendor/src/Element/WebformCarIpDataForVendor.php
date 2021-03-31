@@ -61,16 +61,18 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
 
         $elements['ip_temporary_id'] = [
           '#type' => 'textfield',
-          '#title' => t('<span class="form-required">Temporary Identifier</span>'),
+          '#title' => t('<span class="form-required">Temp Identifier</span>'),
           '#after_build' => [[get_called_class(), 'afterBuild']],
           '#element_validate' => [[get_called_class(), 'ip_id_validate']],
+          '#attributes' => ['title' => t('Temporary Identifier')],
         ];
 
         $elements['ip_container_item_annotations'] = [
           '#type' => 'textarea',
           '#rows' => 4,
           '#resizeable' => 'vertical',
-          '#title' => t('Container/Annotations'),
+          '#title' => t('Container/Annots'),
+          '#attributes' => ['title' => t('Container/Annotations')],
         ];
 
         $elements['ip_related_entity'] = [
@@ -107,13 +109,14 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         $elements['ip_gauge_and_format'] = [
           '#type' => 'webform_term_select',
           '#vocabulary' => 'voc_guage_and_format',
-          '#title' => t('Item Gauge and Format'),
+          '#title' => t('Gauge/Format'),
+          '#attributes' => ['title' => t('Gauge and Format')],
         ];
 
         $elements['ip_generation'] = [
           '#type' => 'select',
           '#options' => 'pbcore_instantiationgenerations',
-          '#title' => t('Item Generation'),
+          '#title' => t('Generation'),
         ];
         $elements['ip_generation']['#options'] = WebformOptions::getElementOptions($elements['ip_generation']);
 
@@ -121,14 +124,15 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#type' => 'number',
           '#min' => 1,
           '#step' => 1,
-          '#title' => t('Item Number of Sides/Parts'),
+          '#title' => t('Sides/Parts'),
+          '#attributes' => ['title' => t('Number of Sides or Parts')],
           '#required' => TRUE,
         ];
 
         $elements['ip_condition'] = [
           '#type' => 'select',
           '#options' => 'sl_condition',
-          '#title' => t('Item Condition'),
+          '#title' => t('Condition'),
           '#required' => TRUE,
         ];
         $elements['ip_condition']['#options'] = WebformOptions::getElementOptions($elements['ip_condition']);
@@ -137,13 +141,13 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#type' => 'textarea',
           '#rows' => 4,
           '#resizeable' => 'vertical',
-          '#title' => t('Item Condition Notes'),
+          '#title' => t('Condition Notes'),
         ];
 
         $elements['ip_base_type'] = [
           '#type' => 'select',
           '#options' => 'ip_av_film_base_type',
-          '#title' => t('Item Base Type'),
+          '#title' => t('Base Type'),
         ];
         $elements['ip_base_type']['#options'] = WebformOptions::getElementOptions($elements['ip_base_type']);
 
@@ -151,7 +155,8 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#type' => 'textarea',
           '#rows' => 4,
           '#resizeable' => 'vertical',
-          '#title' => t('Additional Technical Notes'),
+          '#title' => t('Add. Technical Notes'),
+          '#attributes' => ['title' => t('Additional Technical Notes')],
         ];
 
         $elements['ip_price_bundle'] = [

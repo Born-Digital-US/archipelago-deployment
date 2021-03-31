@@ -110,7 +110,7 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
       $elements['ip_generation'] = [
         '#type' => 'select',
         '#options' => 'pbcore_instantiationgenerations',
-        '#title' => t('Item Generation'),
+        '#title' => t('Generation'),
       ];
       $elements['ip_generation']['#options'] = WebformOptions::getElementOptions($elements['ip_generation']);
     }
