@@ -102,10 +102,20 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
         '#element_validate' => [[get_called_class(), 'print_price_bundle_validate']],
       ];
 
+      /*
+       * TODO: support multivalue?
+       * This will be tough to do.
+       * Requires overriding \Drupal\webform\Element\WebformCompositeBase::initializeCompositeElementsRecursive
+       * It will require serializing the saved data, and unserializing in *every place* that consumes that data.
+       * See https://www.drupal.org/project/webform/issues/2872320#comment-12052985
+       * Also see https://weareborndigital.teamwork.com/#tasks/24564552?c=11680531
+       */
       $elements['ip_print_special_handling'] = [
         '#type' => 'webform_term_select',
         '#vocabulary' => 'special_handling',
         '#title' => t('Special Handling'),
+//        '#multiple' => TRUE,
+//        '#select2' => TRUE,
       ];
       $elements['ip_generation'] = [
         '#type' => 'select',
