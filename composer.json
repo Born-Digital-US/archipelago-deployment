@@ -20,6 +20,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/Born-Digital-US/format_strawberryfield"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/Born-Digital-US/ami"
         },
         {
@@ -108,7 +112,7 @@
         "react/event-loop": "^1.1",
         "react/promise": "^2.7",
         "solarium/solarium": "^6.0",
-        "strawberryfield/format_strawberryfield": "dev-1.0.0-RC1",
+        "strawberryfield/format_strawberryfield": "dev-car-main as dev-1.0.0-RC1",
         "strawberryfield/strawberry_runners": "dev-master",
         "strawberryfield/strawberryfield": "dev-car-main as dev-1.0.0-RC1",
         "strawberryfield/webform_strawberryfield": "dev-car-main as dev-1.0.0-RC1",

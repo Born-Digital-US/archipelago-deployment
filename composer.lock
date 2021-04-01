@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7f30f3c74c00da1601e3867f6d5221e",
+    "content-hash": "333351c05ea7f12a1ee41eb5dadda133",
     "packages": [
         {
             "name": "archipelago/ami",
@@ -213,16 +213,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.176.4",
+            "version": "3.176.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "7cafb35d3ef9944f542a97dde4a6bb52ad0f45d1"
+                "reference": "45d69a8da4f55879f8a24b0b659a5bc7ad077725"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7cafb35d3ef9944f542a97dde4a6bb52ad0f45d1",
-                "reference": "7cafb35d3ef9944f542a97dde4a6bb52ad0f45d1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/45d69a8da4f55879f8a24b0b659a5bc7ad077725",
+                "reference": "45d69a8da4f55879f8a24b0b659a5bc7ad077725",
                 "shasum": ""
             },
             "require": {
@@ -297,9 +297,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.176.4"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.176.5"
             },
-            "time": "2021-03-30T18:17:07+00:00"
+            "time": "2021-03-31T18:15:22+00:00"
         },
         {
             "name": "behat/mink",
@@ -860,16 +860,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.10.20",
+            "version": "1.10.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "e55d297525f0ecc805c813a0f63a40114fd670f6"
+                "reference": "04021432f4a9cbd9351dd166b8c193f42c36a39c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/e55d297525f0ecc805c813a0f63a40114fd670f6",
-                "reference": "e55d297525f0ecc805c813a0f63a40114fd670f6",
+                "url": "https://api.github.com/repos/composer/composer/zipball/04021432f4a9cbd9351dd166b8c193f42c36a39c",
+                "reference": "04021432f4a9cbd9351dd166b8c193f42c36a39c",
                 "shasum": ""
             },
             "require": {
@@ -939,7 +939,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/1.10.20"
+                "source": "https://github.com/composer/composer/tree/1.10.21"
             },
             "funding": [
                 {
@@ -955,7 +955,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T14:41:06+00:00"
+            "time": "2021-04-01T07:16:35+00:00"
         },
         {
             "name": "composer/installers",
@@ -11925,12 +11925,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ProfessionalWiki/EDTF.git",
-                "reference": "52e48be75e704e47297a279e86a428d77c4b3d22"
+                "reference": "0ded4b24e34fb57cf0bd2c14577d7b2a062dcee2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ProfessionalWiki/EDTF/zipball/52e48be75e704e47297a279e86a428d77c4b3d22",
-                "reference": "52e48be75e704e47297a279e86a428d77c4b3d22",
+                "url": "https://api.github.com/repos/ProfessionalWiki/EDTF/zipball/0ded4b24e34fb57cf0bd2c14577d7b2a062dcee2",
+                "reference": "0ded4b24e34fb57cf0bd2c14577d7b2a062dcee2",
                 "shasum": ""
             },
             "require": {
@@ -11986,7 +11986,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-03-29T16:00:02+00:00"
+            "time": "2021-04-01T11:46:22+00:00"
         },
         {
             "name": "psr/cache",
@@ -13913,27 +13913,26 @@
         },
         {
             "name": "strawberryfield/format_strawberryfield",
-            "version": "dev-1.0.0-RC1",
+            "version": "dev-car-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/esmero/format_strawberryfield.git",
-                "reference": "a6651036e96ef4d7cf9f6891cac807fa5e6053bd"
+                "url": "https://github.com/Born-Digital-US/format_strawberryfield.git",
+                "reference": "fc57b0728544aaa43db29b99f2b8867557fa046c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/esmero/format_strawberryfield/zipball/a6651036e96ef4d7cf9f6891cac807fa5e6053bd",
-                "reference": "a6651036e96ef4d7cf9f6891cac807fa5e6053bd",
+                "url": "https://api.github.com/repos/Born-Digital-US/format_strawberryfield/zipball/fc57b0728544aaa43db29b99f2b8867557fa046c",
+                "reference": "fc57b0728544aaa43db29b99f2b8867557fa046c",
                 "shasum": ""
             },
             "require": {
-                "drupal/webform": "^5.19 || ^6.0",
+                "drupal/webform": "^5.23 || ^6.0",
                 "ext-json": "*",
                 "ml/json-ld": "^1.2",
                 "mtdowling/jmespath.php": "^2.5",
                 "strawberryfield/strawberryfield": "dev-1.0.0-RC1"
             },
             "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -13948,10 +13947,9 @@
             "description": "Strawberryfield Mash/Smash/extractor/formatters for Drupal 8",
             "homepage": "https://github.com/esmero/format_strawberryfield",
             "support": {
-                "issues": "https://github.com/esmero/format_strawberryfield/issues",
-                "source": "https://github.com/esmero/format_strawberryfield/tree/1.0.0-RC1"
+                "source": "https://github.com/Born-Digital-US/format_strawberryfield/tree/car-main"
             },
-            "time": "2021-01-08T19:23:39+00:00"
+            "time": "2021-03-23T16:13:21+00:00"
         },
         {
             "name": "strawberryfield/strawberry_runners",
@@ -18712,6 +18710,12 @@
             "version": "dev-car-main",
             "alias": "dev-main",
             "alias_normalized": "dev-main"
+        },
+        {
+            "package": "strawberryfield/format_strawberryfield",
+            "version": "dev-car-main",
+            "alias": "dev-1.0.0-RC1",
+            "alias_normalized": "dev-1.0.0-RC1"
         },
         {
             "package": "strawberryfield/strawberryfield",
