@@ -213,16 +213,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.176.5",
+            "version": "3.176.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "45d69a8da4f55879f8a24b0b659a5bc7ad077725"
+                "reference": "734dd0535f8e70ebb59be37f522af4e45d006ace"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/45d69a8da4f55879f8a24b0b659a5bc7ad077725",
-                "reference": "45d69a8da4f55879f8a24b0b659a5bc7ad077725",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/734dd0535f8e70ebb59be37f522af4e45d006ace",
+                "reference": "734dd0535f8e70ebb59be37f522af4e45d006ace",
                 "shasum": ""
             },
             "require": {
@@ -297,9 +297,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.176.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.176.7"
             },
-            "time": "2021-03-31T18:15:22+00:00"
+            "time": "2021-04-02T18:16:40+00:00"
         },
         {
             "name": "behat/mink",
@@ -7205,28 +7205,8 @@
                     "role": "Contributor"
                 },
                 {
-                    "name": "fenstrat",
-                    "homepage": "https://www.drupal.org/user/362649"
-                },
-                {
-                    "name": "jrockowitz",
-                    "homepage": "https://www.drupal.org/user/371407"
-                },
-                {
-                    "name": "podarok",
-                    "homepage": "https://www.drupal.org/user/116002"
-                },
-                {
                     "name": "quicksketch",
                     "homepage": "https://www.drupal.org/user/35821"
-                },
-                {
-                    "name": "sanchiz",
-                    "homepage": "https://www.drupal.org/user/1671246"
-                },
-                {
-                    "name": "tedbow",
-                    "homepage": "https://www.drupal.org/user/240860"
                 },
                 {
                     "name": "torotil",
@@ -7321,32 +7301,12 @@
                     "homepage": "https://www.drupal.org/user/493050"
                 },
                 {
-                    "name": "bucefal91",
-                    "homepage": "https://www.drupal.org/user/504128"
-                },
-                {
-                    "name": "fenstrat",
-                    "homepage": "https://www.drupal.org/user/362649"
-                },
-                {
                     "name": "jrockowitz",
                     "homepage": "https://www.drupal.org/user/371407"
                 },
                 {
-                    "name": "podarok",
-                    "homepage": "https://www.drupal.org/user/116002"
-                },
-                {
                     "name": "quicksketch",
                     "homepage": "https://www.drupal.org/user/35821"
-                },
-                {
-                    "name": "sanchiz",
-                    "homepage": "https://www.drupal.org/user/1671246"
-                },
-                {
-                    "name": "tedbow",
-                    "homepage": "https://www.drupal.org/user/240860"
                 },
                 {
                     "name": "torotil",
@@ -9175,16 +9135,16 @@
         },
         {
             "name": "laminas/laminas-feed",
-            "version": "2.14.0",
+            "version": "2.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-feed.git",
-                "reference": "85cf475aa76c10b8c12134873100f592251456a6"
+                "reference": "463fdae515fba30633906098c258d3b2c733c15c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-feed/zipball/85cf475aa76c10b8c12134873100f592251456a6",
-                "reference": "85cf475aa76c10b8c12134873100f592251456a6",
+                "url": "https://api.github.com/repos/laminas/laminas-feed/zipball/463fdae515fba30633906098c258d3b2c733c15c",
+                "reference": "463fdae515fba30633906098c258d3b2c733c15c",
                 "shasum": ""
             },
             "require": {
@@ -9251,7 +9211,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-03-16T16:01:42+00:00"
+            "time": "2021-04-01T19:26:09+00:00"
         },
         {
             "name": "laminas/laminas-stdlib",
@@ -13917,12 +13877,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Born-Digital-US/format_strawberryfield.git",
-                "reference": "fc57b0728544aaa43db29b99f2b8867557fa046c"
+                "reference": "b6793e110d6fd530d261d7e35fa72cd30da2ac11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Born-Digital-US/format_strawberryfield/zipball/fc57b0728544aaa43db29b99f2b8867557fa046c",
-                "reference": "fc57b0728544aaa43db29b99f2b8867557fa046c",
+                "url": "https://api.github.com/repos/Born-Digital-US/format_strawberryfield/zipball/b6793e110d6fd530d261d7e35fa72cd30da2ac11",
+                "reference": "b6793e110d6fd530d261d7e35fa72cd30da2ac11",
                 "shasum": ""
             },
             "require": {
@@ -13949,7 +13909,7 @@
             "support": {
                 "source": "https://github.com/Born-Digital-US/format_strawberryfield/tree/car-main"
             },
-            "time": "2021-03-23T16:13:21+00:00"
+            "time": "2021-04-02T20:07:23+00:00"
         },
         {
             "name": "strawberryfield/strawberry_runners",
