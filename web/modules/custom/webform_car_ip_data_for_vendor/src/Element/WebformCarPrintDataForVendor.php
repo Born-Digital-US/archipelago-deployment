@@ -110,12 +110,33 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
        * See https://www.drupal.org/project/webform/issues/2872320#comment-12052985
        * Also see https://weareborndigital.teamwork.com/#tasks/24564552?c=11680531
        */
-      $elements['ip_print_special_handling'] = [
-        '#type' => 'webform_term_select',
-        '#vocabulary' => 'special_handling',
+      $elements['special_handling_group'] = [
+        '#type' => 'fieldset',
         '#title' => t('Special Handling'),
-//        '#multiple' => TRUE,
-//        '#select2' => TRUE,
+        'ip_print_special_handling' => [
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'special_handling',
+          '#title' => t('Special Handling 1'),
+          '#title_display' => 'invisible'
+        ],
+        'ip_print_special_handling_2' => [
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'special_handling',
+          '#title' => t('Special Handling 2'),
+          '#title_display' => 'invisible'
+        ],
+        'ip_print_special_handling_3' => [
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'special_handling',
+          '#title' => t('Special Handling 3'),
+          '#title_display' => 'invisible'
+        ],
+        'ip_print_special_handling_4' => [
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'special_handling',
+          '#title' => t('Special Handling 3'),
+          '#title_display' => 'invisible'
+        ],
       ];
       $elements['ip_generation'] = [
         '#type' => 'select',

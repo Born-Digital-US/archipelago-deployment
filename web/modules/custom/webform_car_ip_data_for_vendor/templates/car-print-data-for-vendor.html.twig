@@ -13,7 +13,7 @@
 #}
 {{ attach_library('webform_car_ip_data_for_vendor/car_print_data_for_vendor') }}
 
-{#      {{ devel_dump(content) }}#}
+      {{ devel_dump(content) }}
   <div class="webform-flexbox">
     {% if content.ip_dimensions %}
       <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_dimensions }}</div></div>
@@ -27,8 +27,8 @@
     {% if content.ip_print_price_bundle %}
       <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_print_price_bundle }}</div></div>
     {% endif %}
-    {% if content.ip_print_special_handling %}
-      <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_print_special_handling }}</div></div>
+    {% if content.special_handling_group %}
+      <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.special_handling_group }}</div></div>
     {% endif %}
     {% if content.ip_generation %}
       <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_generation }}</div></div>
