@@ -167,11 +167,42 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#element_validate' => [[get_called_class(), 'av_price_bundle_validate']],
         ];
 
-        $elements['ip_special_handling'] = [
+      /*
+       * TODO: support multivalue?
+       * This will be tough to do.
+       * Requires overriding \Drupal\webform\Element\WebformCompositeBase::initializeCompositeElementsRecursive
+       * It will require serializing the saved data, and unserializing in *every place* that consumes that data.
+       * See https://www.drupal.org/project/webform/issues/2872320#comment-12052985
+       * Also see https://weareborndigital.teamwork.com/#tasks/24564552?c=11680531
+       */
+      $elements['special_handling_group'] = [
+        '#type' => 'fieldset',
+        '#title' => t('Special Handling'),
+        'ip_special_handling' => [
           '#type' => 'webform_term_select',
           '#vocabulary' => 'voc_av_special_handling',
-          '#title' => t('Special Handling'),
-        ];
+          '#title' => t('Special Handling 1'),
+          '#title_display' => 'invisible'
+        ],
+        'ip_special_handling_2' => [
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'voc_av_special_handling',
+          '#title' => t('Special Handling 2'),
+          '#title_display' => 'invisible'
+        ],
+        'ip_special_handling_3' => [
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'voc_av_special_handling',
+          '#title' => t('Special Handling 3'),
+          '#title_display' => 'invisible'
+        ],
+        'ip_special_handling_4' => [
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'voc_av_special_handling',
+          '#title' => t('Special Handling 3'),
+          '#title_display' => 'invisible'
+        ],
+      ];
     }
 
     return $elements;
