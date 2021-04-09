@@ -213,16 +213,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.177.0",
+            "version": "3.178.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ce99fa71b917428ae790063c41e9cc4b85592299"
+                "reference": "45692b97e12a2eed540c0afd106f143aad15e622"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ce99fa71b917428ae790063c41e9cc4b85592299",
-                "reference": "ce99fa71b917428ae790063c41e9cc4b85592299",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/45692b97e12a2eed540c0afd106f143aad15e622",
+                "reference": "45692b97e12a2eed540c0afd106f143aad15e622",
                 "shasum": ""
             },
             "require": {
@@ -297,9 +297,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.177.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.178.1"
             },
-            "time": "2021-04-07T18:13:10+00:00"
+            "time": "2021-04-09T18:13:02+00:00"
         },
         {
             "name": "behat/mink",
@@ -6284,7 +6284,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/s3fs.git",
-                "reference": "d32a754930e04f6d407766f3fa83f31eebe2b7d7"
+                "reference": "c52813492d4a7dd0d135c0c3ebce7c5ceebe5895"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.18",
@@ -6299,8 +6299,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha17+18-dev",
-                    "datestamp": "1617059225",
+                    "version": "8.x-3.0-alpha17+22-dev",
+                    "datestamp": "1617910985",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -11885,12 +11885,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ProfessionalWiki/EDTF.git",
-                "reference": "a0a730eba646ebd729f281012b7bc5a5ff7df414"
+                "reference": "e87eea559d4b9333c665b55c4614de8cbb39befe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ProfessionalWiki/EDTF/zipball/a0a730eba646ebd729f281012b7bc5a5ff7df414",
-                "reference": "a0a730eba646ebd729f281012b7bc5a5ff7df414",
+                "url": "https://api.github.com/repos/ProfessionalWiki/EDTF/zipball/e87eea559d4b9333c665b55c4614de8cbb39befe",
+                "reference": "e87eea559d4b9333c665b55c4614de8cbb39befe",
                 "shasum": ""
             },
             "require": {
@@ -11946,7 +11946,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-04-05T13:31:35+00:00"
+            "time": "2021-04-08T16:59:38+00:00"
         },
         {
             "name": "psr/cache",
@@ -13763,16 +13763,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.8",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4"
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9d583721a7157ee997f235f327de038e7ea6dac4",
-                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
                 "shasum": ""
             },
             "require": {
@@ -13815,7 +13815,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2020-10-23T02:01:07+00:00"
+            "time": "2021-04-09T00:54:41+00:00"
         },
         {
             "name": "stack/builder",
@@ -14024,12 +14024,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Born-Digital-US/webform_strawberryfield.git",
-                "reference": "f0f79b0dcd5d63cbe1d74d8f8bd5edc1be10a8cf"
+                "reference": "983ce361ab79a93692349d16b1a49d13c71f0abf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Born-Digital-US/webform_strawberryfield/zipball/f0f79b0dcd5d63cbe1d74d8f8bd5edc1be10a8cf",
-                "reference": "f0f79b0dcd5d63cbe1d74d8f8bd5edc1be10a8cf",
+                "url": "https://api.github.com/repos/Born-Digital-US/webform_strawberryfield/zipball/983ce361ab79a93692349d16b1a49d13c71f0abf",
+                "reference": "983ce361ab79a93692349d16b1a49d13c71f0abf",
                 "shasum": ""
             },
             "require": {
@@ -14058,7 +14058,7 @@
             "support": {
                 "source": "https://github.com/Born-Digital-US/webform_strawberryfield/tree/car-main"
             },
-            "time": "2021-03-31T15:08:17+00:00"
+            "time": "2021-04-09T20:07:24+00:00"
         },
         {
             "name": "swaggest/json-diff",
