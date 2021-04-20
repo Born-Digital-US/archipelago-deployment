@@ -66,8 +66,8 @@ rebase_esmero_webform_strawberryfield:
 
 build_linux:
 	cp docker-compose-linux.yml docker-compose.yml
-	sed "s/version: '3.5'/version: '3.7'" docker-compose.yml
-	sed "s/image: mysql:8.0.22/image: mysql:5.7.33" docker-compose.yml
+	sed 's/version: '\''3.5'\''/version: '\''3.7'\''/' docker-compose.yml
+	sed 's/image: mysql:8.0.22/image: mysql:5.7.33/' docker-compose.yml
 	docker-compose up -d
 	sudo chown -R 100:100 persistent/iiifcache
 	sudo chown -R 8983:8983 persistent/solrcore
