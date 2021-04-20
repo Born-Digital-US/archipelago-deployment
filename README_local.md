@@ -7,5 +7,6 @@
 * There will be a prompt asking for your admin / sudo password. Enter it in the terminal and hit enter to continue
 
 * Open up a browser and navigate http://localhost:8001
+  * using default user `demo` and pw `demo` - change on remote
 
 **Please note:** _This build process will take at least 10 - 15 mins depending on your internet connection_
