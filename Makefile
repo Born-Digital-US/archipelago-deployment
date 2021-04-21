@@ -51,7 +51,7 @@ merge_esmero:
 	echo "Resolve composer.lock conflicts, reapply the stash to get any local composer.json changes, then delete composer.lock"
 	git checkout --ours composer.lock
 	git stash apply || true
-  # Re-create composer.lock
+    # Re-create composer.lock
 	rm composer.lock
 	echo "Restart containers"
 	docker-compose up -d
