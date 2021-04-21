@@ -84,7 +84,7 @@ build_linux:
 	sudo mv strawberryfield web/modules/contrib/
 	docker-compose exec -T -w /var/www/html php bash -c "chown -R :www-data /var/www/html/web"
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'scripts/archipelago/setup.sh'
-	docker exec -ti $(APACHE_CONTAINER) bash -c "cd web;../vendor/bin/drush -y si --verbose config_installer	config_installer_sync_configure_form.sync_directory=/var/www/html/config/sync/ --db-url=mysql://root:esmerodb@esmero-db/drupal8 --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false install_configure_form.enable_update_status_module=NULL install_configure_form.enable_update_status_emails=NULL;drush cr;chown -R www-data:www-data sites;"
+	docker exec -ti $(APACHE_CONTAINER) bash -c "cd web;../vendor/bin/drush -y si --verbose config_installer config_installer_sync_configure_form.sync_directory=/var/www/html/config/sync/ --db-url=mysql://root:esmerodb@esmero-db/drupal8 --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false install_configure_form.enable_update_status_module=NULL install_configure_form.enable_update_status_emails=NULL;drush cr;chown -R www-data:www-data sites;"
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'scripts/archipelago/deploy.sh'
