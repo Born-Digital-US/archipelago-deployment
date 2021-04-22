@@ -12,6 +12,9 @@
 /persistent/miniodata/
 /persistent/miniodata/**
 /persistent/miniodata/.*/*
+/persistent/minio-client-data/
+/persistent/minio-client-data/**
+/persistent/minio-client-data/.*/*
 /private
 
 

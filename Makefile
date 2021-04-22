@@ -51,7 +51,7 @@ merge_esmero:
 	echo "Resolve composer.lock conflicts, reapply the stash to get any local composer.json changes, then delete composer.lock"
 	git checkout --ours composer.lock
 	git stash apply || true
-    # Re-create composer.lock
+# Re-create composer.lock
 	rm composer.lock
 	echo "Restart containers"
 	docker-compose up -d
@@ -72,8 +72,9 @@ build_linux:
 	sudo chown -R 100:100 persistent/iiifcache
 	sudo chown -R 8983:8983 persistent/solrcore
 	docker exec -t $(APACHE_CONTAINER) bash -c "chown -R www-data:www-data private"
-	docker exec -t esmero-minio mkdir data/archipelago || true
-	docker exec -t esmero-minio chown -R 82:82 data/archipelago
+	docker-compose exec -T mc bash -c "mc alias set minio http://minio:9000 minio minio123"
+	docker-compose exec -T mc bash -c "mc mb minio/archipelago"
+	docker-compose exec -T mc bash -c "mc ls minio"
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "cd web/modules/contrib; rm -rf webform_strawberryfield"
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "cd web/modules/contrib; rm -rf strawberryfield"
