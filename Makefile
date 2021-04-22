@@ -89,3 +89,11 @@ build_linux:
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'scripts/archipelago/deploy.sh'
+
+clean:
+	docker-compose down -v
+	rm -f docker-compose.yml
+	sudo rm -rf ./vendor
+
+down:
+	docker-compose down --remove-orphans
