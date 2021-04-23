@@ -93,6 +93,7 @@
         "drupal/twig_tweak": "^2.6",
         "drupal/variationcache": "^1.0",
         "drupal/views_bootstrap": "^4.3",
+        "drupal/views_data_export": "^1.0",
         "drupal/webform": "^5.22",
         "drupal/webform_entity_handler": "1.x-dev",
         "drupal/webform_views": "^5.0",
