@@ -24,6 +24,8 @@ class TwigExtension extends \Twig_Extension {
         [$this, 'getPageCountAndType']),
       new \Twig_SimpleFunction('car_ami_get_variable_variables',
         [$this, 'getVariableVariables']),
+      new \Twig_SimpleFunction('car_ami_get_values',
+        [$this, 'getValues']),
     ];
   }
 
@@ -103,6 +105,32 @@ class TwigExtension extends \Twig_Extension {
         $return[$var] = explode($split, $data[$key]);
       }
     }
-    return $return;
+    return array_filter($return);
+  }
+
+  /**
+   * Convert a value into an array of values, split by delimiter.
+   *
+   * {# Example where the values are pipe "|" delimited: #}
+   * {% set creator_name_labels = car_ami_get_variable_variables(roles, "obj_creator__name_label_@var_role", data, "|") %}
+   * {% for value in car_ami_get_values(data.some_field, '|') %}
+   *   value is {{ value }}
+   * {% endfor %}
+   *
+   * @param  array|string  $values
+   * @param  string  $split
+   *   default is ";"
+   *
+   * @return array
+   *  An array of strings.
+   */
+  public function getValues($values, $split = ';') {
+    // Cast the $values argument as an array, even if it was just a string.
+    $values = (array) $values;
+    $return = [];
+    foreach($values as $value) {
+      $return = array_merge($return, array_map('trim', explode($split, $value)));
+    }
+    return array_filter($return);
   }
 }
