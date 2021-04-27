@@ -76,19 +76,22 @@ build_linux:
 	docker-compose exec -T mc bash -c "mc mb minio/archipelago"
 	docker-compose exec -T mc bash -c "mc ls minio"
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
-	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "cd web/modules/contrib; rm -rf webform_strawberryfield"
-	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "cd web/modules/contrib; rm -rf strawberryfield"
-#docker-compose exec -T -w /var/www/html php bash -c "chown -R :www-data /var/www/html/web"
-	git clone --branch $(WEBFORM_SBF_BRANCH) $(WEBFORM_SBF_REPO)
-	sudo mv webform_strawberryfield web/modules/contrib/
-	git clone --branch $(SBF_BRANCH) $(SBF_REPO)
-	sudo mv strawberryfield web/modules/contrib/
-#docker-compose exec -T -w /var/www/html php bash -c "chown -R :www-data /var/www/html/web"
+	#docker-compose exec -T -w /var/www/html php bash -c "chown -R :www-data /var/www/html/web"
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'scripts/archipelago/setup.sh'
 	docker exec -ti $(APACHE_CONTAINER) bash -c "cd web;../vendor/bin/drush -y si --verbose config_installer config_installer_sync_configure_form.sync_directory=/var/www/html/config/sync/ --db-url=mysql://root:esmerodb@esmero-db/drupal8 --account-name=admin --account-pass=archipelago -r=/var/www/html/web --sites-subdir=default --notify=false install_configure_form.enable_update_status_module=NULL install_configure_form.enable_update_status_emails=NULL;drush cr;chown -R www-data:www-data sites;"
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'scripts/archipelago/deploy.sh'
+	
+# this is for Pat, in case he needs it. Can be deleted if he does not
+strawberry_build_linux: build_linux
+	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "cd web/modules/contrib; rm -rf webform_strawberryfield"
+	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "cd web/modules/contrib; rm -rf strawberryfield"
+	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
+	git clone --branch $(WEBFORM_SBF_BRANCH) $(WEBFORM_SBF_REPO)
+	sudo mv webform_strawberryfield web/modules/contrib/
+	git clone --branch $(SBF_BRANCH) $(SBF_REPO)
+	sudo mv strawberryfield web/modules/contrib/
 
 clean:
 	docker-compose down -v
