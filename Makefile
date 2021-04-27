@@ -87,7 +87,7 @@ build_linux:
 strawberry_build_linux: build_linux
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "cd web/modules/contrib; rm -rf webform_strawberryfield"
 	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "cd web/modules/contrib; rm -rf strawberryfield"
-	docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
+	#docker exec -t -w /var/www/html $(APACHE_CONTAINER) bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
 	git clone --branch $(WEBFORM_SBF_BRANCH) $(WEBFORM_SBF_REPO)
 	sudo mv webform_strawberryfield web/modules/contrib/
 	git clone --branch $(SBF_BRANCH) $(SBF_REPO)
