@@ -342,7 +342,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     return $media_type;
   }
 
-  public function addCloneButton(array $element, FormStateInterface $form_state): array {
+  public static function addCloneButton(array $element, FormStateInterface $form_state): array {
     return $element;
   }
 
