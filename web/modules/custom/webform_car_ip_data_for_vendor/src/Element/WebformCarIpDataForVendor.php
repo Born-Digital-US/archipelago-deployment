@@ -6,6 +6,7 @@ use Drupal\Core\Form\FormState;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\webform\Element\WebformCompositeBase;
+use Drupal\webform\Element\WebformMultiple;
 use Drupal\webform\Entity\WebformOptions;
 
 /**
@@ -41,11 +42,6 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     // For some reason, this gets called sometimes without a populated element...
     if(!empty($element)) {
 
-        $elements['ip_item_part_label'] = [
-          '#type' => 'textfield',
-          '#title' => t('Identifier/Label'),
-        ];
-
         $elements['ip_call_number'] = [
           '#type' => 'textfield',
           '#title' => t('<span class="form-required">Call Number</span>'),
@@ -75,34 +71,11 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#attributes' => ['title' => t('Container/Annotations')],
         ];
 
-        $elements['ip_related_entity'] = [
-          '#title' => t('Related Material'),
-          '#type' => 'entity_autocomplete',
-          '#target_type' => 'node',
-          '#selection_handler' => 'default',
-          '#selection_settings' => [
-            'target_bundles' => ['digital_object'],
-          ],
-        ];
-
-        $elements['ip_language_of_material'] = [
-          '#type' => 'select',
-          '#options' => 'languages_iso_639_2',
-          '#title' => t('Language of Material'),
-        ];
-        $elements['ip_language_of_material']['#options'] = WebformOptions::getElementOptions($elements['ip_language_of_material']);
-
-        $elements['ip_relation_type'] = [
-          '#type' => 'select',
-          '#options' => 'pbcorerelationtype',
-          '#title' => t('Relation Type'),
-        ];
-        $elements['ip_relation_type']['#options'] = WebformOptions::getElementOptions($elements['ip_relation_type']);
-
         $elements['ip_media_type'] = [
           '#type' => 'select',
           '#options' => 'pbcore_instantiationmediatype',
           '#title' => t('Media Type'),
+          '#required' => TRUE,
         ];
         $elements['ip_media_type']['#options'] = WebformOptions::getElementOptions($elements['ip_media_type']);
 
@@ -113,29 +86,66 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#attributes' => ['title' => t('Gauge and Format')],
         ];
 
-        $elements['ip_generation'] = [
+      $elements['ip_aspect_ratio'] = [
+        '#type' => 'webform_term_select',
+        '#vocabulary' => 'aspect_ratio',
+        '#title' => t('Aspect Ratio'),
+        '#attributes' => ['title' => t('Aspect Ratio')],
+        '#after_build' => [[get_called_class(), 'afterBuild']],
+      ];
+
+      $elements['ip_running_speed'] = [
+        '#type' => 'webform_term_select',
+        '#vocabulary' => 'running_speed',
+        '#title' => t('Running Speed'),
+        '#attributes' => ['title' => t('Running Speed')],
+      ];
+
+
+      $elements['ip_generation'] = [
           '#type' => 'select',
           '#options' => 'pbcore_instantiationgenerations',
           '#title' => t('Generation'),
         ];
         $elements['ip_generation']['#options'] = WebformOptions::getElementOptions($elements['ip_generation']);
 
-        $elements['ip_sides_parts'] = [
-          '#type' => 'number',
-          '#min' => 1,
-          '#step' => 1,
-          '#title' => t('Sides/Parts'),
-          '#attributes' => ['title' => t('Number of Sides or Parts')],
-          '#required' => TRUE,
-        ];
+      $elements['ip_sides'] = [
+        '#type' => 'number',
+        '#min' => 1,
+        '#step' => 1,
+        '#title' => t('Sides'),
+        '#attributes' => ['title' => t('Number of Sides (minimum 1)')],
+        '#required' => TRUE,
+      ];
 
-        $elements['ip_condition'] = [
+      $elements['parts_wrapper'] = [
+//        '#type' => 'fieldset',
+//        '#title' => t('<span class="form-required">Parts</span>'),
+//        'ip_parts_number' => [
+//          '#type' => 'number',
+//          '#min' => 1,
+//          '#step' => 1,
+//          '#attributes' => ['placeholder' => t('Number'), 'title' => t('Number of Parts (minimum 1)')],
+//          '#title_display' => 'invisible',
+//          '#required' => TRUE,
+//        ],
+        'ip_parts_type' => [
           '#type' => 'select',
-          '#options' => 'sl_condition',
-          '#title' => t('Condition'),
+//          '#title_display' => 'invisible',
+          '#attributes' => ['title' => t('Part type (required)')],
+          '#empty_option' => t("-Type-"),
+          '#options' => [
+            'Cylinder' => 'Cylinder',
+            'Disc' => 'Disc',
+            'File' => 'File',
+            'Tape' => 'Tape',
+            'Reel' => 'Reel',
+            'Unknown' => 'Unknown',
+          ],
+          '#title' => t('Part Type'),
           '#required' => TRUE,
-        ];
-        $elements['ip_condition']['#options'] = WebformOptions::getElementOptions($elements['ip_condition']);
+        ],
+      ];
 
         $elements['ip_condition_notes'] = [
           '#type' => 'textarea',
@@ -155,8 +165,8 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#type' => 'textarea',
           '#rows' => 4,
           '#resizeable' => 'vertical',
-          '#title' => t('Add. Technical Notes'),
-          '#attributes' => ['title' => t('Additional Technical Notes')],
+          '#title' => t('Notes'),
+          '#attributes' => ['title' => t('Notes')],
         ];
 
         $elements['ip_price_bundle'] = [
@@ -167,41 +177,10 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#element_validate' => [[get_called_class(), 'av_price_bundle_validate']],
         ];
 
-      /*
-       * TODO: support multivalue?
-       * This will be tough to do.
-       * Requires overriding \Drupal\webform\Element\WebformCompositeBase::initializeCompositeElementsRecursive
-       * It will require serializing the saved data, and unserializing in *every place* that consumes that data.
-       * See https://www.drupal.org/project/webform/issues/2872320#comment-12052985
-       * Also see https://weareborndigital.teamwork.com/#tasks/24564552?c=11680531
-       */
-      $elements['special_handling_group'] = [
-        '#type' => 'fieldset',
+      $elements['ip_special_handling'] = [
+        '#type' => 'webform_term_select',
+        '#vocabulary' => 'voc_av_special_handling',
         '#title' => t('Special Handling'),
-        'ip_special_handling' => [
-          '#type' => 'webform_term_select',
-          '#vocabulary' => 'voc_av_special_handling',
-          '#title' => t('Special Handling 1'),
-          '#title_display' => 'invisible'
-        ],
-        'ip_special_handling_2' => [
-          '#type' => 'webform_term_select',
-          '#vocabulary' => 'voc_av_special_handling',
-          '#title' => t('Special Handling 2'),
-          '#title_display' => 'invisible'
-        ],
-        'ip_special_handling_3' => [
-          '#type' => 'webform_term_select',
-          '#vocabulary' => 'voc_av_special_handling',
-          '#title' => t('Special Handling 3'),
-          '#title_display' => 'invisible'
-        ],
-        'ip_special_handling_4' => [
-          '#type' => 'webform_term_select',
-          '#vocabulary' => 'voc_av_special_handling',
-          '#title' => t('Special Handling 3'),
-          '#title_display' => 'invisible'
-        ],
       ];
     }
 
@@ -251,6 +230,14 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
 //        ];
         $element['#states']['disabled'] = [
           [':input[name="' . $composite_name . '[ip_call_number]"]' => ['filled' => TRUE ]],
+        ];
+        break;
+      case'ip_aspect_ratio':
+        $element['#states']['visible'] = [
+          [':input[name="' . $composite_name . '[ip_media_type]"]' => ['value' => "http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#MovingImage" ]],
+        ];
+        $element['#states']['disabled'] = [
+          [':input[name="' . $composite_name . '[ip_media_type]"]' => ['!value' => "http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#MovingImage" ]],
         ];
         break;
         // TODO: This doesn't work.
@@ -354,4 +341,20 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     }
     return $media_type;
   }
+
+  public function addCloneButton(array $element, FormStateInterface $form_state): array {
+    return $element;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function processWebformComposite(&$element, FormStateInterface $form_state, &$complete_form) {
+    parent::processWebformComposite($element,  $form_state, $complete_form);
+//    WebformMultiple::processWebformMultiple($element, $form_state,$complete_form);
+
+      $element['#after_build'][] = [get_called_class(), 'addCloneButton'];
+    return $element;
+  }
+
 }
