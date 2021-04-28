@@ -101,8 +101,12 @@ class TwigExtension extends \Twig_Extension {
     $return = [];
     foreach($vars as $var) {
       $key = (string) t($pattern, ['@var' => $var]);
-      if( isset($data[$key])) {
-        $return[$var] = explode($split, $data[$key]);
+      // Make sure we don't return false positives.
+      if(isset($data[$key]) &&  !empty(trim($data[$key]))) {
+        $this_vars = array_map('trim', explode($split, $data[$key]));
+        if(!empty($this_vars)) {
+          $return[$var] = $this_vars;
+        }
       }
     }
     return array_filter($return);
