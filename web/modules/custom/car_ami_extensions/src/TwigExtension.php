@@ -26,6 +26,10 @@ class TwigExtension extends \Twig_Extension {
         [$this, 'getVariableVariables']),
       new \Twig_SimpleFunction('car_ami_get_values',
         [$this, 'getValues']),
+      new \Twig_SimpleFunction('car_ami_get_webform_option_value',
+        [$this, 'getWebformOptionValue']),
+      new \Twig_SimpleFunction('car_ami_get_webform_element_option_value',
+        [$this, 'webformSelectElementOptionValue']),
     ];
   }
 
@@ -43,7 +47,7 @@ class TwigExtension extends \Twig_Extension {
     if(is_string($dimensions_string) && $dimensions_string) {
       // Do a preg_match with fancy regex with named capture groups for
       // width, length, and units.
-      $pattern = '/(?<length>\d+(( *\.\d*| +\d+\/\d+))?)(?<lunits> *(in|cm|\")\.?)?(( *[xX])? *(?<width>\d+((\.\d+| +\d+\/\d+))?))?( *(?<units>in|cm|mm|\"|inches|px|pixels|Pixels)\.?)?/';
+      $pattern = '/ *(?<length>(\d+\/\d+)|(\.\d+)|\d+((\.\d+| \d+\/\d+))?)? *((?<lunits>(in|cm|\"))\.?)?(( *[xX])? *(?<width>(\d+\/\d+)|(\.\d+)|\d+((\.\d+| \d+\/\d+))?))?( *(?<units>in|cm|mm|\"|inches|px|pixels|Pixels|Unknown)?\.?)? */i';
       preg_match($pattern, $dimensions_string, $matches);
 
     }
@@ -67,7 +71,7 @@ class TwigExtension extends \Twig_Extension {
     if(is_string($page_count_string) && $page_count_string) {
       // Do a preg_match with fancy regex with named capture groups for
       // width, length, and units.
-      $pattern = '/(?<count>\d+) *(?<type>[a-zA-Z]+?)(s\b|\b)( of)?( (?<total>\d+))?/';
+      $pattern = '/ *((?<count>\d+) *(?<type>[a-zA-Z]+)(s\b|\b)( of)?( (?<total>\d+))?|(?<unknown>(Unknown|x))) */i';
       preg_match($pattern, $page_count_string, $matches);
     }
     // Return only named capture groups.
@@ -137,4 +141,64 @@ class TwigExtension extends \Twig_Extension {
     }
     return array_filter($return);
   }
+
+  /**
+   * Given a webform option list and a label, returns the corresponding option value.
+   *
+   * @param  string  $webform_option_list_id
+   * @param  string|null  $label
+   *
+   * @return null/string
+   *   The option label if found. Otherwise null.
+   */
+  public function getWebformOptionValue(
+    string $webform_option_list_id,
+    ?string $label = NULL
+  ): ?string {
+    if(is_string($label) && $label) {
+      $webform_option_list = WebformOptions::load($webform_option_list_id);
+      if(!empty($webform_option_list) && !empty($webform_option_list->getOptions()) ) {
+        $options = $webform_option_list->getOptions();
+        $flipped = array_flip($options);
+        if(!empty($flipped[$label])) {
+          return $flipped[$label];
+        }
+      }
+    }
+    return $label;
+  }
+
+
+  /**
+   * Given a webform select list element's option value, returns the corresponding option label.
+   *
+   * @param  string  $webform_id
+   * @param  string  $element_id
+   * @param  string|null  $label
+   *
+   * @return null|string
+   *   The option label if found. Otherwise null.
+   */
+  public function webformSelectElementOptionValue(
+    string $webform_id,
+    string $element_id,
+    ?string $label = NULL
+  ): ?string {
+    if(is_string($label) && $label) {
+      $webform = Webform::load($webform_id);
+      if($webform) {
+        $element = $webform->getElement($element_id);
+        if(!empty($element) && !empty($element['#options'])) {
+          $flipped = array_flip($element['#options']);
+          if(!empty($flipped[$label])) {
+            return $flipped[$label];
+          }
+        }
+      }
+    }
+    return $label;
+  }
+
+
+
 }
