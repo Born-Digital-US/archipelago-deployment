@@ -44,6 +44,7 @@
         "drupal/backup_migrate": "^5.0",
         "drupal/bamboo_twig": "dev-5.x",
         "drupal/bootstrap_barrio": "^5.1",
+        "drupal/chosen": "^3.0",
         "drupal/config_filter": "^2.2",
         "drupal/config_inspector": "dev-1.x",
         "drupal/config_installer": "^1.7",
@@ -59,7 +60,7 @@
         "drupal/display_field_copy": "^2.0",
         "drupal/ds": "^3.9",
         "drupal/entity": "^1.2",
-        "drupal/facets": "1.x-dev",
+        "drupal/facets": "^1.7",
         "drupal/fancy_file_delete": "^2.0",
         "drupal/field_permissions": "^1.0@RC",
         "drupal/file_mdm": "^2",
@@ -74,6 +75,9 @@
         "drupal/jsonapi_earlyrendering_workaround": "^1.0@alpha",
         "drupal/key_value": "1.x-dev",
         "drupal/markdown": "2.x-dev",
+        "drupal/migrate_plus": "^5.1",
+        "drupal/migrate_tools": "^5.0",
+        "drupal/migrate_upgrade": "^3",
         "drupal/moderated_content_bulk_publish": "^1.0",
         "drupal/module_missing_message_fixer": "dev-1.x",
         "drupal/olivero": "dev-1.x@dev",
@@ -107,6 +111,7 @@
         "mixnode/mixnode-warcreader-php": "^0.0.6",
         "ml/json-ld": "^1.0",
         "mtdowling/jmespath.php": "^2.4",
+        "oomphinc/composer-installers-extender": "^2.0",
         "pear/archive_tar": "^1.4.8",
         "ramsey/uuid": "^4.1",
         "react/child-process": "^0.6.1",
@@ -177,7 +182,8 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "harvesthq/chosen"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -190,6 +196,11 @@
             ],
             "drush/Commands/contrib/{$name}": [
                 "type:drupal-drush"
+            ]
+        },
+        "extra": {
+            "installer-types": [
+                "library"
             ]
         },
         "enable-patching": true,
