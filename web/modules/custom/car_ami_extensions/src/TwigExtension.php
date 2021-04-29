@@ -170,7 +170,7 @@ class TwigExtension extends \Twig_Extension {
 
 
   /**
-   * Given a webform select list element's option value, returns the corresponding option label.
+   * Given a webform select list element's option label, returns the corresponding option value.
    *
    * @param  string  $webform_id
    * @param  string  $element_id
@@ -184,14 +184,25 @@ class TwigExtension extends \Twig_Extension {
     string $element_id,
     ?string $label = NULL
   ): ?string {
-    if(is_string($label) && $label) {
+    if (is_string($label) && trim($label)) {
+      $label = trim($label);
       $webform = Webform::load($webform_id);
-      if($webform) {
+      if ($webform) {
         $element = $webform->getElement($element_id);
-        if(!empty($element) && !empty($element['#options'])) {
-          $flipped = array_flip($element['#options']);
-          if(!empty($flipped[$label])) {
-            return $flipped[$label];
+        if (!empty($element)) {
+          if (!empty($element['#options'])) {
+            $flipped = array_flip($element['#options']);
+            if (!empty($flipped[$label])) {
+              return $flipped[$label];
+            }
+          }
+          elseif (!empty($element['#vocabulary'])) {
+            $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')
+              ->loadByProperties(['name' => $label, 'vid' => $element['#vocabulary']]);
+            $term = reset($term);
+            if($term && $term->id()) {
+              return $term->id();
+            }
           }
         }
       }
