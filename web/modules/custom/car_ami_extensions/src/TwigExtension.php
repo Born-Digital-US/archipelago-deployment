@@ -41,7 +41,7 @@ class TwigExtension extends \Twig_Extension {
    * @return array An array keyed by `length`, `lunits` (if present), `width`, and `units`.
    */
   public function getPrintDimensions(
-    string $dimensions_string
+    ?string $dimensions_string = NULL
   ): array {
     $matches = [];
     if(is_string($dimensions_string) && $dimensions_string) {
@@ -65,7 +65,7 @@ class TwigExtension extends \Twig_Extension {
    * @return array of capture group values if matched: `count`, `type`, `total`.
    */
   public function getPageCountAndType(
-    string $page_count_string
+    ?string $page_count_string = NULL
   ): array {
     $matches = [];
     if(is_string($page_count_string) && $page_count_string) {
