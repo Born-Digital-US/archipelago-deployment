@@ -72,12 +72,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         ];
 
         $elements['ip_media_type'] = [
-          '#type' => 'select',
-          '#options' => 'pbcore_instantiationmediatype',
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'media_type',
           '#title' => t('Media Type'),
           '#required' => TRUE,
+          '#after_build' => [[get_called_class(), 'filterAVMediaTypes']],
         ];
-        $elements['ip_media_type']['#options'] = WebformOptions::getElementOptions($elements['ip_media_type']);
 
         $elements['ip_gauge_and_format'] = [
           '#type' => 'webform_term_select',
@@ -103,11 +103,11 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
 
 
       $elements['ip_generation'] = [
-          '#type' => 'select',
-          '#options' => 'pbcore_instantiationgenerations',
+          '#type' => 'webform_term_select',
+          '#vocabulary' => 'voc_av_generation',
           '#title' => t('Generation'),
-        ];
-        $elements['ip_generation']['#options'] = WebformOptions::getElementOptions($elements['ip_generation']);
+        '#attributes' => ['title' => t('Generation')],
+      ];
 
       $elements['ip_sides'] = [
         '#type' => 'number',
@@ -305,6 +305,24 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         }
       }
     }
+  }
+
+  /**
+   * Filter the media type vocabulary options list to just Audio and Moving Image
+   *
+   * @param  array  $element
+   * @param  \Drupal\Core\Form\FormStateInterface  $form_state
+   *
+   * @return array
+   */
+  public static function filterAVMediaTypes(array $element, FormStateInterface $form_state): array {
+    $keep = ['Audio', 'Sound', 'Moving Image'];
+    foreach($element['#options'] as $key => $value) {
+      if(is_string($value) && !in_array($value, $keep)) {
+        unset($element['#options'][$key]);
+      }
+    }
+    return $element;
   }
 
   /**
