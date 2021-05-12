@@ -71,7 +71,7 @@ class TwigExtension extends \Twig_Extension {
     if(is_string($page_count_string) && $page_count_string) {
       // Do a preg_match with fancy regex with named capture groups for
       // width, length, and units.
-      $pattern = '/ *((?<count>\d+) *(?<type>[a-zA-Z]+)(s\b|\b)( of)?( (?<total>\d+))?|(?<unknown>(Unknown|x))) */i';
+      $pattern = '/ *((?<count>\d+) *(?<type>[a-zA-Z]+?)(s\b|\b)( of)?( (?<total>\d+))?|(?<unknown>(Unknown|x))) */i';
       preg_match($pattern, $page_count_string, $matches);
     }
     // Return only named capture groups.
