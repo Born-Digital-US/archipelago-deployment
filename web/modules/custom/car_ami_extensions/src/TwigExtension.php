@@ -74,6 +74,9 @@ class TwigExtension extends \Twig_Extension {
       $pattern = '/ *((?<count>\d+) *(?<type>[a-zA-Z]+?)(s\b|\b)( of)?( (?<total>\d+))?|(?<unknown>(Unknown|x))) */i';
       preg_match($pattern, $page_count_string, $matches);
     }
+    if(!empty($matches['type'])) {
+      $matches['type'] = strtolower($matches['type']);
+    }
     // Return only named capture groups.
     return array_filter($matches, "is_string", ARRAY_FILTER_USE_KEY);
   }

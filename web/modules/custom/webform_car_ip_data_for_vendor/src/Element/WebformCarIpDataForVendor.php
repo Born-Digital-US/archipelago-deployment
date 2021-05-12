@@ -77,6 +77,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#title' => t('Media Type'),
           '#required' => TRUE,
           '#after_build' => [[get_called_class(), 'filterAVMediaTypes']],
+          '#select2' => TRUE,
         ];
 
         $elements['ip_gauge_and_format'] = [
@@ -84,6 +85,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#vocabulary' => 'voc_guage_and_format',
           '#title' => t('Gauge/Format'),
           '#attributes' => ['title' => t('Gauge and Format')],
+          '#select2' => TRUE,
         ];
 
       $elements['ip_aspect_ratio'] = [
@@ -92,6 +94,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#title' => t('Aspect Ratio'),
         '#attributes' => ['title' => t('Aspect Ratio')],
         '#after_build' => [[get_called_class(), 'afterBuild']],
+        '#select2' => TRUE,
       ];
 
       $elements['ip_running_speed'] = [
@@ -99,6 +102,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#vocabulary' => 'running_speed',
         '#title' => t('Running Speed'),
         '#attributes' => ['title' => t('Running Speed')],
+        '#select2' => TRUE,
       ];
 
 
@@ -107,6 +111,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#vocabulary' => 'voc_av_generation',
           '#title' => t('Generation'),
         '#attributes' => ['title' => t('Generation')],
+        '#select2' => TRUE,
       ];
 
       $elements['ip_sides'] = [
@@ -135,12 +140,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#attributes' => ['title' => t('Part type (required)')],
           '#empty_option' => t("-Type-"),
           '#options' => [
-            'Cylinder' => 'Cylinder',
-            'Disc' => 'Disc',
-            'File' => 'File',
-            'Tape' => 'Tape',
-            'Reel' => 'Reel',
-            'Unknown' => 'Unknown',
+            'cylinder' => 'Cylinder',
+            'disc' => 'Disc',
+            'file' => 'File',
+            'tape' => 'Tape',
+            'reel' => 'Reel',
+            'unknown' => 'Unknown',
           ],
           '#title' => t('Part Type'),
           '#required' => TRUE,
@@ -158,6 +163,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#type' => 'select',
           '#options' => 'ip_av_film_base_type',
           '#title' => t('Base Type'),
+          '#select2' => TRUE,
         ];
         $elements['ip_base_type']['#options'] = WebformOptions::getElementOptions($elements['ip_base_type']);
 
@@ -175,12 +181,14 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#title' => t('Price Bundle'),
           //      '#after_build' => [[get_called_class(), 'afterBuild']], // TODO Setting required doesn't work.
           '#element_validate' => [[get_called_class(), 'av_price_bundle_validate']],
+          '#select2' => TRUE,
         ];
 
       $elements['ip_special_handling'] = [
         '#type' => 'webform_term_select',
         '#vocabulary' => 'voc_av_special_handling',
         '#title' => t('Special Handling'),
+        '#select2' => TRUE,
       ];
     }
 
