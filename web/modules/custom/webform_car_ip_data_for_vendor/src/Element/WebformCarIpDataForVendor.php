@@ -84,13 +84,23 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#required' => TRUE,
         '#after_build' => [[get_called_class(), 'filterAVMediaTypes']],
         '#choices' => TRUE,
+        '#attributes' => [
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
       ];
 
       $elements['ip_gauge_and_format'] = [
         '#type' => 'webform_term_select',
         '#vocabulary' => 'voc_guage_and_format',
         '#title' => t('Gauge/Format'),
-        '#attributes' => ['title' => t('Gauge and Format')],
+        '#attributes' => [
+          'title' => t('Gauge and Format'),
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
         '#choices' => TRUE,
       ];
 
@@ -98,7 +108,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#type' => 'webform_term_select',
         '#vocabulary' => 'aspect_ratio',
         '#title' => t('Aspect Ratio'),
-        '#attributes' => ['title' => t('Aspect Ratio')],
+        '#attributes' => [
+          'title' => t('Aspect Ratio'),
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
         '#after_build' => [[get_called_class(), 'afterBuild']],
         '#choices' => TRUE,
       ];
@@ -107,7 +122,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#type' => 'webform_term_select',
         '#vocabulary' => 'running_speed',
         '#title' => t('Running Speed'),
-        '#attributes' => ['title' => t('Running Speed')],
+        '#attributes' => [
+          'title' => t('Running Speed'),
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
         '#choices' => TRUE,
       ];
 
@@ -116,7 +136,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#type' => 'webform_term_select',
         '#vocabulary' => 'voc_av_generation',
         '#title' => t('Generation'),
-        '#attributes' => ['title' => t('Generation')],
+        '#attributes' => [
+          'title' => t('Generation'),
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
         '#choices' => TRUE,
       ];
 
@@ -143,7 +168,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         'ip_parts_type' => [
           '#type' => 'select',
 //          '#title_display' => 'invisible',
-          '#attributes' => ['title' => t('Part type (required)')],
+          '#attributes' => [
+            'title' => t('Part type (required)'),
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
           '#empty_option' => t("-Type-"),
           '#options' => [
             'cylinder' => 'Cylinder',
@@ -170,6 +200,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#options' => 'ip_av_film_base_type',
           '#title' => t('Base Type'),
           '#choices' => TRUE,
+          '#attributes' => [
+            'title' => t('The film base'),
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ];
         $elements['ip_base_type']['#options'] = WebformOptions::getElementOptions($elements['ip_base_type']);
 
@@ -185,6 +221,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#type' => 'webform_term_select',
           '#vocabulary' => 'av_price_bundle',
           '#title' => t('Price Bundle'),
+          '#attributes' => [
+            'title' => t('Price Bundle'),
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
           //      '#after_build' => [[get_called_class(), 'afterBuild']], // TODO Setting required doesn't work.
           '#element_validate' => [[get_called_class(), 'av_price_bundle_validate']],
           '#choices' => TRUE,
@@ -195,6 +237,12 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#vocabulary' => 'voc_av_special_handling',
         '#title' => t('Special Handling'),
         '#choices' => TRUE,
+        '#attributes' => [
+          'title' => t('Special Handling'),
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
       ];
     }
 

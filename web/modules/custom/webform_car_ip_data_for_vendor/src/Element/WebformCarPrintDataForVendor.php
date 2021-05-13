@@ -61,6 +61,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
           '#options' => ['cm' => 'cm', 'in' => 'in'],
           '#title' => t('Units'),
           '#required' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
       ];
 
@@ -84,6 +89,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
           ],
           '#title' => t('Type'),
           '#required' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
       ];
 
@@ -93,6 +103,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
         '#title' => t('Format'),
         '#required' => TRUE,
         '#choices' => TRUE,
+        '#attributes' => [
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
       ];
 
       $elements['ip_print_price_bundle'] = [
@@ -102,6 +117,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
         '#title' => t('Price Bundle'),
         '#element_validate' => [[get_called_class(), 'print_price_bundle_validate']],
         '#choices' => TRUE,
+        '#attributes' => [
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
       ];
 
       /*
@@ -121,6 +141,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
           '#title' => t('Special Handling 1'),
           '#title_display' => 'invisible',
           '#choices' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
         'ip_print_special_handling_2' => [
           '#type' => 'webform_term_select',
@@ -128,6 +153,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
           '#title' => t('Special Handling 2'),
           '#title_display' => 'invisible',
           '#choices' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
         'ip_print_special_handling_3' => [
           '#type' => 'webform_term_select',
@@ -135,6 +165,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
           '#title' => t('Special Handling 3'),
           '#title_display' => 'invisible',
           '#choices' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
         'ip_print_special_handling_4' => [
           '#type' => 'webform_term_select',
@@ -142,6 +177,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
           '#title' => t('Special Handling 3'),
           '#title_display' => 'invisible',
           '#choices' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
       ];
       $elements['ip_generation'] = [
