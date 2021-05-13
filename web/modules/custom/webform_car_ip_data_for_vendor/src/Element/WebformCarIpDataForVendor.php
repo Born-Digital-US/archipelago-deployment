@@ -42,51 +42,57 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
     // For some reason, this gets called sometimes without a populated element...
     if(!empty($element)) {
 
-        $elements['ip_call_number'] = [
-          '#type' => 'textfield',
-          '#title' => t('<span class="form-required">Call Number</span>'),
-          '#after_build' => [[get_called_class(), 'afterBuild']],
-          '#element_validate' => [[get_called_class(), 'ip_id_validate']],
-        ];
+      $elements['ip_item_part_label'] = [
+        '#type' => 'textfield',
+        '#title' => t('Part ID'),
+        '#attributes' => ['title' => t('Item Part Identifier/Label. E.g. "r01" for reel #1, or "t04" for the fourth tape')],
+      ];
 
-        $elements['ip_identifiers_delimiter'] = [
-          '#type' => 'item',
-          '#markup' => t(' -OR- '),
-          '#after_build' => [[get_called_class(), 'afterBuild']],
-        ];
+      $elements['ip_call_number'] = [
+        '#type' => 'textfield',
+        '#title' => t('<span class="form-required">Call Number</span>'),
+        '#after_build' => [[get_called_class(), 'afterBuild']],
+        '#element_validate' => [[get_called_class(), 'ip_id_validate']],
+      ];
 
-        $elements['ip_temporary_id'] = [
-          '#type' => 'textfield',
-          '#title' => t('<span class="form-required">Temp Identifier</span>'),
-          '#after_build' => [[get_called_class(), 'afterBuild']],
-          '#element_validate' => [[get_called_class(), 'ip_id_validate']],
-          '#attributes' => ['title' => t('Temporary Identifier')],
-        ];
+      $elements['ip_identifiers_delimiter'] = [
+        '#type' => 'item',
+        '#markup' => t(' -OR- '),
+        '#after_build' => [[get_called_class(), 'afterBuild']],
+      ];
 
-        $elements['ip_container_item_annotations'] = [
-          '#type' => 'textarea',
-          '#rows' => 4,
-          '#resizeable' => 'vertical',
-          '#title' => t('Container/Annots'),
-          '#attributes' => ['title' => t('Container/Annotations')],
-        ];
+      $elements['ip_temporary_id'] = [
+        '#type' => 'textfield',
+        '#title' => t('<span class="form-required">Temp Identifier</span>'),
+        '#after_build' => [[get_called_class(), 'afterBuild']],
+        '#element_validate' => [[get_called_class(), 'ip_id_validate']],
+        '#attributes' => ['title' => t('Temporary Identifier')],
+      ];
 
-        $elements['ip_media_type'] = [
-          '#type' => 'webform_term_select',
-          '#vocabulary' => 'media_type',
-          '#title' => t('Media Type'),
-          '#required' => TRUE,
-          '#after_build' => [[get_called_class(), 'filterAVMediaTypes']],
-          '#select2' => TRUE,
-        ];
+      $elements['ip_container_item_annotations'] = [
+        '#type' => 'textarea',
+        '#rows' => 4,
+        '#resizeable' => 'vertical',
+        '#title' => t('Container/Annots'),
+        '#attributes' => ['title' => t('Container/Annotations')],
+      ];
 
-        $elements['ip_gauge_and_format'] = [
-          '#type' => 'webform_term_select',
-          '#vocabulary' => 'voc_guage_and_format',
-          '#title' => t('Gauge/Format'),
-          '#attributes' => ['title' => t('Gauge and Format')],
-          '#select2' => TRUE,
-        ];
+      $elements['ip_media_type'] = [
+        '#type' => 'webform_term_select',
+        '#vocabulary' => 'media_type',
+        '#title' => t('Media Type'),
+        '#required' => TRUE,
+        '#after_build' => [[get_called_class(), 'filterAVMediaTypes']],
+        '#choices' => TRUE,
+      ];
+
+      $elements['ip_gauge_and_format'] = [
+        '#type' => 'webform_term_select',
+        '#vocabulary' => 'voc_guage_and_format',
+        '#title' => t('Gauge/Format'),
+        '#attributes' => ['title' => t('Gauge and Format')],
+        '#choices' => TRUE,
+      ];
 
       $elements['ip_aspect_ratio'] = [
         '#type' => 'webform_term_select',
@@ -94,7 +100,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#title' => t('Aspect Ratio'),
         '#attributes' => ['title' => t('Aspect Ratio')],
         '#after_build' => [[get_called_class(), 'afterBuild']],
-        '#select2' => TRUE,
+        '#choices' => TRUE,
       ];
 
       $elements['ip_running_speed'] = [
@@ -102,16 +108,16 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
         '#vocabulary' => 'running_speed',
         '#title' => t('Running Speed'),
         '#attributes' => ['title' => t('Running Speed')],
-        '#select2' => TRUE,
+        '#choices' => TRUE,
       ];
 
 
       $elements['ip_generation'] = [
-          '#type' => 'webform_term_select',
-          '#vocabulary' => 'voc_av_generation',
-          '#title' => t('Generation'),
+        '#type' => 'webform_term_select',
+        '#vocabulary' => 'voc_av_generation',
+        '#title' => t('Generation'),
         '#attributes' => ['title' => t('Generation')],
-        '#select2' => TRUE,
+        '#choices' => TRUE,
       ];
 
       $elements['ip_sides'] = [
@@ -163,7 +169,7 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#type' => 'select',
           '#options' => 'ip_av_film_base_type',
           '#title' => t('Base Type'),
-          '#select2' => TRUE,
+          '#choices' => TRUE,
         ];
         $elements['ip_base_type']['#options'] = WebformOptions::getElementOptions($elements['ip_base_type']);
 
@@ -181,14 +187,14 @@ class WebformCarIpDataForVendor extends WebformCompositeBase {
           '#title' => t('Price Bundle'),
           //      '#after_build' => [[get_called_class(), 'afterBuild']], // TODO Setting required doesn't work.
           '#element_validate' => [[get_called_class(), 'av_price_bundle_validate']],
-          '#select2' => TRUE,
+          '#choices' => TRUE,
         ];
 
       $elements['ip_special_handling'] = [
         '#type' => 'webform_term_select',
         '#vocabulary' => 'voc_av_special_handling',
         '#title' => t('Special Handling'),
-        '#select2' => TRUE,
+        '#choices' => TRUE,
       ];
     }
 
