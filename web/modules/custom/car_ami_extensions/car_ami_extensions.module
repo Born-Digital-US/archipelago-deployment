@@ -25,6 +25,15 @@ function car_ami_extensions_help($path, $arg) {
     <li><a href="#car_ami_get_webform_element_option_value">car_ami_get_webform_element_option_value</a></li>
     <li><a href="#sbf_webform_select_element_option_label">sbf_webform_select_element_option_label</a></li>
 </ul>
+
+<h2>Other twig docs</h2>
+<ul>
+    <li><a href="https://twig.symfony.com/doc/1.x/" target="_blank">twig 1.x function reference</a></li>
+    <li><a href="https://www.drupal.org/docs/theming-drupal/twig-in-drupal/functions-in-twig-templates" target="_blank">drupal core twig extensions</a></li>
+    <li><a href="https://git.drupalcode.org/project/twig_tweak/-/blob/3.x/docs/cheat-sheet.md" target="_blank">twig_tweak cheat sheet</a></li>
+    <li><a href="https://git.drupalcode.org/project/bamboo_twig/-/blob/8.x-5.x/README.md#bamboo-twig-extensions" target="_blank">bamboo_twig extensions</a></li>
+</ul>
+
 <br><br>
 <a name="car_ami_print_dimensions"></a><br><br><br>
 <strong></a>car_ami_print_dimensions(`dimensions string`)</strong>
