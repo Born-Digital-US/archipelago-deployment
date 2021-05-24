@@ -1,0 +1,283 @@
+uuid: 1b70961a-39c9-4696-b6ca-177ae5239a3e
+langcode: en
+status: true
+dependencies: {  }
+id: cls_node_complete_partner_set
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: cls_nodes
+label: 'Node complete (Partner Set)'
+source:
+  key: cls
+  plugin: d7_node_complete
+  node_type: partner_set
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_partner_set/0/status:
+    -
+      plugin: get
+      source: comment
+  field_field_ts_partner_qc_deadli:
+    -
+      plugin: sub_process
+      source: field_field_ts_partner_qc_deadli
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_field_ts_pfr_orig_ret_ship:
+    -
+      plugin: get
+      source: field_field_ts_pfr_orig_ret_ship
+  field_field_ts_pub_email_date:
+    -
+      plugin: sub_process
+      source: field_field_ts_pub_email_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_grant_cycle:
+    -
+      plugin: sub_process
+      source: field_grant_cycle
+      process:
+        target_id: tid
+  field_ts_dec_orig_return_ship:
+    -
+      plugin: get
+      source: field_ts_dec_orig_return_ship
+  field_ts_digit_expect_date:
+    -
+      plugin: sub_process
+      source: field_ts_digit_expect_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ts_expected_delivery:
+    -
+      plugin: sub_process
+      source: field_ts_expected_delivery
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ts_hd_recd_date:
+    -
+      plugin: sub_process
+      source: field_ts_hd_recd_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ts_lto:
+    -
+      plugin: get
+      source: field_ts_lto
+  field_ts_nomination_notes:
+    -
+      plugin: get
+      source: field_ts_nomination_notes
+  field_ts_nominations:
+    -
+      plugin: get
+      source: field_ts_nominations
+  field_ts_phys_check_in_date:
+    -
+      plugin: sub_process
+      source: field_ts_phys_check_in_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ts_phys_proc_date:
+    -
+      plugin: sub_process
+      source: field_ts_phys_proc_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ts_phys_proc_feedback:
+    -
+      plugin: get
+      source: field_ts_phys_proc_feedback
+  field_ts_phys_proc_md_chk:
+    -
+      plugin: get
+      source: field_ts_phys_proc_md_chk
+  field_ts_phys_proc_ship:
+    -
+      plugin: get
+      source: field_ts_phys_proc_ship
+  field_ts_phys_recd_by:
+    -
+      plugin: get
+      source: field_ts_phys_recd_by
+  field_ts_physproc_user:
+    -
+      plugin: get
+      source: field_ts_physproc_user
+  field_ts_pub_upload_person:
+    -
+      plugin: get
+      source: field_ts_pub_upload_person
+  field_ts_qc_complete_date:
+    -
+      plugin: sub_process
+      source: field_ts_qc_complete_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ts_qc_issues_reported:
+    -
+      plugin: get
+      source: field_ts_qc_issues_reported
+  field_ts_qc_person:
+    -
+      plugin: get
+      source: field_ts_qc_person
+  field_ts_qcvr_hdd:
+    -
+      plugin: get
+      source: field_ts_qcvr_hdd
+  field_ts_rework_drive:
+    -
+      plugin: get
+      source: field_ts_rework_drive
+  field_ts_sent4digit_date:
+    -
+      plugin: sub_process
+      source: field_ts_sent4digit_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ts_ship_from_partner:
+    -
+      plugin: get
+      source: field_ts_ship_from_partner
+  field_ts_ship_to_vendor:
+    -
+      plugin: get
+      source: field_ts_ship_to_vendor
+  field_ts_stream:
+    -
+      plugin: sub_process
+      source: field_ts_stream
+      process:
+        target_id: tid
+#  og_group_ref:
+#    -
+#      plugin: get
+#      source: og_group_ref
+  field_ts_partner_wants_copies:
+    -
+      plugin: get
+      source: field_ts_partner_wants_copies
+  field_ts_rework_hd_recd_date:
+    -
+      plugin: sub_process
+      source: field_ts_rework_hd_recd_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  bundle: partner_set
+migration_dependencies:
+  required:
+    - cls_user
+    - cls_taxonomy_term_grant_cycle
+    - cls_taxonomy_term_production_stream
+    - cls_node_complete_shipment
+    - cls_node_complete_vendor
+    - cls_node_complete_hdd
+    - cls_node_complete_lto
+   # - cls_node_type
+  optional:
+    - cls_comment_field_instance

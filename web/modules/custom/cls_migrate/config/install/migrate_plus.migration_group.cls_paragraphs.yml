@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cls_paragraphs
+label: 'CLS Paragraphs'
+description: ''
+source_type: 'Drupal 7'
+module: null
+shared_configuration: null

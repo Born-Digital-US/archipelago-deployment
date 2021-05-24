@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Contains cls_migrate.install.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Removes stale migration configs during uninstall.
+ */
+function cls_migrate_uninstall() {
+  $query = \Drupal::database()->select('config', 'c')
+    ->fields('c', ['name']);
+  $group = $query->orConditionGroup()
+    ->condition('name', \Drupal::database()->escapeLike('migrate_plus.migration.cls_') . '%', 'LIKE')
+    ->condition('name', \Drupal::database()->escapeLike('migrate_plus.migration_group.cls_') . '%', 'LIKE');
+  $query->condition($group);
+
+  $config_names = $query->execute()->fetchAll();
+
+  // Delete each config using configFactory.
+  foreach ($config_names as $config_name) {
+    \Drupal::configFactory()->getEditable($config_name->name)->delete();
+  }
+}
