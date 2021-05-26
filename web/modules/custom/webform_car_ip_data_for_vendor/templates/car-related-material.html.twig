@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a item part data for vendor.
+ *
+ * Available variables:
+ * - content: The item part data for vendor to be output.
+
+ * @see template_preprocess_webform_car_ip_data_for_vendor()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('webform_car_ip_data_for_vendor/car_print_data_for_vendor') }}
+
+  <div class="webform-flexbox">
+    {% if content.related_material_reference %}
+      <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.related_material_reference }}</div></div>
+    {% endif %}
+    {% if content.related_material_relation %}
+      <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.related_material_relation }}</div></div>
+    {% endif %}
+
+  </div>
+
