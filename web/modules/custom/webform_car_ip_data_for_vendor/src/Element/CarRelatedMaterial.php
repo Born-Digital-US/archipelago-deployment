@@ -40,7 +40,7 @@ class CarRelatedMaterial extends WebformCompositeBase {
     $elements['entity_reference'] = [
       '#title' => t('ADO'),
       '#type' => 'entity_autocomplete',
-      '#description' => t('Other digital objects that are related to this one.<br>Begin typing the title and select from the list.'),
+      '#description' => t('Begin typing the title and select from the list.'),
       '#attributes' => [
       ],
       '#target_type' => 'node',
