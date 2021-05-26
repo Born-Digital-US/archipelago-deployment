@@ -37,7 +37,7 @@ class CarRelatedMaterial extends WebformCompositeBase {
   public static function getCompositeElements(array $element): array {
     $elements = parent::getCompositeElements($element);
 
-    $elements['related_material_reference'] = [
+    $elements['entity_reference'] = [
       '#title' => t('ADO'),
       '#type' => 'entity_autocomplete',
       '#description' => t('Other digital objects that are related to this one.<br>Begin typing the title and select from the list.'),
@@ -53,7 +53,7 @@ class CarRelatedMaterial extends WebformCompositeBase {
       '#required' => TRUE,
     ];
 
-    $elements['related_material_relation'] = [
+    $elements['relation_type'] = [
       '#type' => 'select',
       '#options' => 'dublin_core_relators',
       '#title' => t('Relation'),
@@ -62,7 +62,7 @@ class CarRelatedMaterial extends WebformCompositeBase {
         'title' => t('Dublin Core relation'),
       ],
     ];
-    $elements['related_material_relation']['#options'] = WebformOptions::getElementOptions($elements['related_material_relation']);
+    $elements['relation_type']['#options'] = WebformOptions::getElementOptions($elements['relation_type']);
 
 
     return $elements;
