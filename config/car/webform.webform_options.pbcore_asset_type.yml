@@ -1,9 +1,0 @@
-uuid: 5ea5956c-8ad9-434d-8f4b-94f233426bf9
-langcode: en
-status: true
-dependencies: {  }
-id: pbcore_asset_type
-label: pbcoreAssetType
-category: PBCore
-likert: false
-options: "'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Album': 'Album'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Animation': 'Animation'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Clip': 'Clip'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Collection': 'Collection'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Compilation': 'Compilation'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Episode': 'Episode'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Miniseries': 'Miniseries'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Program': 'Program'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Promo': 'Promo'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#RawFootage': 'Raw Footage'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Segment': 'Segment'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Series': 'Series'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Season': 'Season'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary/#Subseries': 'Subseries'\r\n"

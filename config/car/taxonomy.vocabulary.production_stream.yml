@@ -1,8 +1,0 @@
-uuid: db81f8a0-a8ec-41d9-a765-67584807e822
-langcode: en
-status: true
-dependencies: {  }
-name: 'Production Stream'
-vid: production_stream
-description: 'Indicates which production workflow is used for these items.'
-weight: 0

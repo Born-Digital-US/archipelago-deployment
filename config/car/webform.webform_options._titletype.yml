@@ -1,9 +1,0 @@
-uuid: fcfead2f-1498-4d35-a14e-a8b056e9345f
-langcode: en
-status: true
-dependencies: {  }
-id: _titletype
-label: '@titleType'
-category: PBCore
-likert: false
-options: "'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Album': 'Album'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Collection': 'Collection'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Episode': 'Episode'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Miniseries': 'Miniseries'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Program': 'Program'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Segment': 'Segment'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Series': 'Series'\r\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Subseries': 'Subseries'\r\n"

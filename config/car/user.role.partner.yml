@@ -1,9 +1,0 @@
-uuid: 9022a61b-def6-45ef-8cd2-48ac09c998ba
-langcode: en
-status: true
-dependencies: {  }
-id: partner
-label: Partner
-weight: 5
-is_admin: null
-permissions: {  }

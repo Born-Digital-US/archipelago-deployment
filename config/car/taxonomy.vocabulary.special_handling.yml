@@ -1,8 +1,0 @@
-uuid: 281af14c-7bb8-4d29-8014-303a4a8e2b80
-langcode: en
-status: true
-dependencies: {  }
-name: 'Special Handling'
-vid: special_handling
-description: 'Special handling types and their costs'
-weight: 0

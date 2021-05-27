@@ -32,6 +32,7 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
+  devel: 0
   display_field_copy: 0
   ds_devel: 0
   ds_switch_view_mode: 0
