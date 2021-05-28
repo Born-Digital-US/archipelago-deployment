@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.shipment.field_ship_date_recd
     - field.field.node.shipment.field_ship_date_sent
     - field.field.node.shipment.field_shipment_from
+    - field.field.node.shipment.field_shipment_to
     - node.type.shipment
   module:
     - datetime
@@ -44,6 +45,14 @@ content:
     region: content
   field_shipment_from:
     weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_shipment_to:
+    weight: 108
     label: above
     settings:
       link: true

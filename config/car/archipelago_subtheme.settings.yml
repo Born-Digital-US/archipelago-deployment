@@ -25,7 +25,7 @@ features:
   favicon: true
 logo:
   use_default: false
-  path: ''
+  path: 'public://CA-R_10y_logo_halfsize.png'
 favicon:
   use_default: true
 bootstrap_barrio_region_clean_top_header: '0'

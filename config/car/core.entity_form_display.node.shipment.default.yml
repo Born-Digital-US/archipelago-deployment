@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.shipment.field_ship_date_recd
     - field.field.node.shipment.field_ship_date_sent
     - field.field.node.shipment.field_shipment_from
+    - field.field.node.shipment.field_shipment_to
     - node.type.shipment
   module:
     - content_moderation
@@ -55,6 +56,16 @@ content:
     region: content
   field_shipment_from:
     weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_shipment_to:
+    weight: 128
     settings:
       match_operator: CONTAINS
       match_limit: 10

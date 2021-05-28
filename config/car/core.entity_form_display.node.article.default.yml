@@ -5,15 +5,11 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
-    - image.style.thumbnail
     - node.type.article
   module:
     - comment
     - content_moderation
     - field_layout
-    - image
     - layout_discovery
     - path
     - text
@@ -50,24 +46,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 4
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
-    region: content
-    settings:
-      match_limit: 10
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -127,4 +105,6 @@ content:
       placeholder: ''
       match_limit: 10
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_image: true
+  field_tags: true
