@@ -81,12 +81,6 @@ process:
     -
       plugin: get
       source: body
-  field_ship_carrier:
-    -
-      plugin: sub_process
-      source: field_ship_carrier
-      process:
-        target_id: tid
   field_ship_date_recd:
     -
       plugin: sub_process
@@ -107,26 +101,28 @@ process:
           from_format: 'Y-m-d H:i:s'
           to_format: Y-m-d
           source: value
-  field_ship_from:
+  field_shipment_from:
     -
-      plugin: get
+      plugin: sub_process
       source: field_ship_from
-  field_ship_to:
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration:
+            - cls_node_complete_partner
+            - cls_node_complete_vendor
+          source: target_id
+  field_shipment_to:
     -
-      plugin: get
+      plugin: sub_process
       source: field_ship_to
-  field_ship_track_num:
-    -
-      plugin: get
-      source: field_ship_track_num
-  field_ship_tracking_url:
-    -
-      plugin: field_link
-      source: field_ship_tracking_url
-  field_ts_vendor_job_id:
-    -
-      plugin: get
-      source: field_ts_vendor_job_id
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration:
+            - cls_node_complete_partner
+            - cls_node_complete_vendor
+          source: target_id
 destination:
   plugin: 'entity_complete:node'
   translations: true
