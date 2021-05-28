@@ -1,0 +1,30 @@
+uuid: fd0f8fce-8362-4360-9644-6f19cbcb5111
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.solr_search_content
+  module:
+    - system
+    - views
+  theme:
+    - archipelago_subtheme
+id: views_block__solr_search_content_block
+theme: archipelago_subtheme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:solr_search_content-block'
+settings:
+  id: 'views_block:solr_search_content-block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

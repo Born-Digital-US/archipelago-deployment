@@ -1,0 +1,10 @@
+uuid: 80825d6d-fd75-4f33-89e4-13d000d5424d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.megan_display_form
+label: 'megan display form'
+targetEntityType: node
+cache: true

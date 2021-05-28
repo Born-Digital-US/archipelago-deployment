@@ -1,0 +1,11 @@
+uuid: be94e703-a01c-4192-be29-3e87580ae94e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lto_tape
+id: node.lto_tape
+target_entity_type_id: node
+target_bundle: lto_tape
+default_langcode: site_default
+language_alterable: false

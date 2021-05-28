@@ -1,0 +1,18 @@
+uuid: e49c19d8-eb8c-418f-bb86-8929e719b5b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lto_tape
+id: node.lto_tape.title
+field_name: title
+entity_type: node
+bundle: lto_tape
+label: 'LTO ID'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
