@@ -10,33 +10,20 @@ migration_tags:
   - 'Drupal 7'
   - Content
 migration_group: cls_nodes
-label: 'Node complete (Vendor)'
+label: 'Group (Vendor)'
 source:
   key: cls
   plugin: d7_node_complete
   node_type: vendor
 process:
-  nid:
-    -
-      plugin: get
-      source: tnid
-  vid:
-    -
-      plugin: get
-      source: vid
-  langcode:
-    -
-      plugin: default_value
-      source: language
-      default_value: und
-  title:
-    -
-      plugin: get
-      source: title
+#  id: nid
+  label: title
+  path: alias
   uid:
-    -
-      plugin: get
-      source: node_uid
+    plugin: migration_lookup
+    migration:
+      - cls_user
+    source: uid
   status:
     -
       plugin: get
@@ -73,37 +60,33 @@ process:
     -
       plugin: get
       source: source_langcode
-  comment_node_vendor/0/status:
+  comment_node_partner/0/status:
     -
       plugin: get
       source: comment
-  body:
-    -
-      plugin: get
-      source: body
-  field_vendor_address:
+  field_partner_shipping_address:
     -
       plugin: addressfield
       source: field_vendor_address
-  field_vendor_email:
+  field_institution_email:
     -
       plugin: sub_process
       source: field_vendor_email
       process:
         value: email
-  field_vendor_phone:
+  field_instutional_phone_number:
     -
       plugin: get
       source: field_vendor_phone
-  field_vendor_services:
+  field_services:
     -
       plugin: sub_process
       source: field_vendor_services
       process:
         target_id: tid
 destination:
-  plugin: 'entity_complete:node'
-  translations: true
+  plugin: 'entity:group'
+  #  translations: true
   default_bundle: vendor
 migration_dependencies:
   required:
