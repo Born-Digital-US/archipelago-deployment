@@ -10,8 +10,8 @@ dependencies:
     - search_api
     - file
   config:
-    - field.storage.node.field_tags
     - field.storage.node.field_descriptive_metadata
+    - field.storage.node.field_tags
     - search_api.server.esmero_solr_7_5
     - core.entity_view_mode.node.digital_object_image_only_for_carousel
     - core.entity_view_mode.node.search_index
@@ -49,6 +49,9 @@ third_party_settings:
       maxntp: 2000
       boost: false
       interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
     advanced:
       index_prefix: ''
       collection: ''
@@ -353,14 +356,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_descriptive_metadata
-  subject_labels:
-    label: '🍓 Strawberry (Descriptive Metadata source) » subject_labels'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:subject_labels'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -459,12 +454,16 @@ datasource_settings:
     bundles:
       default: false
       selected:
+        - '0'
+        - '0'
+        - '0'
         - digital_object
         - digital_object_collection
     languages:
       default: true
       selected:
         - '0'
+    metadatadisplayentity_source: null
 processor_settings:
   add_url:
     weights:
@@ -513,7 +512,6 @@ processor_settings:
       - rendered_item_iiif_img
       - sbf_entity_reference_title
       - str_flatten_keys
-      - subject_labels
       - title
       - title_1
       - title_autocomplete

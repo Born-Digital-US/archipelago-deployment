@@ -35,6 +35,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_descriptive_metadata: true
   field_hdd_checked_by: true
   field_hdd_checksums_checked: true
   field_hdd_md_checked: true

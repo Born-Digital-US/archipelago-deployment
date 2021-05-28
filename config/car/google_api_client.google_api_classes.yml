@@ -38,6 +38,8 @@ google_api_client_google_api_classes:
   books: Google_Service_Books
   calendar: Google_Service_Calendar
   certificateauthorityservice: Google_Service_CertificateAuthorityService
+  chromemanagement: Google_Service_ChromeManagement
+  chromepolicy: Google_Service_ChromePolicy
   chromeuxreport: Google_Service_ChromeUXReport
   chromewebstore: Google_Service_Chromewebstore
   cih: Google_Service_Cih
@@ -70,6 +72,7 @@ google_api_client_google_api_classes:
   cloudprofiler: Google_Service_CloudProfiler
   cloudredis: Google_Service_CloudRedis
   cloudresourcemanager: Google_Service_CloudResourceManager
+  cloudretail: Google_Service_CloudRetail
   cloudrun: Google_Service_CloudRun
   cloudruntimeconfig: Google_Service_CloudRuntimeConfig
   cloudscheduler: Google_Service_CloudScheduler
@@ -84,6 +87,7 @@ google_api_client_google_api_classes:
   clouduseraccounts: Google_Service_CloudUserAccounts
   cloudvideointelligence: Google_Service_CloudVideoIntelligence
   cloudbilling: Google_Service_Cloudbilling
+  cloudchannel: Google_Service_Cloudchannel
   clouderrorreporting: Google_Service_Clouderrorreporting
   cloudlatencytest: Google_Service_Cloudlatencytest
   commentanalyzer: Google_Service_CommentAnalyzer
@@ -98,8 +102,10 @@ google_api_client_google_api_classes:
   datafusion: Google_Service_DataFusion
   datalabeling: Google_Service_DataLabeling
   datatransfer: Google_Service_DataTransfer
+  databasemigrationservice: Google_Service_DatabaseMigrationService
   dataflow: Google_Service_Dataflow
   dataproc: Google_Service_Dataproc
+  dataprocmetastore: Google_Service_DataprocMetastore
   datastore: Google_Service_Datastore
   deploymentmanager: Google_Service_DeploymentManager
   devprojects: Google_Service_Devprojects
@@ -126,11 +132,13 @@ google_api_client_google_api_classes:
   firebaserealtimedatabase: Google_Service_FirebaseRealtimeDatabase
   firebaseremoteconfig: Google_Service_FirebaseRemoteConfig
   firebaserules: Google_Service_FirebaseRulesAPI
+  firebasestorage: Google_Service_Firebasestorage
   firestore: Google_Service_Firestore
   fitness: Google_Service_Fitness
   flightavailability: Google_Service_FlightAvailability
   freebase: Google_Service_Freebase
   fusiontables: Google_Service_Fusiontables
+  gkehub: Google_Service_GKEHub
   gameservices: Google_Service_GameServices
   games: Google_Service_Games
   gamesconfiguration: Google_Service_GamesConfiguration
@@ -157,9 +165,13 @@ google_api_client_google_api_classes:
   manufacturercenter: Google_Service_ManufacturerCenter
   mirror: Google_Service_Mirror
   monitoring: Google_Service_Monitoring
+  mybusinessaccountmanagement: Google_Service_MyBusinessAccountManagement
   networkmanagement: Google_Service_NetworkManagement
+  networkconnectivity: Google_Service_Networkconnectivity
   osconfig: Google_Service_SystemsManagement
   oauth2: Google_Service_Oauth2
+  ondemandscanning: Google_Service_OnDemandScanning
+  orgpolicyapi: Google_Service_OrgPolicyAPI
   pagespeedonline: Google_Service_Pagespeedonline
   partners: Google_Service_Partners
   people: Google_Service_PeopleService
@@ -169,6 +181,7 @@ google_api_client_google_api_classes:
   playcustomapp: Google_Service_Playcustomapp
   plus: Google_Service_Plus
   plusdomains: Google_Service_PlusDomains
+  policysimulator: Google_Service_PolicySimulator
   policytroubleshooter: Google_Service_PolicyTroubleshooter
   polyservice: Google_Service_PolyService
   postmastertools: Google_Service_PostmasterTools
@@ -231,6 +244,7 @@ google_api_client_google_api_classes:
   vault: Google_Service_Vault
   verifiedaccess: Google_Service_Verifiedaccess
   vision: Google_Service_Vision
+  webrisk: Google_Service_WebRisk
   websecurityscanner: Google_Service_WebSecurityScanner
   webfonts: Google_Service_Webfonts
   webmasters: Google_Service_Webmasters

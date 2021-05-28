@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.shipment.field_ship_date_recd
     - field.field.node.shipment.field_ship_date_sent
     - field.field.node.shipment.field_shipment_from
+    - field.field.node.shipment.field_shipment_to
     - node.type.shipment
   module:
     - text
@@ -34,5 +35,6 @@ hidden:
   field_ship_date_recd: true
   field_ship_date_sent: true
   field_shipment_from: true
+  field_shipment_to: true
   langcode: true
   search_api_excerpt: true

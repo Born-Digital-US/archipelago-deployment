@@ -13,11 +13,9 @@ entity_type: node
 bundle: digital_object_collection
 label: '🍓 Strawberry (Descriptive metadata source)'
 description: ''
-required: true
+required: false
 translatable: true
-default_value:
-  -
-    value: '{}'
+default_value: {  }
 default_value_callback: ''
 settings: {  }
 field_type: strawberryfield_field
