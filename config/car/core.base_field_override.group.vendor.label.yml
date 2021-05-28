@@ -1,0 +1,18 @@
+uuid: a547fb59-c254-4e0a-8b40-0b1e8810ce6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.vendor
+id: group.vendor.label
+field_name: label
+entity_type: group
+bundle: vendor
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
