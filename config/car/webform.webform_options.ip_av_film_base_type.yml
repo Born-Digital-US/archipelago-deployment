@@ -1,0 +1,9 @@
+uuid: ef8af22d-33d6-41f6-be0d-a05b15b81ab1
+langcode: en
+status: true
+dependencies: {  }
+id: ip_av_film_base_type
+label: 'AV Film Base Type'
+category: CAR
+likert: false
+options: "Acetate: Acetate\n'Acetate; Polyester': 'Acetate; Polyester'\nNitrate: Nitrate\nPolyester: Polyester"

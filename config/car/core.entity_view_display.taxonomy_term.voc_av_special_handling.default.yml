@@ -1,0 +1,23 @@
+uuid: ce81487d-e67f-4b4a-add8-19cde6543fc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.voc_av_special_handling
+  module:
+    - text
+id: taxonomy_term.voc_av_special_handling.default
+targetEntityType: taxonomy_term
+bundle: voc_av_special_handling
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

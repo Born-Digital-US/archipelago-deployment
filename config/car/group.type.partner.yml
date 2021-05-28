@@ -1,0 +1,10 @@
+uuid: fc8dc327-bca4-4d73-a851-ab97ba36134c
+langcode: en
+status: true
+dependencies: {  }
+id: partner
+label: Partner
+description: 'Partner Institution'
+creator_membership: true
+creator_wizard: true
+creator_roles: {  }

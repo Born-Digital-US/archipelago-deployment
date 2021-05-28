@@ -1,0 +1,19 @@
+uuid: 57782541-535c-447b-bfb4-1a2a0099078a
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_awarded
+    - workflow.state.car_physical_processed
+id: car_awarded_physical_processed
+label: ''
+module: workflow
+from_sid: car_awarded
+to_sid: car_physical_processed
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

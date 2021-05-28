@@ -1,0 +1,25 @@
+uuid: 4c30961d-2b3f-4c62-9c48-cae7d36a6727
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vendor_address
+    - node.type.vendor
+  module:
+    - address
+id: node.vendor.field_vendor_address
+field_name: field_vendor_address
+entity_type: node
+bundle: vendor
+label: Address
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides: {  }
+  fields: {  }
+field_type: address

@@ -1,0 +1,19 @@
+uuid: 5a1cab3f-9b73-4425-938d-be4f91c782f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_inspected_notes
+    - paragraphs.paragraphs_type.inspection
+id: paragraph.inspection.field_inspected_notes
+field_name: field_inspected_notes
+entity_type: paragraph
+bundle: inspection
+label: Notes
+description: 'Any additional information you want to record.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

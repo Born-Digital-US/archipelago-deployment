@@ -1,0 +1,10 @@
+uuid: a3189c6e-977c-4080-b106-9b6aa759d93a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.hdds
+label: HDDs
+targetEntityType: node
+cache: true

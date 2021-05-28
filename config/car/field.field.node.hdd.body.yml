@@ -1,0 +1,23 @@
+uuid: dfb7eeec-1596-470b-8493-eeff238afb7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.hdd
+  module:
+    - text
+id: node.hdd.body
+field_name: body
+entity_type: node
+bundle: hdd
+label: Notes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

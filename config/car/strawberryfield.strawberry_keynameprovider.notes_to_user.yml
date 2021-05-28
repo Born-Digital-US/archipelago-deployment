@@ -1,0 +1,11 @@
+uuid: fe147966-ff3b-4702-8afa-d10c8171301d
+langcode: en
+status: true
+dependencies: {  }
+id: notes_to_user
+label: 'Notes to User'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_notes_to_user
+  exposed_key: obj_notes_to_user
+active: true

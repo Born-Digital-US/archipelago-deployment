@@ -1,0 +1,45 @@
+uuid: 055bf5e0-b8b5-47e6-89f2-35d7ef439bfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.special_handling
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: taxonomy_term.special_handling.default
+targetEntityType: taxonomy_term
+bundle: special_handling
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  path: true
+  status: true

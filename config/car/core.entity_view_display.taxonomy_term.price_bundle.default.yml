@@ -1,0 +1,23 @@
+uuid: 2a671887-8b49-45c2-80ff-7a4796c796b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.price_bundle
+  module:
+    - text
+id: taxonomy_term.price_bundle.default
+targetEntityType: taxonomy_term
+bundle: price_bundle
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

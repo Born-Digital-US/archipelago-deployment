@@ -1,0 +1,19 @@
+uuid: 4fe385e5-7bf0-41bd-878c-f03c01e38dfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_nominated
+    - workflow.state.car_qc_version_received
+id: car_qc_version_received_nominated
+label: null
+module: workflow
+from_sid: car_qc_version_received
+to_sid: car_nominated
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

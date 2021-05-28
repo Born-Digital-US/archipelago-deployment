@@ -1,0 +1,19 @@
+uuid: b08b16e7-0c05-4116-a6f8-a4a79dcc77ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_creation
+    - workflow.state.car_qc_complete
+id: car_creation_qc_complete
+label: ''
+module: workflow
+from_sid: car_creation
+to_sid: car_qc_complete
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

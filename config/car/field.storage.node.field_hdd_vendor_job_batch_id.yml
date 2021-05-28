@@ -1,0 +1,25 @@
+uuid: a4c37a6d-6d48-44e6-a37c-1f382c52ff2c
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_hdd_vendor_job_batch_id
+field_name: field_hdd_vendor_job_batch_id
+entity_type: node
+type: string
+settings:
+  max_length: 512
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

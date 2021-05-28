@@ -1,0 +1,17 @@
+uuid: 235ae5e3-2408-4568-b5e0-2ff0db30a3a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.partner
+  enforced:
+    config:
+      - user.role.vendor
+id: partner-ab176eeed
+label: vendor
+weight: 4
+internal: true
+audience: outsider
+group_type: partner
+permissions_ui: false
+permissions: {  }

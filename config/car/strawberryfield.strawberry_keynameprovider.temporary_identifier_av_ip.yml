@@ -1,0 +1,11 @@
+uuid: 50cf1c83-2f62-4e4a-a1a4-7641771d697f
+langcode: en
+status: true
+dependencies: {  }
+id: temporary_identifier_av_ip
+label: 'Temporary Identifier - AV IP'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_temporary_id'
+  exposed_key: obj_av_item_parts_ip_temporary_id
+active: true

@@ -1,0 +1,19 @@
+uuid: b4e14c58-2cb8-4410-9801-91c857e978bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_preservation_version_accepted
+    - workflow.state.car_withdrawn
+id: car_withdrawn_preservation_version_accepted
+label: ''
+module: workflow
+from_sid: car_withdrawn
+to_sid: car_preservation_version_accepted
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

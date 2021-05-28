@@ -1,0 +1,9 @@
+uuid: 932bd9d4-c41b-4e71-84b2-c70117eec357
+langcode: en
+status: true
+dependencies: {  }
+id: dublin_core_relators
+label: 'Dublin Core Relators'
+category: CAR
+likert: false
+options: "hasFormat: hasFormat\nhasPart: hasPart\nhasVersion: hasVersion\nisFormatOf: isFormatOf\nisPartOf: isPartOf\nisReferencedBy: isReferencedBy\nisReplacedBy: isReplacedBy\nisRequiredBy: isRequiredBy\nisVersionOf: isVersionOf\nreferences: references\nreplaces: replaces\nrequires: requires"

@@ -1,0 +1,23 @@
+uuid: 6f0e7fec-5d46-4ffe-81a0-5dba7563e485
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_dpla_link
+    - group.type.partner
+  module:
+    - link
+id: group.partner.field_dpla_link
+field_name: field_dpla_link
+entity_type: group
+bundle: partner
+label: 'Digital Public Library of America Collection'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

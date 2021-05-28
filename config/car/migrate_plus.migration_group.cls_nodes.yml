@@ -1,0 +1,12 @@
+uuid: 5014bb2b-1e5a-4204-a897-755f3c6bf619
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: n6zkQ1PF_XZEIOVwRHucRcsmlfU9HMOi0paRfXedI2U
+id: cls_nodes
+label: 'CLS Nodes'
+description: ''
+source_type: 'Drupal 7'
+module: null
+shared_configuration: null

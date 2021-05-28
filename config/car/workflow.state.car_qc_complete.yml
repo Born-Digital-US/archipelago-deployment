@@ -1,0 +1,12 @@
+uuid: 450b26a5-85cd-4b7a-8385-1d7fc72eb159
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_qc_complete
+label: 'QC Complete'
+module: workflow
+wid: car
+weight: -3
+sysid: 0

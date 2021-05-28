@@ -1,0 +1,8 @@
+uuid: 39f7abbd-fe53-4dce-b8dc-abb663e0f82f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Subject Topic'
+vid: subject_topic
+description: ''
+weight: 0

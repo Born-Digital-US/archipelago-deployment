@@ -1,0 +1,11 @@
+uuid: 682a4a13-d5b7-477f-a71e-6ae7668ef0c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hdd
+id: node.hdd
+target_entity_type_id: node
+target_bundle: hdd
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,11 @@
+uuid: 8b7763d7-dec5-4945-afe5-7123d33da2a9
+langcode: en
+status: true
+dependencies: {  }
+id: series_title
+label: 'Series Title'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_series_title
+  exposed_key: obj_series_title
+active: true

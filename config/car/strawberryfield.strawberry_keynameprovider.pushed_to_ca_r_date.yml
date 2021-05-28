@@ -1,0 +1,11 @@
+uuid: 531481c2-ec10-4c8b-81c4-b4fef4ce4ffc
+langcode: en
+status: true
+dependencies: {  }
+id: pushed_to_ca_r_date
+label: 'Pushed to CA-R Date'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_pushed_to_car_date
+  exposed_key: obj_pushed_to_car_date
+active: true

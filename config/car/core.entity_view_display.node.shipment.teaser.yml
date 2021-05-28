@@ -1,0 +1,38 @@
+uuid: eb66e31b-a24f-4661-b27f-13529e405953
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.shipment.body
+    - field.field.node.shipment.field_ship_date_recd
+    - field.field.node.shipment.field_ship_date_sent
+    - field.field.node.shipment.field_shipment_from
+    - node.type.shipment
+  module:
+    - text
+    - user
+id: node.shipment.teaser
+targetEntityType: node
+bundle: shipment
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ship_date_recd: true
+  field_ship_date_sent: true
+  field_shipment_from: true
+  langcode: true
+  search_api_excerpt: true

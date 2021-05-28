@@ -1,0 +1,12 @@
+uuid: e54075c4-64f1-4ec7-8842-c43625d5f61b
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_published
+label: Published
+module: workflow
+wid: car
+weight: -2
+sysid: 0

@@ -1,0 +1,19 @@
+uuid: 50c2cdf4-972c-4bd9-a73f-e048e57557ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_nominated
+    - workflow.state.car_published
+id: car_published_nominated
+label: null
+module: workflow
+from_sid: car_published
+to_sid: car_nominated
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

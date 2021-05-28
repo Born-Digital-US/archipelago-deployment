@@ -1,0 +1,11 @@
+uuid: 0d9e8451-8061-44e1-9de5-a8ddf2c14cc8
+langcode: en
+status: true
+dependencies: {  }
+id: extent_dimensions_width
+label: 'Extent dimensions - Width'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_print_item_parts[*].ip_ext_dim_width'
+  exposed_key: obj_print_item_parts_ip_ext_dim_width
+active: true

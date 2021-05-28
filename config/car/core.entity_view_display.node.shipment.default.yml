@@ -1,0 +1,60 @@
+uuid: 5c841ac8-e43b-4925-b103-8144dff9f6c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.shipment.body
+    - field.field.node.shipment.field_ship_date_recd
+    - field.field.node.shipment.field_ship_date_sent
+    - field.field.node.shipment.field_shipment_from
+    - node.type.shipment
+  module:
+    - datetime
+    - text
+    - user
+id: node.shipment.default
+targetEntityType: node
+bundle: shipment
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 102
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ship_date_recd:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ship_date_sent:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_shipment_from:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

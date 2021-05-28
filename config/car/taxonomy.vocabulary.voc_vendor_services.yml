@@ -1,0 +1,8 @@
+uuid: 0c02fd21-25e7-4d53-9843-9bc61f94dfc8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Vendor Services'
+vid: voc_vendor_services
+description: 'Services offered by vendors and other providers.'
+weight: 0

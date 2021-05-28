@@ -1,0 +1,12 @@
+uuid: 1771dc12-f015-4032-9037-7e8fcce1edb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_not_digitized
+label: 'Not Digitized'
+module: workflow
+wid: car
+weight: 3
+sysid: 0

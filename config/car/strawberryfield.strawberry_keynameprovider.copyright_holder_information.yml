@@ -1,0 +1,11 @@
+uuid: ea4c3a00-a01d-4c38-a9df-4db28065ff6d
+langcode: en
+status: true
+dependencies: {  }
+id: copyright_holder_information
+label: 'Copyright Holder Information'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_copyright_holder_info
+  exposed_key: obj_copyright_holder_info
+active: true

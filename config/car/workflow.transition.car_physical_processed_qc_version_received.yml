@@ -1,0 +1,19 @@
+uuid: 3ab39d9c-bbc8-484d-90dd-0f03f7a31c6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_physical_processed
+    - workflow.state.car_qc_version_received
+id: car_physical_processed_qc_version_received
+label: ''
+module: workflow
+from_sid: car_physical_processed
+to_sid: car_qc_version_received
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

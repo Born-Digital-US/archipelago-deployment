@@ -1,0 +1,13 @@
+uuid: a1f62b10-d8fc-4808-bd79-0a611087427e
+langcode: en
+status: true
+dependencies: {  }
+id: hourly
+label: Hourly
+enabled: true
+keep: 24
+period: 3600
+cron: null
+source_id: default_db
+destination_id: private_files
+settings_profile_id: null

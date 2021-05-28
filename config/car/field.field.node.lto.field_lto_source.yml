@@ -1,0 +1,28 @@
+uuid: dde84c99-9165-4be3-9c23-299d18b836ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_source
+    - node.type.lto
+    - node.type.vendor
+id: node.lto.field_lto_source
+field_name: field_lto_source
+entity_type: node
+bundle: lto
+label: Source
+description: 'The vendor who generated the LTO tape. Start typing the vendor name and select from the names that match.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      vendor: vendor
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

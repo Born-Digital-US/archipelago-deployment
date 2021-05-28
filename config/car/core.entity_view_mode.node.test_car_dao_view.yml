@@ -1,0 +1,10 @@
+uuid: 810640ed-6139-4a93-8845-8fc89fe30f72
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.test_car_dao_view
+label: 'test CAR DAO view'
+targetEntityType: node
+cache: true

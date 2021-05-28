@@ -1,0 +1,39 @@
+uuid: 596529f2-a238-470f-a44f-bdc7fe4c6b09
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'diff view changes'
+  - 'participate in workflow'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use text format filtered_html'
+  - 'view field_base_thickness'
+  - 'view field_channel_configuration'
+  - 'view field_condition'
+  - 'view field_contentdm_number'
+  - 'view field_institution_url'
+  - 'view field_internet_archive_url'
+  - 'view field_islandora_object'
+  - 'view field_oclc_number'
+  - 'view field_reference_url'
+  - 'view field_timecode_content_begins'
+  - 'view files'
+  - 'view own field_base_thickness'
+  - 'view own field_channel_configuration'
+  - 'view own field_condition'
+  - 'view own field_contentdm_number'
+  - 'view own field_institution_url'
+  - 'view own field_internet_archive_url'
+  - 'view own field_islandora_object'
+  - 'view own field_oclc_number'
+  - 'view own field_reference_url'
+  - 'view own field_timecode_content_begins'

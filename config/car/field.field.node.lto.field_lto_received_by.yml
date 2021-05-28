@@ -1,0 +1,28 @@
+uuid: 4bd06075-549f-4c15-8173-349c2273d3af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_received_by
+    - node.type.lto
+id: node.lto.field_lto_received_by
+field_name: field_lto_received_by
+entity_type: node
+bundle: lto
+label: 'Received by'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

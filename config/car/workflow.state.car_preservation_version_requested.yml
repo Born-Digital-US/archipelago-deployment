@@ -1,0 +1,12 @@
+uuid: 0053a6aa-4a82-4031-bd4e-8e4276f386a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_preservation_version_requested
+label: 'Preservation Version Requested'
+module: workflow
+wid: car
+weight: -1
+sysid: 0

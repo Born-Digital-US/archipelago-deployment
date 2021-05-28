@@ -1,0 +1,10 @@
+uuid: 42c1dc13-34f3-4687-b06d-5998e916507a
+langcode: en
+status: true
+dependencies: {  }
+id: inspection
+label: Inspection
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Inspection'
+behavior_plugins: {  }

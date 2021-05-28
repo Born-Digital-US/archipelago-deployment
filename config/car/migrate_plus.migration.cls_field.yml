@@ -1,0 +1,76 @@
+uuid: fef922d3-471d-4b59-90d8-27d28fa7e523
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nUpGBX88AUAaz0k2TP3Yi7hZZXFcLZ1Cz-lLnxrk-EU
+id: cls_field
+class: Drupal\migrate_drupal\Plugin\migrate\FieldMigration
+field_plugin_method: alterFieldMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: cls_fields
+label: 'Field configuration'
+source:
+  key: cls
+  plugin: d7_field
+  constants:
+    status: true
+    langcode: und
+process:
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+  status:
+    -
+      plugin: get
+      source: constants/status
+  langcode:
+    -
+      plugin: get
+      source: constants/langcode
+  field_name:
+    -
+      plugin: get
+      source: field_name
+  type:
+    -
+      plugin: process_field
+      source: type
+      method: getFieldType
+      map:
+        d7_text:
+          d7_text: d7_text
+        taxonomy_term_reference:
+          taxonomy_term_reference: taxonomy_term_reference
+        image:
+          image: image
+        entityreference:
+          entityreference: entityreference
+        list:
+          list: list
+        addressfield:
+          addressfield: addressfield
+        link_field:
+          link_field: link_field
+        email:
+          email: email
+        number_default:
+          number_default: number_default
+        datetime:
+          datetime: datetime
+  cardinality:
+    -
+      plugin: get
+      source: cardinality
+  settings:
+    -
+      plugin: d7_field_settings
+destination:
+  plugin: 'entity:field_storage_config'
+migration_dependencies:
+  required: {  }
+  optional: {  }

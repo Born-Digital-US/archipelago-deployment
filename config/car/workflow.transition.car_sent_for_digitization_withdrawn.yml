@@ -1,0 +1,19 @@
+uuid: 40b2530c-d635-4859-a946-e889eb1e4aa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_sent_for_digitization
+    - workflow.state.car_withdrawn
+id: car_sent_for_digitization_withdrawn
+label: ''
+module: workflow
+from_sid: car_sent_for_digitization
+to_sid: car_withdrawn
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

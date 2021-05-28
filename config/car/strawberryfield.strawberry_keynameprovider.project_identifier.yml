@@ -1,0 +1,11 @@
+uuid: d194395f-2856-42e4-9644-46950fe77d40
+langcode: en
+status: true
+dependencies: {  }
+id: project_identifier
+label: 'Project Identifier'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_project_identifier
+  exposed_key: obj_project_identifier
+active: true

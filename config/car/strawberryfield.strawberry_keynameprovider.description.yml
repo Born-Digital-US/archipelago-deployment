@@ -1,0 +1,11 @@
+uuid: fa5f1144-ddbc-449d-8abc-3efe33dd1110
+langcode: en
+status: true
+dependencies: {  }
+id: description
+label: Description
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_description
+  exposed_key: obj_description
+active: true

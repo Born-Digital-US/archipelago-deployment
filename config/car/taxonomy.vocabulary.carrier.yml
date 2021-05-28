@@ -1,0 +1,8 @@
+uuid: a3d51b06-5fe0-45ea-b721-af98a9e2b0e3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Mail Carrier'
+vid: carrier
+description: 'shipment carrier'
+weight: 0

@@ -1,0 +1,29 @@
+uuid: 7f7bee2f-4a89-4b01-9bbb-394d709d1f31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vendor_services
+    - node.type.vendor
+    - taxonomy.vocabulary.vendor_services
+id: node.vendor.field_vendor_services
+field_name: field_vendor_services
+entity_type: node
+bundle: vendor
+label: Services
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vendor_services: vendor_services
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

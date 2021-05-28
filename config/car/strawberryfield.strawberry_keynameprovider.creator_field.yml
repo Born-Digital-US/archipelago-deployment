@@ -1,0 +1,11 @@
+uuid: 56e27cbc-58ea-4b1e-a783-3f3b06a31b0c
+langcode: en
+status: true
+dependencies: {  }
+id: creator_field
+label: 'Creator or Contributor'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_creator[*].name_label'
+  exposed_key: obj_creator_name_label
+active: true

@@ -1,0 +1,12 @@
+uuid: 31fbd5a7-f09e-43e7-ac82-6d73a946412e
+langcode: en
+status: true
+dependencies: {  }
+id: format_av
+label: 'Format - AV'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_gauge_and_format'
+  entity_type: taxonomy_term
+  exposed_key: obj_av_item_parts__ip_gauge_and_format
+active: true

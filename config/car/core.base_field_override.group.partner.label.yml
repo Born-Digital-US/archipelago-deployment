@@ -1,0 +1,18 @@
+uuid: 08467f64-242b-4bb8-b79b-b143be570571
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.partner
+id: group.partner.label
+field_name: label
+entity_type: group
+bundle: partner
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 65c1daa1-8054-45f4-be51-f41db48af60d
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_qc_complete
+    - workflow.state.car_qc_version_received
+id: car_qc_version_received_qc_complete
+label: ''
+module: workflow
+from_sid: car_qc_version_received
+to_sid: car_qc_complete
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

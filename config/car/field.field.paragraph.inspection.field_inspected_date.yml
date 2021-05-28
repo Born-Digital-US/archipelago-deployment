@@ -1,0 +1,21 @@
+uuid: 07b2ffa6-0dd0-4e20-bb47-97ac7b3c3de8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_inspected_date
+    - paragraphs.paragraphs_type.inspection
+  module:
+    - datetime
+id: paragraph.inspection.field_inspected_date
+field_name: field_inspected_date
+entity_type: paragraph
+bundle: inspection
+label: 'Date checked'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

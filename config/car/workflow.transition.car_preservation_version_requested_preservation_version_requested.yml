@@ -1,0 +1,12 @@
+uuid: a3358c42-11a8-4720-ad9b-e948b3ac7b1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_preservation_version_requested
+id: car_preservation_version_requested_preservation_version_requested
+label: ''
+module: workflow
+from_sid: car_preservation_version_requested
+to_sid: car_preservation_version_requested
+roles: {  }

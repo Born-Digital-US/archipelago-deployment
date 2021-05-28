@@ -1,0 +1,18 @@
+uuid: 203d05ff-e94a-402a-b7a0-5008554c86c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lto
+id: node.lto.title
+field_name: title
+entity_type: node
+bundle: lto
+label: 'LTO ID'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

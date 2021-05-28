@@ -1,0 +1,11 @@
+uuid: ff3c2968-a3ff-4341-a57f-777f489c0726
+langcode: en
+status: true
+dependencies: {  }
+id: temporal_coverage_date_from
+label: 'Temporal Coverage - date from'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_temporal_coverage[*].date_from'
+  exposed_key: obj_temporal_coverage_date_from
+active: true

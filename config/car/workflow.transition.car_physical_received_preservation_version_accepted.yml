@@ -1,0 +1,19 @@
+uuid: 5fe4350b-9312-41ff-901e-55931e33d76d
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_physical_received
+    - workflow.state.car_preservation_version_accepted
+id: car_physical_received_preservation_version_accepted
+label: ''
+module: workflow
+from_sid: car_physical_received
+to_sid: car_preservation_version_accepted
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

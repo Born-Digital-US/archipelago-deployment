@@ -1,0 +1,21 @@
+uuid: a702209f-7384-415e-8551-64a46d02d68f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_pi_lead_text
+    - group.type.partner
+  module:
+    - text
+id: group.partner.field_pi_lead_text
+field_name: field_pi_lead_text
+entity_type: group
+bundle: partner
+label: 'Lead text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

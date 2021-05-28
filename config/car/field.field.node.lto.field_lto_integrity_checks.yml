@@ -1,0 +1,37 @@
+uuid: 6f7dfa36-d61f-45c5-812f-afcabe417732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_integrity_checks
+    - node.type.lto
+    - paragraphs.paragraphs_type.inspection
+  module:
+    - entity_reference_revisions
+id: node.lto.field_lto_integrity_checks
+field_name: field_lto_integrity_checks
+entity_type: node
+bundle: lto
+label: 'Integrity checks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      inspection: inspection
+    target_bundles_drag_drop:
+      av_item_parts:
+        weight: 4
+        enabled: false
+      inspection:
+        enabled: true
+        weight: 5
+      non_av_item_parts:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

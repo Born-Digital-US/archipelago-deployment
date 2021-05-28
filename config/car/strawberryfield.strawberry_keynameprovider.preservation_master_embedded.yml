@@ -1,0 +1,11 @@
+uuid: 87c09924-3ddc-4482-aa27-74eaccb8fe91
+langcode: en
+status: true
+dependencies: {  }
+id: preservation_master_embedded
+label: 'Preservation Master Embedded'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_prsv_embedded_descriptive_metadata
+  exposed_key: obj_prsv_embedded_descriptive_metadata
+active: true

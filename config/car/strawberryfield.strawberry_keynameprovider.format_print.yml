@@ -1,0 +1,12 @@
+uuid: ff4c9ecb-676a-42bc-a6ed-4d0de5a4f310
+langcode: en
+status: true
+dependencies: {  }
+id: format_print
+label: 'Format - Print'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: 'obj_print_item_parts[*].ip_print_format'
+  entity_type: taxonomy_term
+  exposed_key: obj_print_item_parts_ip_print_format
+active: true

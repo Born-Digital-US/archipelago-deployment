@@ -1,0 +1,24 @@
+uuid: 194b9d8b-3673-4ac8-8162-64b1eb2e03ce
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_hdd_qc_checkin_date
+field_name: field_hdd_qc_checkin_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

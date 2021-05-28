@@ -1,0 +1,10 @@
+uuid: a8ed72ec-603c-40aa-a43c-3f1b493cb0c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.shipment
+label: Shipment
+targetEntityType: node
+cache: true

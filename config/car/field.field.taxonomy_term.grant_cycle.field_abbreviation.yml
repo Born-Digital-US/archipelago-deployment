@@ -1,0 +1,19 @@
+uuid: e4520454-351e-4442-8abd-32b420f2b852
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_abbreviation
+    - taxonomy.vocabulary.grant_cycle
+id: taxonomy_term.grant_cycle.field_abbreviation
+field_name: field_abbreviation
+entity_type: taxonomy_term
+bundle: grant_cycle
+label: Abbreviation
+description: 'A unique abbreviation to use in some displays of Grant Cycles, and when creating a partner set ConcatID'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

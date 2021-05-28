@@ -1,0 +1,11 @@
+uuid: 92cb0058-323e-457d-8d05-8ebd2887b5eb
+langcode: en
+status: true
+dependencies: {  }
+id: access_technical_specifications_met
+label: 'Access Technical Specifications Met'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_access_tech_specs
+  exposed_key: obj_access_tech_specs
+active: true

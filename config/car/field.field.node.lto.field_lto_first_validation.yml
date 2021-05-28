@@ -1,0 +1,21 @@
+uuid: a567b12d-9dde-448d-9244-b133da075fdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_first_validation
+    - node.type.lto
+  module:
+    - datetime
+id: node.lto.field_lto_first_validation
+field_name: field_lto_first_validation
+entity_type: node
+bundle: lto
+label: 'Initial validation date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

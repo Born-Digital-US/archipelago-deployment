@@ -1,0 +1,23 @@
+uuid: 5cdcfae3-25ff-4b29-a5a4-671dfcda8ad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_instutional_website
+    - group.type.partner
+  module:
+    - link
+id: group.partner.field_instutional_website
+field_name: field_instutional_website
+entity_type: group
+bundle: partner
+label: 'Organization Websites'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

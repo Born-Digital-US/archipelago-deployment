@@ -1,0 +1,12 @@
+uuid: e1d78517-a27d-4f63-b392-d8788090770b
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.car
+id: car_withdrawn
+label: Withdrawn
+module: workflow
+wid: car
+weight: 5
+sysid: 0

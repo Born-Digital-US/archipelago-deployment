@@ -1,0 +1,9 @@
+uuid: 453802f9-3130-4ea3-972c-4549d0755a81
+langcode: en
+status: true
+dependencies: {  }
+id: workflow_states
+label: 'Workflow States'
+category: CAR
+likert: false
+options: "car_nominated: Nominated\ncar_awarded: Awarded\ncar_physical_received: 'Physical Received'\ncar_physical_processed: 'Physical Processed'\ncar_sent_for_digitization: 'Sent for Digitization'\ncar_qc_version_received: 'QC Version Received'\ncar_qc_complete: 'QC Complete'\ncar_published: Published\ncar_preservation_version_requested: 'Preservation Version Requested'\ncar_preservation_version_accepted: 'Preservation Version Accepted'\ncar_declined: Declined\ncar_darkened: Darkened\ncar_not_digitized: 'Not Digitized'\ncar_rework: Rework\ncar_withdrawn: Withdrawn"

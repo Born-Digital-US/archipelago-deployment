@@ -1,0 +1,19 @@
+uuid: b37aeca7-23a5-4b9f-9a7b-0b5b4f013fff
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.state.car_preservation_version_accepted
+    - workflow.state.car_qc_complete
+id: car_preservation_version_accepted_qc_complete
+label: ''
+module: workflow
+from_sid: car_preservation_version_accepted
+to_sid: car_qc_complete
+roles:
+  administrator: administrator
+  workflow_author: '0'
+  anonymous: '0'
+  authenticated: '0'
+  metadata_api: '0'
+  metadata_pro: '0'

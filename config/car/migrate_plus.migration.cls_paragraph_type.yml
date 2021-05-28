@@ -1,0 +1,25 @@
+uuid: 8b9667b1-2598-428a-919a-197beaacd5ae
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qTSzMHPJUJ7Y0hTS6TY-1bwbxZPmb9Yc-SQUbjcAbxI
+id: cls_paragraph_type
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+migration_group: cls_paragraphs
+label: 'Paragraphs type configuration'
+source:
+  plugin: d7_paragraphs_type
+  add_description: true
+  key: cls
+process:
+  id: bundle
+  label: name
+  description: description
+destination:
+  plugin: 'entity:paragraphs_type'
+migration_dependencies: null

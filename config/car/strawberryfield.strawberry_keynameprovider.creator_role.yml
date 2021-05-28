@@ -1,0 +1,11 @@
+uuid: 4fd59072-92b8-40a3-9b3f-42bfa4b0cf6f
+langcode: en
+status: true
+dependencies: {  }
+id: creator_role
+label: 'Creator Role'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_creator[*].role_label'
+  exposed_key: obj_creator_role_label
+active: true

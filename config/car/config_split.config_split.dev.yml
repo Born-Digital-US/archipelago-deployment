@@ -1,0 +1,18 @@
+uuid: aab8e9e9-05b5-4177-987a-82f3032bb774
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: 'CAR Dev'
+description: 'Configuration needed only for development. E.g. devel module, etc.'
+folder: ../config/dev
+module:
+  devel: 0
+  devel_php: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - core.extension
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

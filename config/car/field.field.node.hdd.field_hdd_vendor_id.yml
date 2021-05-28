@@ -1,0 +1,19 @@
+uuid: 8b8c807f-1388-4833-96c1-5e63add480b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hdd_vendor_id
+    - node.type.hdd
+id: node.hdd.field_hdd_vendor_id
+field_name: field_hdd_vendor_id
+entity_type: node
+bundle: hdd
+label: 'Drive ID'
+description: 'Title field of drive, provided by vendor. E.g. <em>BSLW-Provo-08</em>; <em>CAVPP2613D2</em>'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
