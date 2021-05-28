@@ -36,7 +36,7 @@ third_party_settings:
       'display_field_copy:node-field_descriptive_metadata_image':
         plugin_id: 'display_field_copy:node-field_descriptive_metadata_image'
         weight: 2
-        label: above
+        label: hidden
         formatter: strawberry_media_formatter
         settings:
           formatter:
@@ -51,7 +51,7 @@ third_party_settings:
       'display_field_copy:node-formatted_metadata':
         plugin_id: 'display_field_copy:node-formatted_metadata'
         weight: 3
-        label: above
+        label: hidden
         formatter: strawberry_metadata_formatter
         settings:
           formatter:
@@ -62,7 +62,7 @@ third_party_settings:
       'display_field_copy:node-static_media':
         plugin_id: 'display_field_copy:node-static_media'
         weight: 5
-        label: above
+        label: hidden
         formatter: strawberry_metadata_formatter
         settings:
           formatter:
@@ -84,7 +84,7 @@ content:
     region: content
   field_descriptive_metadata:
     weight: 4
-    label: above
+    label: hidden
     settings:
       limit_access: edit
     third_party_settings: {  }
