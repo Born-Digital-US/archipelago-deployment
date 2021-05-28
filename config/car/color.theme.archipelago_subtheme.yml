@@ -16,9 +16,9 @@ palette:
   buttonprimary: '#ff4081'
   textoverdark: '#f7f7f7'
   searchbutton: '#ff4081'
-logo: 'public://color/archipelago_subtheme-155a4782/logo.svg'
+logo: 'public://color/archipelago_subtheme-563e3668/logo.svg'
 stylesheets:
-  - 'public://color/archipelago_subtheme-155a4782/colors.css'
+  - 'public://color/archipelago_subtheme-563e3668/colors.css'
 files:
-  - 'public://color/archipelago_subtheme-155a4782/logo.svg'
-  - 'public://color/archipelago_subtheme-155a4782/colors.css'
+  - 'public://color/archipelago_subtheme-563e3668/logo.svg'
+  - 'public://color/archipelago_subtheme-563e3668/colors.css'

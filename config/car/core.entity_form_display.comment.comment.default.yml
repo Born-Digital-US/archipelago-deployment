@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - comment.type.comment
+    - field.field.comment.comment.comment_body
   module:
     - field_layout
     - layout_discovery
+    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -23,6 +25,14 @@ content:
     weight: -2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
