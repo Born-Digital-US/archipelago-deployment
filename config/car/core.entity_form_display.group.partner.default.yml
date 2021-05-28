@@ -3,35 +3,179 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.group.partner.field_ca_r_node_id
+    - field.field.group.partner.field_calisphere_collection
+    - field.field.group.partner.field_dpla_link
+    - field.field.group.partner.field_file_backup
+    - field.field.group.partner.field_hero_image
+    - field.field.group.partner.field_home_movie_registry
+    - field.field.group.partner.field_ia_collection_names
+    - field.field.group.partner.field_institution_email
+    - field.field.group.partner.field_instutional_phone_number
+    - field.field.group.partner.field_instutional_rights_stateme
+    - field.field.group.partner.field_instutional_website
     - field.field.group.partner.field_marc_code
+    - field.field.group.partner.field_metadata_share_exemptions
+    - field.field.group.partner.field_metadata_shares
+    - field.field.group.partner.field_partner_agree_or_file_req
     - field.field.group.partner.field_partner_description
     - field.field.group.partner.field_partner_shipping_address
+    - field.field.group.partner.field_pi_lead_text
+    - field.field.group.partner.field_pi_logo
+    - field.field.group.partner.field_worldcat_collection
     - group.type.partner
   module:
     - address
+    - field_group
     - field_layout
     - layout_discovery
+    - link
+    - media_library
+    - telephone
     - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
       label: ''
+  field_group:
+    group_public_fields:
+      children:
+        - field_hero_image
+        - field_pi_logo
+        - field_pi_lead_text
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        description: 'Information that may be displayed to site visitors.'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Public
 id: group.partner.default
 targetEntityType: group
 bundle: partner
 mode: default
 content:
-  field_marc_code:
-    weight: 1
+  field_ca_r_node_id:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_calisphere_collection:
+    weight: 11
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_dpla_link:
+    weight: 12
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_file_backup:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_hero_image:
+    type: media_library_widget
+    weight: 18
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_home_movie_registry:
+    weight: 13
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ia_collection_names:
+    weight: 9
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_institution_email:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_instutional_phone_number:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_instutional_rights_stateme:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_instutional_website:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_marc_code:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_metadata_share_exemptions:
+    weight: 17
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_metadata_shares:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_partner_agree_or_file_req:
+    type: media_library_widget
+    weight: 14
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
   field_partner_description:
-    weight: 2
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -39,10 +183,33 @@ content:
     type: text_textarea
     region: content
   field_partner_shipping_address:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: address_default
+    region: content
+  field_pi_lead_text:
+    weight: 20
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_pi_logo:
+    type: media_library_widget
+    weight: 19
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_worldcat_collection:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   label:
     type: string_textfield

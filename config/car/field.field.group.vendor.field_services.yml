@@ -1,0 +1,29 @@
+uuid: 175adde7-48a8-4363-9334-320c86bd89f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_services
+    - group.type.vendor
+    - taxonomy.vocabulary.voc_vendor_services
+id: group.vendor.field_services
+field_name: field_services
+entity_type: group
+bundle: vendor
+label: Services
+description: 'Services offered by the provider. Please add any new/specialized services to the Vendor Services taxonomy.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      voc_vendor_services: voc_vendor_services
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,14 @@
+uuid: 8836d9c3-209b-45d0-8c79-f2099d5f8bee
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.vendor
+id: vendor-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: vendor
+permissions_ui: true
+permissions: {  }

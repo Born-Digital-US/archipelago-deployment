@@ -1,0 +1,50 @@
+uuid: ee2366ec-e666-44e6-a54f-45ea0ee8ddce
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TTkI0VOf5J6g2NRsiIhzO7ERP05QAn1-5xjDTza-t3I
+id: cls_paragraph_inspection
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+migration_group: cls_paragraphs
+label: 'Inspection paragraph entities'
+source:
+  plugin: d7_paragraphs_item
+  bundle: inspection
+  key: cls
+process:
+  id: item_id
+  field_inspected_by:
+    plugin: sub_process
+    source: field_inspected_by
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration:
+          - cls_user
+        source: target_id
+  field_inspected_date:
+    plugin: sub_process
+    source: field_inspected_date
+    process:
+      value:
+        plugin: format_date
+        from_format: 'Y-m-d H:i:s'
+        to_format: 'Y-m-d\TH:i:s'
+        source: value
+  field_inspected_result:
+    plugin: get
+    source: field_inspected_result
+  field_inspected_notes:
+    plugin: get
+    source: field_inspected_notes
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: inspection
+migration_dependencies:
+  required:
+    - cls_user

@@ -1,0 +1,11 @@
+uuid: 759f486d-a37a-4cf6-994a-dfcca02ddc31
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lto
+id: node.lto
+target_entity_type_id: node
+target_bundle: lto
+default_langcode: site_default
+language_alterable: false

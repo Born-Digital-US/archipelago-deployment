@@ -1,0 +1,11 @@
+uuid: 3f71a261-afd8-467e-8af2-16a48f7bafd9
+langcode: en
+status: true
+dependencies: {  }
+id: vendor_xml_validates
+label: 'Vendor XML Validates'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_xml_from_vendor_validates
+  exposed_key: obj_xml_from_vendor_validates
+active: true

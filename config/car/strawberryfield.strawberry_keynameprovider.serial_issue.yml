@@ -1,0 +1,11 @@
+uuid: 954645cc-8e9c-46e7-862c-23a3f47f8000
+langcode: en
+status: true
+dependencies: {  }
+id: serial_issue
+label: 'Serial Issue'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_serial_issue
+  exposed_key: obj_serial_issue
+active: true

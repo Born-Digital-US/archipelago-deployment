@@ -1,0 +1,11 @@
+uuid: 6ee70ff1-dd81-4247-a812-b7e8cdb8a44b
+langcode: en
+status: true
+dependencies: {  }
+id: production_stream_text
+label: 'Production Stream Text'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_txt_prd_stream
+  exposed_key: obj_txt_prd_stream
+active: true

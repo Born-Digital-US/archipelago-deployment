@@ -1,0 +1,19 @@
+uuid: caab17d5-17cb-406f-8aa9-2c8adf82cd66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vendor_phone
+    - node.type.vendor
+id: node.vendor.field_vendor_phone
+field_name: field_vendor_phone
+entity_type: node
+bundle: vendor
+label: Phone
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: ce4ac738-c387-4188-8cbb-b5ad91d5469b
+langcode: en
+status: true
+dependencies: {  }
+id: vendor
+label: Vendor
+description: 'Vendor Organizations and Service Providers.'
+creator_membership: true
+creator_wizard: true
+creator_roles: {  }

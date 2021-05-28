@@ -1,0 +1,11 @@
+uuid: 20214800-8189-4a54-993d-c31455d9ae65
+langcode: en
+status: true
+dependencies: {  }
+id: transcript
+label: Transcript
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_transcript
+  exposed_key: obj_transcript
+active: true

@@ -1,0 +1,11 @@
+uuid: 4d4bdaa5-8e62-4eeb-9acf-4bbd73f3a27c
+langcode: en
+status: true
+dependencies: {  }
+id: oclc_number
+label: 'OCLC Number'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_oclc_number
+  exposed_key: obj_oclc_number
+active: true

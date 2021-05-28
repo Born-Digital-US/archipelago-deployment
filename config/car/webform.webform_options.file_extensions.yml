@@ -1,0 +1,9 @@
+uuid: b6a02689-8f08-4cac-89af-b85b0255cfae
+langcode: en
+status: true
+dependencies: {  }
+id: file_extensions
+label: 'File extensions'
+category: CAR
+likert: false
+options: ".tif: .tif\n.jpg: .jpg\n.pdf: .pdf\n.m4a: .m4a\n.bwf: .bwf\n.mov: .mov\n.mkv: .mkv\n.mp4: .mp4"

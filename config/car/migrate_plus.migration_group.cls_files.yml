@@ -1,0 +1,12 @@
+uuid: b5c08b08-b4f9-47ef-a75f-97f95e0df71b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9bgrBW-ill03Fk6mOxR9zLr6oDWbeg8dBO2Qy5XeS2E
+id: cls_files
+label: 'CLS Files'
+description: ''
+source_type: 'Drupal 7'
+module: null
+shared_configuration: null

@@ -1,0 +1,19 @@
+uuid: ea72e420-32c4-4509-9f1c-2ac9af7087e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hdd_vendor_job_batch_id
+    - node.type.hdd
+id: node.hdd.field_hdd_vendor_job_batch_id
+field_name: field_hdd_vendor_job_batch_id
+entity_type: node
+bundle: hdd
+label: 'Job/Batch Identifiers'
+description: 'Enter vendor provided job number or batch name. Multiple values can be added, one at a time.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

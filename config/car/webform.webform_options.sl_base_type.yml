@@ -1,0 +1,9 @@
+uuid: f912321c-1b28-4b85-ac2f-c4fb845707a3
+langcode: en
+status: true
+dependencies: {  }
+id: sl_base_type
+label: 'Base Type'
+category: CAR
+likert: false
+options: "Acetate: Acetate\r\nNitrate: Nitrate\r\nPolyester: Polyester"

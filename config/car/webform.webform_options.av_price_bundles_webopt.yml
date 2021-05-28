@@ -1,0 +1,9 @@
+uuid: 77f24bd8-36e8-42ed-acf2-3d8a1553719a
+langcode: en
+status: true
+dependencies: {  }
+id: av_price_bundles_webopt
+label: 'AV Price Bundles'
+category: CAR
+likert: false
+options: "20: 'MP - Audio Cassette < 40 min.'\n25: 'MP - Audio Cassette > 40 min.'\n40: 'MP - Audio Grooved Disc'\n200: 'MP - Audio Open Reel Music'\n'20.00': 'MP - Audio Open Reel Spoken < 40 min.'\n'25.00': 'MP - Audio Open Reel Spoken > 40 min.'\n60: 'MP - Audio Wire'\n10: 'MP - DVD Transfer'\n150: 'MP - Film 2k 0 to 6 min.'\n300: 'MP - Film 2k 20 to 40 min.'\n450: 'MP - Film 2k 40 to 60 min.'\n250: 'MP - Film 2k 6 to 20 min.'\n'300.00': 'MP - Film 4k 0 to 6 min.'\n'450.00': 'MP - Film 4k 6 to 20 min.'\n30: 'MP - Video Cassette 30 to 60 min.'\n35: 'MP - Video Cassette 60 to 90 min.'\n'25.001': 'MP - Video Cassette < 30 min.'\n45: 'MP - Video Cassette > 90 min.'\n175: 'MP - Video Open Reel 30 to 60 min.'\n'250.00': 'MP - Video Open Reel 60 to 90 min.'\n125: 'MP - Video Open Reel < 30 min.'\n275: 'MP - Video Open Reel > 90 min.'"

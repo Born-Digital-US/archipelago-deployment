@@ -1,0 +1,29 @@
+uuid: ee635238-1592-4e52-9029-fefdc0bda4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_generation
+    - node.type.lto
+    - taxonomy.vocabulary.lto_generations
+id: node.lto.field_lto_generation
+field_name: field_lto_generation
+entity_type: node
+bundle: lto
+label: Generation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lto_generations: lto_generations
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: voc_lto_generation
+field_type: entity_reference

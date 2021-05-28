@@ -1,0 +1,8 @@
+uuid: d9af2d3a-387d-4967-9ce2-900611bee5ad
+langcode: en
+status: true
+dependencies: {  }
+name: 'Metadata Shares'
+vid: metadata_shares
+description: 'Sites and organizations where CAVPP Partners share their metadata'
+weight: 0

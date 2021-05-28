@@ -1,0 +1,8 @@
+uuid: 1fdbd7be-6877-4e59-8b21-64e28eff703b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Gauge and Format'
+vid: gauge_and_format
+description: 'Values from PBCore instantiationPhysical vocabulary'
+weight: 0

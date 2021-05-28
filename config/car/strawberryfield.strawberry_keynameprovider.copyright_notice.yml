@@ -1,0 +1,11 @@
+uuid: 6724b694-bd2a-4159-a7f3-3bb5cca9b6ce
+langcode: en
+status: true
+dependencies: {  }
+id: copyright_notice
+label: 'Copyright Notice'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_copyright_notice
+  exposed_key: obj_copyright_notice
+active: true

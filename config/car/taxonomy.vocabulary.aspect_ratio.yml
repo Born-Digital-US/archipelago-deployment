@@ -1,0 +1,8 @@
+uuid: faa1b147-b061-4ea1-9bc9-7f68f26a4294
+langcode: en
+status: true
+dependencies: {  }
+name: 'Aspect Ratio'
+vid: aspect_ratio
+description: ''
+weight: 0

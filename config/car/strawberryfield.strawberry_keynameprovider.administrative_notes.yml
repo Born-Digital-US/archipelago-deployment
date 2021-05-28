@@ -1,0 +1,11 @@
+uuid: b4037785-10ed-4246-b4e9-6a2927463c59
+langcode: en
+status: true
+dependencies: {  }
+id: administrative_notes
+label: 'Administrative Notes'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_administrative_notes
+  exposed_key: obj_administrative_notes
+active: true

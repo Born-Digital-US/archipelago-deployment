@@ -1,0 +1,9 @@
+uuid: 9974c68d-b9bd-4803-8884-aacd40ddabc6
+langcode: en
+status: true
+dependencies: {  }
+id: special_handling_webopt
+label: 'Special Handling'
+category: CAR
+likert: false
+options: "15: 'BSLW - two part capture - per part cost'\n50: 'BSLW - four or more part capture - per part cost'\n'0.05': 'BSLW - Tier 1'\n'0.25': 'BSLW - Tier 2'\n'0.60': 'BSLW - Tier 3'\n4: 'MP -  Re-housing: Open Reel '\n2: 'MP -  Re-housing: Disc'\n5: 'MP -  Re-housing: Film'\n'2.00': 'MP -  Re-housing: Cassette'\n'25.50': 'SRLF - Special handling: Half hour'\n51: 'SRLF - Special handling: One hour'\n'12.75': 'SRLF - Special handling: Quarter hour'\n'0.04': 'SRLF - Checksums'\n54: 'SRLF - HDD Transfer'\n'0.15': 'BSLW - Manual image cropping - per image cost'\n'2.50': 'BSLW - Material surface cleaning - per item cost'\n45: 'BSLW - Specialized material prep - per hour cost'"

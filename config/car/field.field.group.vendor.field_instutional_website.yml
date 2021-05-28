@@ -1,0 +1,23 @@
+uuid: ae8302a6-1801-42ec-a554-a74bebf9e476
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_instutional_website
+    - group.type.vendor
+  module:
+    - link
+id: group.vendor.field_instutional_website
+field_name: field_instutional_website
+entity_type: group
+bundle: vendor
+label: 'Organization Websites'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

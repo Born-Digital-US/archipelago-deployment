@@ -1,0 +1,11 @@
+uuid: 322cce57-4d75-48d0-95e5-974afc9472c7
+langcode: en
+status: true
+dependencies: {  }
+id: item_annotations
+label: 'Item Annotations'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_container_item_annotations
+  exposed_key: obj_container_item_annotations
+active: true

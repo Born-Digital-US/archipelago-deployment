@@ -1,0 +1,14 @@
+uuid: 38b3a207-75f8-48a6-b4a8-b635e2cff239
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.vendor
+id: vendor-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: vendor
+permissions_ui: true
+permissions: {  }

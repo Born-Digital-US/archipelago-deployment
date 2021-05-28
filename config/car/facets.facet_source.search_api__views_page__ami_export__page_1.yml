@@ -1,0 +1,9 @@
+uuid: 807a0477-d62a-48fe-84ce-bf819fe56df7
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_page__ami_export__page_1
+name: 'search_api:views_page__ami_export__page_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

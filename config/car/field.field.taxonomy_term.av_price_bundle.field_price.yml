@@ -1,0 +1,23 @@
+uuid: 4ad29133-d9e6-4d04-bdca-abd63a837b2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_price
+    - taxonomy.vocabulary.av_price_bundle
+id: taxonomy_term.av_price_bundle.field_price
+field_name: field_price
+entity_type: taxonomy_term
+bundle: av_price_bundle
+label: Price
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

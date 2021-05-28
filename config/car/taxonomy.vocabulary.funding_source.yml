@@ -2,7 +2,7 @@ uuid: 31e89e4d-82c6-45b7-9f0b-48483614bc61
 langcode: en
 status: true
 dependencies: {  }
-name: 'Funding Source'
+name: 'Funding Sources'
 vid: funding_source
 description: ''
 weight: 0

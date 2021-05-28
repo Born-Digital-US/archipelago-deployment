@@ -1,0 +1,12 @@
+uuid: 2acb7f42-e561-4760-9857-a5a3d1234eb9
+langcode: en
+status: true
+dependencies: {  }
+id: special_handling_av
+label: 'Special Handling - AV'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_special_handling'
+  entity_type: taxonomy_term
+  exposed_key: obj_av_item_parts_ip_special_handling
+active: true

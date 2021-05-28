@@ -1,0 +1,16 @@
+uuid: 00eb577d-8076-4b74-985e-4a900c5a700e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.voc_vendor_services
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.voc_vendor_services
+target_entity_type_id: taxonomy_term
+target_bundle: voc_vendor_services
+default_langcode: site_default
+language_alterable: false

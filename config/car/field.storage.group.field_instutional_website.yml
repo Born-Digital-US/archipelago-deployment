@@ -1,0 +1,23 @@
+uuid: 2cc702c8-f541-420c-9b44-ae5220ab129f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - group
+    - link
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: group.field_instutional_website
+field_name: field_instutional_website
+entity_type: group
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

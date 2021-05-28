@@ -1,0 +1,8 @@
+uuid: 3df0f698-1cc3-4e19-80ac-91162cba52b8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Print Format'
+vid: voc_print_format
+description: 'List of formats for photographic and print based records.'
+weight: 0

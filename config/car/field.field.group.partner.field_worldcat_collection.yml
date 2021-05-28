@@ -1,0 +1,23 @@
+uuid: 5ced6698-b1ae-441a-a3c5-5294b4bb5dfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_worldcat_collection
+    - group.type.partner
+  module:
+    - link
+id: group.partner.field_worldcat_collection
+field_name: field_worldcat_collection
+entity_type: group
+bundle: partner
+label: 'WorldCat Collection'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

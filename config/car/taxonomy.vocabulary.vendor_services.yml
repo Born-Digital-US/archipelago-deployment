@@ -1,0 +1,8 @@
+uuid: 93508609-5c67-475d-bbd3-7a043dcc5ce7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Vendor Digitization Services'
+vid: vendor_services
+description: ''
+weight: 0

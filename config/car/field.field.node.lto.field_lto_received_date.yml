@@ -1,0 +1,21 @@
+uuid: 249ab072-bf97-4b7a-bc6a-6beb1da319b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_received_date
+    - node.type.lto
+  module:
+    - datetime
+id: node.lto.field_lto_received_date
+field_name: field_lto_received_date
+entity_type: node
+bundle: lto
+label: 'Received date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

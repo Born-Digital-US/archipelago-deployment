@@ -1,0 +1,186 @@
+uuid: e43c2673-c26e-4e87-8fb4-5b7f1c0f425b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: m3rOnqyfAPdTQzKhVrrmGE2Kw_7m_YL5ffl_CR63LkY
+id: cls_taxonomy_term_metadata_shares
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: cls_taxonomies
+label: 'Taxonomy terms (Metadata Shares)'
+source:
+  key: cls
+  plugin: d7_taxonomy_term
+  bundle: metadata_shares
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: cls_taxonomy_vocabularies
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - cls_taxonomy_term_pbcore_asset_type
+        - cls_taxonomy_term_funding_source
+        - cls_taxonomy_term_item_sub_part_type
+        - cls_taxonomy_term_vendor_services
+        - cls_taxonomy_term_special_handling
+        - cls_taxonomy_term_production_stream
+        - cls_taxonomy_term_price_bundle
+        - cls_taxonomy_term_lto_generations
+        - cls_taxonomy_term_carrier
+        - cls_taxonomy_term_medium_description
+        - cls_taxonomy_term_object_type
+        - cls_taxonomy_term_asset_type
+        - cls_taxonomy_term_additional_title_type
+        - cls_taxonomy_term_relationship_type
+        - cls_taxonomy_term_language
+        - cls_taxonomy_term_contributor_role
+        - cls_taxonomy_term_base_type
+        - cls_taxonomy_term_alternative_modes
+        - cls_taxonomy_term_track_standard
+        - cls_taxonomy_term_running_speed
+        - cls_taxonomy_term_aspect_ratio
+        - cls_taxonomy_term_colors
+        - cls_taxonomy_term_silent_sound
+        - cls_taxonomy_term_country
+        - cls_taxonomy_term_creator_role
+        - cls_taxonomy_term_media_type
+        - cls_taxonomy_term_metadata_shares
+        - cls_taxonomy_term_grant_cycle
+        - cls_taxonomy_term_spatial_coverage
+        - cls_taxonomy_term_genre
+        - cls_taxonomy_term_subject_entity
+        - cls_taxonomy_term_subject_topic
+        - cls_taxonomy_term_creator_contributor
+        - cls_taxonomy_term_generation
+        - cls_taxonomy_term_gauge_and_format
+        - cls_taxonomy_term_tags
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: metadata_shares
+migration_dependencies:
+  required:
+    - cls_taxonomy_vocabularies
+  optional:
+    - cls_taxonomy_vocabularies
+    - cls_taxonomy_term_tags
+    - cls_taxonomy_term_gauge_and_format
+    - cls_taxonomy_term_generation
+    - cls_taxonomy_term_creator_contributor
+    - cls_taxonomy_term_subject_topic
+    - cls_taxonomy_term_subject_entity
+    - cls_taxonomy_term_genre
+    - cls_taxonomy_term_spatial_coverage
+    - cls_taxonomy_term_grant_cycle
+    - cls_taxonomy_term_metadata_shares
+    - cls_taxonomy_term_media_type
+    - cls_taxonomy_term_creator_role
+    - cls_taxonomy_term_country
+    - cls_taxonomy_term_silent_sound
+    - cls_taxonomy_term_colors
+    - cls_taxonomy_term_aspect_ratio
+    - cls_taxonomy_term_running_speed
+    - cls_taxonomy_term_track_standard
+    - cls_taxonomy_term_alternative_modes
+    - cls_taxonomy_term_base_type
+    - cls_taxonomy_term_contributor_role
+    - cls_taxonomy_term_language
+    - cls_taxonomy_term_relationship_type
+    - cls_taxonomy_term_additional_title_type
+    - cls_taxonomy_term_asset_type
+    - cls_taxonomy_term_object_type
+    - cls_taxonomy_term_medium_description
+    - cls_taxonomy_term_carrier
+    - cls_taxonomy_term_lto_generations
+    - cls_taxonomy_term_price_bundle
+    - cls_taxonomy_term_production_stream
+    - cls_taxonomy_term_special_handling
+    - cls_taxonomy_term_vendor_services
+    - cls_taxonomy_term_item_sub_part_type
+    - cls_taxonomy_term_funding_source
+    - cls_taxonomy_term_pbcore_asset_type
+    - cls_taxonomy_term_pbcore_asset_type
+    - cls_taxonomy_term_funding_source
+    - cls_taxonomy_term_item_sub_part_type
+    - cls_taxonomy_term_vendor_services
+    - cls_taxonomy_term_special_handling
+    - cls_taxonomy_term_production_stream
+    - cls_taxonomy_term_price_bundle
+    - cls_taxonomy_term_lto_generations
+    - cls_taxonomy_term_carrier
+    - cls_taxonomy_term_medium_description
+    - cls_taxonomy_term_object_type
+    - cls_taxonomy_term_asset_type
+    - cls_taxonomy_term_additional_title_type
+    - cls_taxonomy_term_relationship_type
+    - cls_taxonomy_term_language
+    - cls_taxonomy_term_contributor_role
+    - cls_taxonomy_term_base_type
+    - cls_taxonomy_term_alternative_modes
+    - cls_taxonomy_term_track_standard
+    - cls_taxonomy_term_running_speed
+    - cls_taxonomy_term_aspect_ratio
+    - cls_taxonomy_term_colors
+    - cls_taxonomy_term_silent_sound
+    - cls_taxonomy_term_country
+    - cls_taxonomy_term_creator_role
+    - cls_taxonomy_term_media_type
+    - cls_taxonomy_term_metadata_shares
+    - cls_taxonomy_term_grant_cycle
+    - cls_taxonomy_term_spatial_coverage
+    - cls_taxonomy_term_genre
+    - cls_taxonomy_term_subject_entity
+    - cls_taxonomy_term_subject_topic
+    - cls_taxonomy_term_creator_contributor
+    - cls_taxonomy_term_generation
+    - cls_taxonomy_term_gauge_and_format
+    - cls_taxonomy_term_tags

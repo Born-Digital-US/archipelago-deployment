@@ -1,0 +1,8 @@
+uuid: 42f9b755-9a54-4feb-813e-87a169d7e1ee
+langcode: en
+status: true
+dependencies: {  }
+name: 'LTO Generation'
+vid: voc_lto_generation
+description: 'Denotes the LTO generation for LTO Tape records. '
+weight: 0

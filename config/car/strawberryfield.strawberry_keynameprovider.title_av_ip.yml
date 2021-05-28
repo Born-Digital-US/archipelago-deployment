@@ -1,0 +1,11 @@
+uuid: 6ff53d25-727d-45a7-804f-6ed13c64ef75
+langcode: en
+status: true
+dependencies: {  }
+id: title_av_ip
+label: 'Title - AV IP'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_item_part_label'
+  exposed_key: obj_av_item_parts_ip_item_part_label
+active: true

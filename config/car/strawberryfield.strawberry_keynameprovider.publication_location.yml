@@ -1,0 +1,11 @@
+uuid: e6fbf7d8-2a0e-41d6-aec7-7c5cc6b8d40d
+langcode: en
+status: true
+dependencies: {  }
+id: publication_location
+label: 'Publication Location'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_publication_location[*].label'
+  exposed_key: obj_publication_location_label
+active: true

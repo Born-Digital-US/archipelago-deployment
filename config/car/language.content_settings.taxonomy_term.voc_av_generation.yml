@@ -1,0 +1,16 @@
+uuid: 8884d6ed-a2c9-4a72-b128-1e708eaa440b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.voc_av_generation
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.voc_av_generation
+target_entity_type_id: taxonomy_term
+target_bundle: voc_av_generation
+default_langcode: site_default
+language_alterable: false

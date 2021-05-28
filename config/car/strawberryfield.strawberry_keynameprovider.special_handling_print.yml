@@ -1,0 +1,12 @@
+uuid: 9334f4e7-9e67-4219-8995-a6eec60ed0e8
+langcode: en
+status: true
+dependencies: {  }
+id: special_handling_print
+label: 'Special Handling - Print'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: 'obj_print_item_parts[*].ip_print_special_handling'
+  entity_type: taxonomy_term
+  exposed_key: obj_print_item_parts_ip_print_special_handling
+active: true

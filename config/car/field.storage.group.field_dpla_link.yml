@@ -1,0 +1,23 @@
+uuid: 8b692e3b-c60f-43b2-9ba6-0b7219778a7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - group
+    - link
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: group.field_dpla_link
+field_name: field_dpla_link
+entity_type: group
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

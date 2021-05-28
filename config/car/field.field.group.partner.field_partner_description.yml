@@ -11,7 +11,7 @@ id: group.partner.field_partner_description
 field_name: field_partner_description
 entity_type: group
 bundle: partner
-label: Description
+label: 'Collection Description'
 description: 'Contents of this field display on the collection description page of California Revealed.'
 required: false
 translatable: false

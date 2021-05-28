@@ -25,9 +25,9 @@ content:
   field_descriptive_metadata:
     weight: 3
     settings:
-      webform_id: car
+      webform_id: car_object_metadata_megapelago
       placeholder: 'CAR Object Metadata'
-      render_always: false
+      render_always: true
       hide_cancel: false
     third_party_settings: {  }
     type: strawberryfield_webform_inline_widget

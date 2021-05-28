@@ -1,0 +1,15 @@
+uuid: 2045d6ef-2a81-4c09-9897-7e9d691e117e
+langcode: en
+status: true
+dependencies: {  }
+name: partner_logo
+label: 'Partner logo'
+effects:
+  6e99ff27-46e8-469e-a962-5272565b2f68:
+    uuid: 6e99ff27-46e8-469e-a962-5272565b2f68
+    id: image_scale
+    weight: 1
+    data:
+      width: 240
+      height: null
+      upscale: true

@@ -1,0 +1,10 @@
+uuid: 055f866c-427e-468c-a498-05c429358a28
+langcode: en
+status: true
+dependencies: {  }
+id: av_item_parts
+label: 'AV Item Parts'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle AV Item Parts'
+behavior_plugins: {  }

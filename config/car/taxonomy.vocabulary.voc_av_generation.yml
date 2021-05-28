@@ -1,0 +1,8 @@
+uuid: 6dbc161b-d36f-4b23-8cf9-76f9a940648f
+langcode: en
+status: true
+dependencies: {  }
+name: 'AV Generation'
+vid: voc_av_generation
+description: 'Identifies the use type and provenance of the instantiation.'
+weight: 0

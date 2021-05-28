@@ -1,0 +1,11 @@
+uuid: c17080ef-aad4-4adb-be54-ce267ad6856b
+langcode: en
+status: true
+dependencies: {  }
+id: overall_image_and_sound_quality
+label: 'Overall Image and Sound Quality'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_overall_image_sound_qc.value
+  exposed_key: obj_overall_image_sound_qc_value
+active: true

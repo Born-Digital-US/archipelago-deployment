@@ -1,0 +1,8 @@
+uuid: cfbfedc5-2360-4f9b-be3c-f99f0ca3c9e3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Mail Carrier'
+vid: mail_carrier
+description: 'Service or method used to deliver materials from one location to another'
+weight: 0

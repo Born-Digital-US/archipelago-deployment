@@ -1,0 +1,11 @@
+uuid: f6f4c060-615e-4f38-8198-b52300992891
+langcode: en
+status: true
+dependencies: {  }
+id: ca_r_notes_for_partner
+label: 'CA-R Notes for Partner'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_car_notes_for_partner
+  exposed_key: obj_car_notes_for_partner
+active: true

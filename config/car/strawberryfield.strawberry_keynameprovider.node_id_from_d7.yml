@@ -1,0 +1,11 @@
+uuid: bc4e1ffa-15a5-4378-8153-4b256ccbe55b
+langcode: en
+status: true
+dependencies: {  }
+id: node_id_from_d7
+label: 'Node ID from D7'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_node_id_from_d7
+  exposed_key: obj_node_id_from_d7
+active: true

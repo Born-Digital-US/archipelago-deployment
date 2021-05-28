@@ -1,0 +1,27 @@
+uuid: f934fa48-b055-43c3-aa40-e13ab431387b
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+  module:
+    - field_layout
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: 77Ye1kR-P6AaiGfEO8mnXNSr7nqtnP3PiiVBwJeGGMI
+id: comment.comment.default
+targetEntityType: comment
+bundle: comment
+mode: default
+content:
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

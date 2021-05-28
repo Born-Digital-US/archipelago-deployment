@@ -1,0 +1,11 @@
+uuid: fe27c41a-4d08-4778-8d29-1551e3933f29
+langcode: en
+status: true
+dependencies: {  }
+id: extent_dimensions_length
+label: 'Extent dimensions - Length'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_print_item_parts[*].ip_ext_dim_length'
+  exposed_key: obj_print_item_parts_ip_ext_dim_length
+active: true

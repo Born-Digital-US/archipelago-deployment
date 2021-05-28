@@ -1,0 +1,11 @@
+uuid: 23640e73-2f46-4832-b96d-20263b279cd6
+langcode: en
+status: true
+dependencies: {  }
+id: condition
+label: Condition
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_condition_list.label
+  exposed_key: obj_condition_list
+active: true

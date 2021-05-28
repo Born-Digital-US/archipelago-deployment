@@ -1,0 +1,11 @@
+uuid: 480bdc65-d4a4-4fca-b3b0-653c02dea2d5
+langcode: en
+status: true
+dependencies: {  }
+id: extent_number_of_parts_print
+label: 'Extent number of parts - print'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_print_item_parts[*].ip_extent_count'
+  exposed_key: obj_print_item_parts_ip_extent_count
+active: true

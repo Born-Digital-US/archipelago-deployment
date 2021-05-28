@@ -1,0 +1,11 @@
+uuid: dd9d4f6b-6bb1-41c7-bfa0-f4a090a72fb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shipment
+id: node.shipment
+target_entity_type_id: node
+target_bundle: shipment
+default_langcode: site_default
+language_alterable: false

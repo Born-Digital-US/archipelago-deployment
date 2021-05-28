@@ -1,0 +1,11 @@
+uuid: 1bb3ae4c-50b2-4cd6-951c-78b0c33e34c5
+langcode: en
+status: true
+dependencies: {  }
+id: qc_state
+label: 'QC State'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_qc_state
+  exposed_key: obj_qc_state
+active: true

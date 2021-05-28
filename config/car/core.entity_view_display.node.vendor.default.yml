@@ -1,0 +1,65 @@
+uuid: 15632744-5bc3-48a8-be23-31bbc5397339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vendor.body
+    - field.field.node.vendor.field_vendor_address
+    - field.field.node.vendor.field_vendor_email
+    - field.field.node.vendor.field_vendor_phone
+    - field.field.node.vendor.field_vendor_services
+    - node.type.vendor
+  module:
+    - address
+    - text
+    - user
+id: node.vendor.default
+targetEntityType: node
+bundle: vendor
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_vendor_address:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_vendor_email:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_vendor_phone:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_vendor_services:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -16,7 +16,11 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  car_ami_extensions: 0
+  chosen: 0
+  chosen_lib: 0
   ckeditor: 0
+  cls_migrate: 0
   codemirror_editor: 0
   color: 0
   comment: 0
@@ -31,6 +35,7 @@ module:
   context: 0
   context_ui: 0
   contextual: 0
+  csv_serialization: 0
   ctools: 0
   ctools_views: 0
   datetime: 0
@@ -46,10 +51,12 @@ module:
   editor: 0
   entity: 0
   entity_reference: 0
+  entity_reference_revisions: 0
   facets: 0
   facets_range_widget: 0
   facets_rest: 0
   field: 0
+  field_group: 0
   field_layout: 0
   field_permissions: 0
   field_ui: 0
@@ -80,7 +87,11 @@ module:
   media_library: 0
   menu_ui: 0
   migrate: 0
+  migrate_devel: 0
   migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
   moderated_content_bulk_publish: 0
   module_missing_message_fixer: 0
   node: 0
@@ -125,8 +136,10 @@ module:
   variationcache: 0
   views_bootstrap: 0
   views_bulk_operations: 0
+  views_data_export: 0
   views_ui: 0
   webform: 0
+  webform_car_ip_data_for_vendor: 0
   webform_examples_accessibility: 0
   webform_image_select: 0
   webform_node: 0
@@ -136,7 +149,6 @@ module:
   webform_templates: 0
   webform_ui: 0
   webform_views: 0
-  webprofiler: 0
   workflow: 0
   workflow_ui: 0
   workflows: 0
@@ -147,6 +159,7 @@ module:
   ds_extras: 2
   content_translation: 10
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable: 0

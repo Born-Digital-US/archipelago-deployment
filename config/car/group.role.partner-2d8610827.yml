@@ -8,7 +8,7 @@ dependencies:
     config:
       - user.role.partner
 id: partner-2d8610827
-label: Partner
+label: partner
 weight: 5
 internal: true
 audience: outsider

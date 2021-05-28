@@ -1,0 +1,11 @@
+uuid: 0d60e4f2-e289-4909-83dc-36de13a38a5f
+langcode: en
+status: true
+dependencies: {  }
+id: production_stream_still_image
+label: 'Production Stream Still Image'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_si_prd_stream
+  exposed_key: obj_si_prd_stream
+active: true

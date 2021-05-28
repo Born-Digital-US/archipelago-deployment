@@ -1,0 +1,11 @@
+uuid: a45f5dd4-7063-486f-8ea2-f5a2f77079df
+langcode: en
+status: true
+dependencies: {  }
+id: country_of_creation_label
+label: 'Country of Creation - label'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_country_of_creation.label
+  exposed_key: obj_country_of_creation_label
+active: true
