@@ -13,7 +13,7 @@ migration_group: cls_nodes
 label: 'Node complete (Partner Set)'
 source:
   key: cls
-  plugin: d7_node_complete
+  plugin: cls_partner_set
   node_type: partner_set
 process:
   nid:
@@ -107,6 +107,9 @@ process:
       source: field_grant_cycle
       process:
         target_id: tid
+        plugin: migration_lookup
+        migration: cls_taxonomy_term_grant_cycle
+        source: tid
   field_ts_dec_orig_return_ship:
     -
       plugin: get
@@ -247,10 +250,18 @@ process:
       source: field_ts_stream
       process:
         target_id: tid
-#  og_group_ref:
-#    -
-#      plugin: get
-#      source: og_group_ref
+        plugin: migration_lookup
+        migration: cls_taxonomy_term_production_stream
+        source: tid
+  field_ts_partner:
+    -
+      plugin: sub_process
+      source: gids
+      process:
+        plugin: migration_lookup
+        migration: cls_node_complete_partner
+        target_id: gid
+
   field_ts_partner_wants_copies:
     -
       plugin: get
@@ -265,10 +276,28 @@ process:
           from_format: 'Y-m-d H:i:s'
           to_format: Y-m-d
           source: value
+  field_ts_cost_estimates:
+    -
+      plugin: sub_process
+      source: cost_estimates
+      process:
+        value: json
+  field_ts_wfs_counts:
+    -
+      plugin: sub_process
+      source: wfs_counts
+      process:
+        value: json
+  field_ts_extents_summary:
+    -
+      plugin: sub_process
+      source: extents_data
+      process:
+        value: json
 destination:
   plugin: 'entity_complete:node'
   translations: true
-  bundle: partner_set
+  default_bundle: partner_set
 migration_dependencies:
   required:
     - cls_user
