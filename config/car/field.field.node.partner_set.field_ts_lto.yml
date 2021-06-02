@@ -1,0 +1,28 @@
+uuid: bdbaae04-242d-41aa-9fac-66ba4be37743
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_lto
+    - node.type.lto
+    - node.type.partner_set
+id: node.partner_set.field_ts_lto
+field_name: field_ts_lto
+entity_type: node
+bundle: partner_set
+label: LTO
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      lto: lto
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

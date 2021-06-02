@@ -1,0 +1,21 @@
+uuid: b5be1bff-55a5-42f9-ad59-6e05235b0ea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_expected_delivery
+    - node.type.partner_set
+  module:
+    - datetime
+id: node.partner_set.field_ts_expected_delivery
+field_name: field_ts_expected_delivery
+entity_type: node
+bundle: partner_set
+label: 'Material Due Date'
+description: 'The date that materials are expected to be delivered from the Partner to CAR'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

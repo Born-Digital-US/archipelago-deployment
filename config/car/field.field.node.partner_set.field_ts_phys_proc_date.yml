@@ -1,0 +1,21 @@
+uuid: 3ab0617a-c369-4fe1-ba82-385640a84c2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_phys_proc_date
+    - node.type.partner_set
+  module:
+    - datetime
+id: node.partner_set.field_ts_phys_proc_date
+field_name: field_ts_phys_proc_date
+entity_type: node
+bundle: partner_set
+label: 'Physical processed date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

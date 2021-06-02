@@ -1,0 +1,21 @@
+uuid: 172c555e-4b16-4a03-b8a4-73bfc4500b9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_ts_partner_qc_deadli
+    - node.type.partner_set
+  module:
+    - datetime
+id: node.partner_set.field_field_ts_partner_qc_deadli
+field_name: field_field_ts_partner_qc_deadli
+entity_type: node
+bundle: partner_set
+label: 'QC deadline date / "Time to order files" email date'
+description: 'Populated automatically. A rule sends an email at this date telling the partner that QC is now closed, and that they can order files.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

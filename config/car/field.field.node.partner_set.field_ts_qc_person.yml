@@ -1,0 +1,28 @@
+uuid: 2a36200e-4c21-409e-8a3b-947378344973
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_qc_person
+    - node.type.partner_set
+id: node.partner_set.field_ts_qc_person
+field_name: field_ts_qc_person
+entity_type: node
+bundle: partner_set
+label: 'QC Person'
+description: 'Start typing the user name of the person who completed quality control and pick from the displayed choices.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

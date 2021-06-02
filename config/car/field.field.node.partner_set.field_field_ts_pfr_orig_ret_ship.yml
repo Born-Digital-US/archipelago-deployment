@@ -1,0 +1,28 @@
+uuid: 4e85e533-83e7-4484-a0a8-b18dc75d1395
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_ts_pfr_orig_ret_ship
+    - node.type.partner_set
+    - node.type.shipment
+id: node.partner_set.field_field_ts_pfr_orig_ret_ship
+field_name: field_field_ts_pfr_orig_ret_ship
+entity_type: node
+bundle: partner_set
+label: 'Originals return shipment'
+description: 'Record shipments of originals back to partner.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      shipment: shipment
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

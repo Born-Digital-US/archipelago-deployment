@@ -1,0 +1,28 @@
+uuid: 8ce6d6b9-b14c-4801-b292-177944bc9260
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_pub_upload_person
+    - node.type.partner_set
+id: node.partner_set.field_ts_pub_upload_person
+field_name: field_ts_pub_upload_person
+entity_type: node
+bundle: partner_set
+label: 'Upload person'
+description: 'Start typing the user name of the person who uploaded the item to internet archive, and then select from the names found.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

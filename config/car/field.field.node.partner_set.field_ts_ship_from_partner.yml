@@ -1,0 +1,28 @@
+uuid: 45a6f2d7-24c3-4fe1-9556-35e8e27740f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_ship_from_partner
+    - node.type.partner_set
+    - node.type.shipment
+id: node.partner_set.field_ts_ship_from_partner
+field_name: field_ts_ship_from_partner
+entity_type: node
+bundle: partner_set
+label: 'Shipment from partner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      shipment: shipment
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
