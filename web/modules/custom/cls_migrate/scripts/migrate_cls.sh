@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# run this from the root directory so that the files rsync will happen in the right place. E.g. `sh web/modules/custom/cls_migrate/scripts/migrate_cls.sh`
+
 # rsync the files directory to /web/migrate_files
 rsync -rltv --exclude=js  --exclude=css --exclude=backup_migrate/* --exclude=feeds/* islandora@repository.californialightandsound.org:/opt/data/apache_cls/html/sites/default/files/ web/migrate_files/
 docker exec -it esmero-php bash -c "drush config-split:import car -y"
@@ -23,5 +25,6 @@ docker exec -it esmero-php bash -c "drush mim cls_user"
 docker exec -it esmero-php bash -c "drush mim cls_node_complete_vendor"
 docker exec -it esmero-php bash -c "drush mim cls_node_complete_hdd"
 docker exec -it esmero-php bash -c "drush mim cls_node_complete_shipment"
+docker exec -it esmero-php bash -c "drush mim cls_paragraph_inspection"
 docker exec -it esmero-php bash -c "drush mim cls_node_complete_lto"
 docker exec -it esmero-php bash -c "drush mim cls_node_complete_partner_set"
