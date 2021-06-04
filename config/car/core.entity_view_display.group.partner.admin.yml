@@ -1,8 +1,9 @@
-uuid: 0ed2dae0-d2a5-4d44-80b1-6f270b835814
+uuid: 7cd7808f-9cc1-4c32-96c8-788433caa7e0
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.group.admin
     - field.field.group.partner.field_ca_r_node_id
     - field.field.group.partner.field_calisphere_collection
     - field.field.group.partner.field_dpla_link
@@ -41,17 +42,19 @@ third_party_settings:
         - field_instutional_website
       parent_name: ''
       weight: 3
-      format_type: fieldset
+      format_type: details
       region: content
       format_settings:
-        description: ''
         id: ''
         classes: ''
+        description: ''
+        open: false
+        required_fields: false
       label: 'Contact Info'
-id: group.partner.default
+id: group.partner.admin
 targetEntityType: group
 bundle: partner
-mode: default
+mode: admin
 content:
   field_institution_email:
     weight: 11

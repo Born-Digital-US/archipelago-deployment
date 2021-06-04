@@ -8,10 +8,9 @@ dependencies:
     - user
     - strawberryfield
     - search_api
-    - file
+    - group
   config:
     - field.storage.node.field_descriptive_metadata
-    - field.storage.node.field_tags
     - search_api.server.esmero_solr_7_5
     - core.entity_view_mode.node.digital_object_image_only_for_carousel
     - core.entity_view_mode.node.search_index
@@ -148,14 +147,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_descriptive_metadata
-  field_tags:
-    label: Tags
-    datasource_id: 'entity:node'
-    property_path: field_tags
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_tags
   file_uuid:
     label: 'Source File UUID (first one passed in a Post Processor chain)'
     datasource_id: strawberryfield_flavor_datasource
@@ -442,11 +433,20 @@ field_settings:
     property_path: 'target_id:uuid'
     type: string
 datasource_settings:
-  'entity:file': {  }
-  'entity:node':
+  'entity:group':
     bundles:
+      default: false
+      selected:
+        - partner
+    languages:
       default: true
       selected: {  }
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - digital_object
+        - digital_object_collection
     languages:
       default: true
       selected: {  }
