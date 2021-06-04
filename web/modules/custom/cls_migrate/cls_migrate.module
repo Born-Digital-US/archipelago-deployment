@@ -27,7 +27,8 @@ function cls_migrate_migrate_cls_taxonomy_vocabularies_prepare_row(Row $row, Mig
       'metadata_shares',
       'production_stream',
       'running_speed',
-      'vendor_services'
+      'vendor_services',
+      'lto_generations',
     ];
 
 

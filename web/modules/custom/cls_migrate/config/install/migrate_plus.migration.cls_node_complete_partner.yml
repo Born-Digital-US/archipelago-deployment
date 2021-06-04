@@ -13,6 +13,7 @@ migration_group: cls_nodes
 label: 'Node complete (Partner)'
 source:
   key: cls
+#  key: cls_remote
   plugin: d7_node_complete
   node_type: partner
 process:
@@ -20,10 +21,9 @@ process:
   label: title
   path: alias
   uid:
-    plugin: migration_lookup
-    migration:
-      - cls_user
-    source: uid
+    -
+      plugin: default_value
+      default_value: 1
   status:
     -
       plugin: get
@@ -72,15 +72,15 @@ process:
     -
       plugin: get
       source: field_marc_code
-  field_shipping_address:
+  field_partner_shipping_address:
     -
       plugin: addressfield
       source: field_shipping_address
-  field_phone_number:
+  field_instutional_phone_number:
     -
       plugin: get
       source: field_phone_number
-  field_institution_url:
+  field_instutional_website:
     -
       plugin: field_link
       source: field_institution_url
@@ -90,7 +90,7 @@ process:
       source: field_ia_email
       process:
         value: email
-  field_file_backups:
+  field_file_backup:
     -
       plugin: get
       source: field_file_backups
@@ -98,7 +98,7 @@ process:
     -
       plugin: get
       source: field_partner_other
-  field_ia_collection:
+  field_ia_collection_names:
     -
       plugin: get
       source: field_ia_collection
@@ -120,7 +120,7 @@ process:
     -
       plugin: field_link
       source: field_calisphere_url
-  field_dpla_url:
+  field_dpla_link:
     -
       plugin: field_link
       source: field_dpla_url
@@ -128,7 +128,7 @@ process:
     -
       plugin: get
       source: field_push_to_cr
-  field_collection_description:
+  field_partner_description:
     -
       plugin: get
       source: field_collection_description
@@ -136,10 +136,23 @@ process:
     -
       plugin: get
       source: field_partner_agreement_signed
-  field_institutional_rights_state:
+  field_instutional_rights_stateme:
     -
       plugin: get
       source: field_institutional_rights_state
+  field_partner_logo:
+    -
+      plugin: sub_process
+      source: field_partner_logo
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: cls_file
+          source: fid
+        alt: alt
+        title: title
+        height: height
+        width: width
 destination:
   plugin: 'entity:group'
 #  translations: true
@@ -147,5 +160,7 @@ destination:
 migration_dependencies:
   required:
     - cls_taxonomy_term_metadata_shares
+#    - cls_user
+    - cls_file
   optional:
     - cls_comment_field_instance

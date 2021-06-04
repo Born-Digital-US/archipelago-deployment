@@ -2,7 +2,11 @@
 
 namespace Drupal\cls_migrate\Plugin\migrate\destination;
 
+use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\Core\Field\FieldTypePluginManagerInterface;
+use Drupal\Core\Password\PasswordInterface;
 use Drupal\migrate\Annotation\MigrateDestination;
 use Drupal\migrate\Row;
 use Drupal\group\Entity\Group;
@@ -30,6 +34,12 @@ class EntityUserPostSave extends EntityUser {
    * @var array
    */
   private $groups;
+  private $idmap;
+
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration, EntityStorageInterface $storage, array $bundles, EntityFieldManagerInterface $entity_field_manager, FieldTypePluginManagerInterface $field_type_manager, PasswordInterface $password) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition, $migration, $storage, $bundles, $entity_field_manager, $field_type_manager, $password);
+    $this->idmap = \Drupal::service('plugin.manager.migration')->createInstance('cls_node_complete_partner')->getIdMap();
+  }
 
 
   /**
@@ -88,20 +98,23 @@ class EntityUserPostSave extends EntityUser {
     foreach ($this->groups as $membership) {
 
       if (!empty($membership['gid'])) {
-        $group = Group::load($membership['gid']);
-        if ($group !== NULL) {
-          $group->addMember($entity, ['group_roles' => [$membership['role']]]);
-          // Manually set in the created date. Could not figure out how
-          // to do this using the addMember $values argument.
-          // Note that D7 og_membership does not provide a changed date, so we don't try to set that.
-          // $group->addMember($entity, ['group_roles' => [$membership['role'], 'created' => $membership['created']]]);
-          \Drupal::database()
-            ->update('group_content_field_data')
-            ->fields(['created' => $membership['created']])
-            ->condition('gid', $membership['gid'])
-            ->condition('type', 'partner-group_membership')
-            ->condition('entity_id', $entity->id())
-            ->execute();
+        $destination_ids = $this->idmap->lookupDestinationIds([$membership['gid']]);
+        if(!empty($destination_ids[0][0])) {
+          $group = Group::load($destination_ids[0][0]);
+          if ($group !== NULL) {
+            $group->addMember($entity, ['group_roles' => [$membership['role']]]);
+            // Manually set in the created date. Could not figure out how
+            // to do this using the addMember $values argument.
+            // Note that D7 og_membership does not provide a changed date, so we don't try to set that.
+            // $group->addMember($entity, ['group_roles' => [$membership['role'], 'created' => $membership['created']]]);
+            \Drupal::database()
+              ->update('group_content_field_data')
+              ->fields(['created' => $membership['created']])
+              ->condition('gid', $membership['gid'])
+              ->condition('type', 'partner-group_membership')
+              ->condition('entity_id', $entity->id())
+              ->execute();
+          }
         }
       }
     }
