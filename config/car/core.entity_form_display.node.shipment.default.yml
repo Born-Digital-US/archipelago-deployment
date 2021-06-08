@@ -3,14 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.shipment.field_descriptive_metadata
+    - field.field.node.shipment.body
+    - field.field.node.shipment.field_ship_date_recd
+    - field.field.node.shipment.field_ship_date_sent
+    - field.field.node.shipment.field_shipment_from
+    - field.field.node.shipment.field_shipment_to
     - node.type.shipment
   module:
     - content_moderation
+    - datetime
     - field_layout
     - layout_discovery
     - path
-    - webform_strawberryfield
+    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -21,21 +26,53 @@ targetEntityType: node
 bundle: shipment
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 122
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_descriptive_metadata:
-    weight: 121
-    settings:
-      webform_id: car_shipment
-      placeholder: ''
-      render_always: true
-      hide_cancel: false
+  field_ship_date_recd:
+    weight: 124
+    settings: {  }
     third_party_settings: {  }
-    type: strawberryfield_webform_inline_widget
+    type: datetime_default
+    region: content
+  field_ship_date_sent:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_shipment_from:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_shipment_to:
+    weight: 128
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select

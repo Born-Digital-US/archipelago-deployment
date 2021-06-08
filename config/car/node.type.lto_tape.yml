@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'LTO Tape'
 type: lto_tape
-description: 'Individual tapes within the California Revealed long term storage repository. Used to record information about tape ingest, structure, relationships to individual objects, annual integrity checks, and migration to new tape generations. '
+description: REMOVE
 help: ''
 new_revision: true
 preview_mode: 1

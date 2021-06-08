@@ -3,23 +3,61 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.shipment.field_descriptive_metadata
+    - field.field.node.shipment.body
+    - field.field.node.shipment.field_ship_date_recd
+    - field.field.node.shipment.field_ship_date_sent
+    - field.field.node.shipment.field_shipment_from
+    - field.field.node.shipment.field_shipment_to
     - node.type.shipment
   module:
-    - strawberryfield
+    - datetime
+    - text
     - user
 id: node.shipment.default
 targetEntityType: node
 bundle: shipment
 mode: default
 content:
-  field_descriptive_metadata:
-    weight: 101
+  body:
+    label: hidden
+    type: text_default
+    weight: 102
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ship_date_recd:
+    weight: 104
     label: above
     settings:
-      limit_access: edit
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
-    type: strawberry_default_formatter
+    type: datetime_default
+    region: content
+  field_ship_date_sent:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_shipment_from:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_shipment_to:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 100

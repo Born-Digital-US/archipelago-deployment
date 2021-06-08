@@ -7,11 +7,11 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - main
-    parent: 'main:'
+      - main-menu
+    parent: 'main-menu:0:'
 name: Shipment
 type: shipment
-description: ''
+description: 'Used to track shipments.'
 help: ''
 new_revision: true
 preview_mode: 1

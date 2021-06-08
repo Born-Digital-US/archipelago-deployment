@@ -4,14 +4,17 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.shipment
-    - field.field.node.shipment.field_descriptive_metadata
+    - field.field.node.shipment.body
+    - field.field.node.shipment.field_ship_date_recd
+    - field.field.node.shipment.field_ship_date_sent
+    - field.field.node.shipment.field_shipment_from
+    - field.field.node.shipment.field_shipment_to
     - node.type.shipment
   module:
     - content_moderation
     - field_layout
     - layout_discovery
     - path
-    - webform_strawberryfield
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -28,16 +31,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_descriptive_metadata:
-    weight: 121
-    settings:
-      webform_id: car_shipment
-      placeholder: ''
-      render_always: true
-      hide_cancel: false
-    third_party_settings: {  }
-    type: strawberryfield_webform_inline_widget
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -96,4 +89,9 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  body: true
+  field_ship_date_recd: true
+  field_ship_date_sent: true
+  field_shipment_from: true
+  field_shipment_to: true

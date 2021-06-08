@@ -7,6 +7,7 @@ dependencies:
     - field.field.group.partner.field_calisphere_collection
     - field.field.group.partner.field_dpla_link
     - field.field.group.partner.field_file_backup
+    - field.field.group.partner.field_hero_image
     - field.field.group.partner.field_home_movie_registry
     - field.field.group.partner.field_ia_collection_names
     - field.field.group.partner.field_institution_email
@@ -15,104 +16,61 @@ dependencies:
     - field.field.group.partner.field_instutional_website
     - field.field.group.partner.field_marc_code
     - field.field.group.partner.field_metadata_share_exemptions
+    - field.field.group.partner.field_metadata_shares
     - field.field.group.partner.field_partner_agree_or_file_req
     - field.field.group.partner.field_partner_description
+    - field.field.group.partner.field_partner_logo
     - field.field.group.partner.field_partner_shipping_address
+    - field.field.group.partner.field_pi_lead_text
     - field.field.group.partner.field_worldcat_collection
     - group.type.partner
   module:
     - address
+    - field_group
+    - image
     - link
+    - telephone
     - text
+third_party_settings:
+  field_group:
+    group_contact_info:
+      children:
+        - field_partner_shipping_address
+        - field_instutional_phone_number
+        - field_institution_email
+        - field_instutional_website
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: ''
+        id: ''
+        classes: ''
+      label: 'Contact Info'
 id: group.partner.default
 targetEntityType: group
 bundle: partner
 mode: default
 content:
-  field_ca_r_node_id:
-    weight: 9
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_calisphere_collection:
-    weight: 6
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_dpla_link:
-    weight: 7
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_file_backup:
-    weight: 10
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_home_movie_registry:
-    weight: 8
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
-  field_ia_collection_names:
-    weight: 4
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_institution_email:
-    weight: 2
-    label: above
+    weight: 11
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_instutional_phone_number:
-    weight: -1
-    label: above
-    settings: {  }
+    weight: 10
+    label: visually_hidden
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_instutional_rights_stateme:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
+    type: telephone_link
     region: content
   field_instutional_website:
-    weight: 0
-    label: above
+    weight: 12
+    label: visually_hidden
     settings:
       trim_length: 80
       url_only: false
@@ -122,60 +80,33 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-  field_marc_code:
-    weight: -4
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_metadata_share_exemptions:
-    weight: 11
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_partner_agree_or_file_req:
-    type: entity_reference_entity_view
-    weight: 3
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
   field_partner_description:
-    weight: -3
-    label: above
+    weight: 1
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_partner_logo:
+    type: image
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
   field_partner_shipping_address:
-    weight: -2
-    label: above
+    weight: 9
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
-  field_worldcat_collection:
-    weight: 5
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
   label:
-    label: hidden
+    label: visually_hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
@@ -183,6 +114,20 @@ content:
 hidden:
   changed: true
   created: true
+  field_ca_r_node_id: true
+  field_calisphere_collection: true
+  field_dpla_link: true
+  field_file_backup: true
+  field_hero_image: true
+  field_home_movie_registry: true
+  field_ia_collection_names: true
+  field_instutional_rights_stateme: true
+  field_marc_code: true
+  field_metadata_share_exemptions: true
+  field_metadata_shares: true
+  field_partner_agree_or_file_req: true
+  field_pi_lead_text: true
+  field_worldcat_collection: true
   langcode: true
   search_api_excerpt: true
   uid: true
