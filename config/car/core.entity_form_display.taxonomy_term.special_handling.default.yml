@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.special_handling.field_price
     - taxonomy.vocabulary.special_handling
   module:
     - field_layout
@@ -26,6 +27,13 @@ content:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
+  field_price:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   name:
     type: string_textfield
     weight: 0
@@ -34,13 +42,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  translation:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
-  field_price: true
   langcode: true
   path: true
   status: true

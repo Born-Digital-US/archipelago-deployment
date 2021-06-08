@@ -1,4 +1,4 @@
-uuid: e104fbb2-ecaa-4a16-a18b-f12a8f83d635
+uuid: ae39c3a0-e3ee-4951-b52d-0b00104ab9a6
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     config:
       - user.role.administrator
 id: vendor-a416e6833
-label: administrator
+label: Administrator
 weight: 2
 internal: true
 audience: outsider

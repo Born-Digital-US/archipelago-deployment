@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.voc_av_special_handling.field_price
     - taxonomy.vocabulary.voc_av_special_handling
   module:
     - field_layout
@@ -27,6 +28,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_price:
+    weight: 101
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -60,5 +68,4 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden:
-  field_price: true
+hidden: {  }

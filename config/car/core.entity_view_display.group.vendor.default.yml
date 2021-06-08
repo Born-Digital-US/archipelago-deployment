@@ -1,4 +1,4 @@
-uuid: 86a091b7-0ac9-4749-bd71-f0f3fa0953d9
+uuid: f6087cf4-35bb-4b9f-bb8f-7b01e61a3e8f
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,11 @@ dependencies:
     - field.field.group.vendor.field_institution_email
     - field.field.group.vendor.field_instutional_phone_number
     - field.field.group.vendor.field_instutional_website
+    - field.field.group.vendor.field_partner_shipping_address
+    - field.field.group.vendor.field_services
     - group.type.vendor
   module:
+    - address
     - link
 id: group.vendor.default
 targetEntityType: group
@@ -15,21 +18,21 @@ bundle: vendor
 mode: default
 content:
   field_institution_email:
-    weight: -4
+    weight: -2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_instutional_phone_number:
-    weight: -3
+    weight: -1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_instutional_website:
-    weight: -2
+    weight: -3
     label: above
     settings:
       trim_length: 80
@@ -39,6 +42,21 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_partner_shipping_address:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_services:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   label:
     label: hidden
@@ -51,8 +69,6 @@ content:
 hidden:
   changed: true
   created: true
-  field_partner_shipping_address: true
-  field_services: true
   langcode: true
   search_api_excerpt: true
   uid: true

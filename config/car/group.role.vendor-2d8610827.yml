@@ -1,4 +1,4 @@
-uuid: 1edf305b-3b55-489c-9323-2688256e4887
+uuid: 45436559-4dc4-4776-bc25-024db14dc931
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ dependencies:
     config:
       - user.role.partner
 id: vendor-2d8610827
-label: partner
-weight: 3
+label: Partner
+weight: 5
 internal: true
 audience: outsider
 group_type: vendor

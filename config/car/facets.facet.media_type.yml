@@ -8,12 +8,12 @@ dependencies:
   module:
     - search_api
 id: media_type
-name: 'Media Type'
+name: '🍓 obj_media_type » Name'
 url_alias: media_type
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: obj_media_type
+field_identifier: obj_media_type__name
 facet_source_id: 'search_api:views_page__solr_search_content__page_1'
 widget:
   type: links
@@ -28,7 +28,6 @@ widget:
     show_numbers: false
 query_operator: null
 use_hierarchy: false
-keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: null

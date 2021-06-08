@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 name: 'Grant Cycle'
 vid: grant_cycle
-description: ''
+description: 'Period within the project where materials were accepted for retention or digitization.'
 weight: 0

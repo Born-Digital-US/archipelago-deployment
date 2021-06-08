@@ -9,8 +9,8 @@ google_api_client_google_api_classes:
   adexchangeseller: Google_Service_AdExchangeSeller
   adexperiencereport: Google_Service_AdExperienceReport
   admob: Google_Service_AdMob
-  adsense: Google_Service_AdSense
   adsensehost: Google_Service_AdSenseHost
+  adsense: Google_Service_Adsense
   alertcenter: Google_Service_AlertCenter
   analytics: Google_Service_Analytics
   analyticsdata: Google_Service_AnalyticsData
@@ -19,6 +19,7 @@ google_api_client_google_api_classes:
   androidmanagement: Google_Service_AndroidManagement
   androidprovisioningpartner: Google_Service_AndroidProvisioningPartner
   androidpublisher: Google_Service_AndroidPublisher
+  apikeysservice: Google_Service_ApiKeysService
   apigateway: Google_Service_Apigateway
   apigee: Google_Service_Apigee
   appstate: Google_Service_AppState
@@ -28,6 +29,7 @@ google_api_client_google_api_classes:
   artifactregistry: Google_Service_ArtifactRegistry
   assuredworkloads: Google_Service_Assuredworkloads
   autoscaler: Google_Service_Autoscaler
+  baremetalsolution: Google_Service_Baremetalsolution
   bigqueryconnectionservice: Google_Service_BigQueryConnectionService
   bigquerydatatransfer: Google_Service_BigQueryDataTransfer
   bigqueryreservation: Google_Service_BigQueryReservation
@@ -122,6 +124,7 @@ google_api_client_google_api_classes:
   doubleclicksearch: Google_Service_Doubleclicksearch
   drive: Google_Service_Drive
   driveactivity: Google_Service_DriveActivity
+  essentialcontacts: Google_Service_Essentialcontacts
   eventarc: Google_Service_Eventarc
   factchecktools: Google_Service_FactCheckTools
   firebasecloudmessaging: Google_Service_FirebaseCloudMessaging
@@ -166,6 +169,8 @@ google_api_client_google_api_classes:
   mirror: Google_Service_Mirror
   monitoring: Google_Service_Monitoring
   mybusinessaccountmanagement: Google_Service_MyBusinessAccountManagement
+  mybusinesslodging: Google_Service_MyBusinessLodging
+  mybusinessplaceactions: Google_Service_MyBusinessPlaceActions
   networkmanagement: Google_Service_NetworkManagement
   networkconnectivity: Google_Service_Networkconnectivity
   osconfig: Google_Service_SystemsManagement
@@ -174,6 +179,7 @@ google_api_client_google_api_classes:
   orgpolicyapi: Google_Service_OrgPolicyAPI
   pagespeedonline: Google_Service_Pagespeedonline
   partners: Google_Service_Partners
+  paymentsresellersubscription: Google_Service_PaymentsResellerSubscription
   people: Google_Service_PeopleService
   photoslibrary: Google_Service_PhotosLibrary
   playmoviespartner: Google_Service_Playmoviespartner

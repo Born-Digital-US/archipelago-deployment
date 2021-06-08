@@ -1,36 +1,36 @@
-uuid: cb49e8fe-80b5-4ee7-a113-b7969929da88
+uuid: 6fd98ccb-482b-402d-9e29-1510a0eec061
 langcode: en
 status: true
 dependencies:
   config:
     - search_api.index.default_solr_index
-    - views.view.solr_search_content
+    - views.view.solr_search_content_with_find_and_replace
   module:
     - search_api
-id: creator
-name: Creator
-url_alias: creator
-weight: 0
+id: strawberry_descriptive_metadata_ado_replace
+name: '🍓 Strawberry (Descriptive Metadata source) » digital_object_type for Search and Replace'
+url_alias: descriptive_metadata_object_types
+weight: -1
 min_count: 1
 show_only_one_result: false
-field_identifier: obj_creator_name_label
-facet_source_id: 'search_api:views_page__solr_search_content__page_1'
+field_identifier: digital_object_type
+facet_source_id: 'search_api:views_page__solr_search_content_with_find_and_replace__page_1'
 widget:
   type: links
   config:
+    show_numbers: false
     soft_limit: 0
     soft_limit_settings:
       show_less_label: 'Show less'
       show_more_label: 'Show more'
     show_reset_link: false
-    hide_reset_when_no_selection: false
     reset_text: 'Show all'
-    show_numbers: false
-query_operator: null
+    hide_reset_when_no_selection: false
+query_operator: and
 use_hierarchy: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
-hard_limit: null
+hard_limit: 0
 exclude: false
 only_visible_when_facet_source_is_visible: true
 processor_configs:
@@ -38,17 +38,20 @@ processor_configs:
     processor_id: active_widget_order
     weights:
       sort: 20
-    settings: {  }
+    settings:
+      sort: DESC
   count_widget_order:
     processor_id: count_widget_order
     weights:
       sort: 30
-    settings: {  }
+    settings:
+      sort: DESC
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:
       sort: 40
-    settings: {  }
+    settings:
+      sort: ASC
   url_processor_handler:
     processor_id: url_processor_handler
     weights:
@@ -57,4 +60,4 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-show_title: null
+show_title: false

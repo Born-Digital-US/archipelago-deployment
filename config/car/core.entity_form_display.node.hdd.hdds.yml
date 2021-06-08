@@ -4,20 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.hdds
-    - field.field.node.hdd.body
-    - field.field.node.hdd.field_hdd_checked_by
-    - field.field.node.hdd.field_hdd_checksums_checked
-    - field.field.node.hdd.field_hdd_md_checked
-    - field.field.node.hdd.field_hdd_qc_checkin_date
-    - field.field.node.hdd.field_hdd_tech_specs_checked
-    - field.field.node.hdd.field_hdd_vendor_id
-    - field.field.node.hdd.field_hdd_vendor_job_batch_id
+    - field.field.node.hdd.field_descriptive_metadata
     - node.type.hdd
   module:
     - content_moderation
     - field_layout
     - layout_discovery
     - path
+    - webform_strawberryfield
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -34,6 +28,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_descriptive_metadata:
+    weight: 122
+    settings:
+      webform_id: hdd
+      placeholder: ''
+    third_party_settings: {  }
+    type: strawberryfield_webform_widget
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -92,13 +94,4 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden:
-  body: true
-  field_descriptive_metadata: true
-  field_hdd_checked_by: true
-  field_hdd_checksums_checked: true
-  field_hdd_md_checked: true
-  field_hdd_qc_checkin_date: true
-  field_hdd_tech_specs_checked: true
-  field_hdd_vendor_id: true
-  field_hdd_vendor_job_batch_id: true
+hidden: {  }

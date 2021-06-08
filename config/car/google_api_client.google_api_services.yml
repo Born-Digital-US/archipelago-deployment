@@ -9,8 +9,8 @@ google_api_client_google_api_services:
   adexchangeseller: AdExchangeSeller
   adexperiencereport: 'Ad Experience Report API'
   admob: AdMob
-  adsense: 'AdSense Management API'
   adsensehost: 'AdSense Host API'
+  adsense: 'AdSense Management API'
   alertcenter: 'G Suite Alert Center API'
   analytics: 'Google Analytics API'
   analyticsdata: AnalyticsData
@@ -19,6 +19,7 @@ google_api_client_google_api_services:
   androidmanagement: 'Android Management API'
   androidprovisioningpartner: AndroidProvisioningPartner
   androidpublisher: 'Google Play Developer API'
+  apikeysservice: ApiKeysService
   apigateway: Apigateway
   apigee: Apigee
   appstate: AppState
@@ -28,6 +29,7 @@ google_api_client_google_api_services:
   artifactregistry: ArtifactRegistry
   assuredworkloads: Assuredworkloads
   autoscaler: Autoscaler
+  baremetalsolution: Baremetalsolution
   bigqueryconnectionservice: BigQueryConnectionService
   bigquerydatatransfer: 'BigQuery Data Transfer API'
   bigqueryreservation: 'BigQuery Reservation API'
@@ -123,6 +125,7 @@ google_api_client_google_api_services:
   doubleclicksearch: 'Search Ads 360 API'
   drive: 'Drive API'
   driveactivity: 'Drive Activity API'
+  essentialcontacts: Essentialcontacts
   eventarc: Eventarc
   factchecktools: 'Fact Check Tools API'
   firebasecloudmessaging: FirebaseCloudMessaging
@@ -169,6 +172,8 @@ google_api_client_google_api_services:
   mirror: 'Google Mirror API'
   monitoring: 'Stackdriver Monitoring API'
   mybusinessaccountmanagement: MyBusinessAccountManagement
+  mybusinesslodging: MyBusinessLodging
+  mybusinessplaceactions: MyBusinessPlaceActions
   networkmanagement: NetworkManagement
   networkconnectivity: Networkconnectivity
   osconfig: 'Cloud OS Config API'
@@ -178,6 +183,7 @@ google_api_client_google_api_services:
   pagespeedinsights: PagespeedInsights
   pagespeedonline: 'PageSpeed Insights API'
   partners: Partners
+  paymentsresellersubscription: PaymentsResellerSubscription
   people: 'People API'
   peopleservice: PeopleService
   photoslibrary: PhotosLibrary

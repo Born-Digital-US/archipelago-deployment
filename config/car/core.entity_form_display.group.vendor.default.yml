@@ -1,4 +1,4 @@
-uuid: 6fa4b2e6-703b-4808-8285-fd5fcf7f1482
+uuid: b78cf723-5426-4951-ad36-5f766e15899b
 langcode: en
 status: true
 dependencies:
@@ -27,7 +27,7 @@ bundle: vendor
 mode: default
 content:
   field_institution_email:
-    weight: 3
+    weight: 33
     settings:
       size: 60
       placeholder: ''
@@ -35,14 +35,14 @@ content:
     type: email_default
     region: content
   field_instutional_phone_number:
-    weight: 2
+    weight: 34
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
     region: content
   field_instutional_website:
-    weight: 5
+    weight: 32
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -50,24 +50,24 @@ content:
     type: link_default
     region: content
   field_partner_shipping_address:
-    type: address_default
-    weight: 4
-    region: content
+    weight: 36
     settings: {  }
     third_party_settings: {  }
-  field_services:
-    type: entity_reference_autocomplete
-    weight: 1
+    type: address_default
     region: content
+  field_services:
+    weight: 35
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   label:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -75,14 +75,14 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 6
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }

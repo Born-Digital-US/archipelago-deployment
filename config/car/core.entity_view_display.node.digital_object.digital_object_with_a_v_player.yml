@@ -29,7 +29,6 @@ third_party_settings:
       content:
         - links
         - body
-        - 'display_field_copy:node-static_media'
         - 'display_field_copy:node-field_descriptive_metadata_image'
         - 'display_field_copy:node-formatted_metadata'
         - field_descriptive_metadata
@@ -52,30 +51,10 @@ third_party_settings:
         formatter: strawberry_metadata_formatter
         settings:
           formatter:
-            metadatadisplayentity_id: '1'
+            metadatadisplayentity_id: '14'
             specs: 'http://schema.org'
             label: 'Descriptive Metadata'
             metadatadisplayentity_uselabel: '0'
-      'display_field_copy:node-static_media':
-        plugin_id: 'display_field_copy:node-static_media'
-        weight: 2
-        label: hidden
-        formatter: strawberry_mirador_formatter
-        settings:
-          formatter:
-            mediasource:
-              metadataexposeentity: metadataexposeentity
-              manifesturl: '0'
-              manifestnodelist: '0'
-            main_mediasource: metadataexposeentity
-            metadataexposeentity_source: iiifmanifest
-            manifesturl_json_key_source: iiifmanifest
-            manifestnodelist_json_key_source: isrelatedto
-            max_width: '720'
-            max_height: '480'
-            use_iiif_globals: '1'
-            iiif_base_url: 'http://localhost:8183/iiif/2'
-            iiif_base_url_internal: 'http://esmero-cantaloupe:8182/iiif/2'
 id: node.digital_object.digital_object_with_a_v_player
 targetEntityType: node
 bundle: digital_object

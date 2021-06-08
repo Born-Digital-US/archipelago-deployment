@@ -3,22 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.hdd.body
-    - field.field.node.hdd.field_hdd_checked_by
-    - field.field.node.hdd.field_hdd_checksums_checked
-    - field.field.node.hdd.field_hdd_md_checked
-    - field.field.node.hdd.field_hdd_qc_checkin_date
-    - field.field.node.hdd.field_hdd_tech_specs_checked
-    - field.field.node.hdd.field_hdd_vendor_id
-    - field.field.node.hdd.field_hdd_vendor_job_batch_id
+    - field.field.node.hdd.field_descriptive_metadata
     - node.type.hdd
   module:
     - content_moderation
-    - datetime
     - field_layout
     - layout_discovery
     - path
-    - text
+    - webform_strawberryfield
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -29,91 +21,38 @@ targetEntityType: node
 bundle: hdd
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 8
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_hdd_checked_by:
-    weight: 4
+  field_descriptive_metadata:
+    weight: 122
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
+      webform_id: hdd
       placeholder: ''
+      render_always: true
+      hide_cancel: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_hdd_checksums_checked:
-    weight: 5
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_hdd_md_checked:
-    weight: 6
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_hdd_qc_checkin_date:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_hdd_tech_specs_checked:
-    weight: 7
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
-  field_hdd_vendor_id:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_hdd_vendor_job_batch_id:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+    type: strawberryfield_webform_inline_widget
     region: content
   langcode:
     type: language_select
-    weight: 10
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 16
+    weight: 100
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 15
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -121,26 +60,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 15
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 120
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 16
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -148,7 +87,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -156,5 +95,4 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden:
-  field_descriptive_metadata: true
+hidden: {  }

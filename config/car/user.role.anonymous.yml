@@ -5,12 +5,18 @@ dependencies: {  }
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'anonymous user'
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
   - 'access comments'
-  - 'diff view changes'
-  - 'participate in workflow'
-  - 'use text format filtered_html'
-  - 'view files'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'create car workflow_transition'
+  - 'create carevealed_workflow workflow_transition'
+  - 'search content'
+  - 'use search_api_autocomplete for solr_search_content'
+  - 'use text format restricted_html'
+  - 'view field_vendor_address'
+  - 'view media'
+  - 'view strawberryfield webannotation'

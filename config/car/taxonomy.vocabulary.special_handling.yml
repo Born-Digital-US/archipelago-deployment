@@ -2,7 +2,7 @@ uuid: 281af14c-7bb8-4d29-8014-303a4a8e2b80
 langcode: en
 status: true
 dependencies: {  }
-name: 'Special Handling'
+name: 'Print Special Handling'
 vid: special_handling
-description: 'Special handling types and their costs'
+description: 'Special handling types and their costs for print materials.'
 weight: 0

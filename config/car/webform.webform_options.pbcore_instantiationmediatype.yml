@@ -6,4 +6,4 @@ id: pbcore_instantiationmediatype
 label: instantiationMediaType
 category: PBCore
 likert: false
-options: "'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Audio': Audio\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#MovingImage': 'Moving Image'"
+options: "'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Audio': Audio\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#MovingImage': 'Moving Image'\n'http://pbcore.org/pbcore-controlled-vocabularies/titletype-vocabulary/#Sound': Sound"

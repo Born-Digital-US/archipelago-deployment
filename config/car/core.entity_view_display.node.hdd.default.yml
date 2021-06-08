@@ -3,93 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.hdd.body
-    - field.field.node.hdd.field_hdd_checked_by
-    - field.field.node.hdd.field_hdd_checksums_checked
-    - field.field.node.hdd.field_hdd_md_checked
-    - field.field.node.hdd.field_hdd_qc_checkin_date
-    - field.field.node.hdd.field_hdd_tech_specs_checked
-    - field.field.node.hdd.field_hdd_vendor_id
-    - field.field.node.hdd.field_hdd_vendor_job_batch_id
+    - field.field.node.hdd.field_descriptive_metadata
     - node.type.hdd
   module:
-    - datetime
-    - text
+    - strawberryfield
     - user
 id: node.hdd.default
 targetEntityType: node
 bundle: hdd
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 103
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_hdd_checked_by:
-    weight: 107
+  field_descriptive_metadata:
+    weight: 102
     label: above
     settings:
-      link: true
+      limit_access: edit
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_hdd_checksums_checked:
-    weight: 108
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_hdd_md_checked:
-    weight: 109
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_hdd_qc_checkin_date:
-    weight: 106
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  field_hdd_tech_specs_checked:
-    weight: 110
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_hdd_vendor_id:
-    weight: 104
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_hdd_vendor_job_batch_id:
-    weight: 105
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    type: strawberry_default_formatter
     region: content
   links:
     weight: 100
@@ -97,6 +27,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_descriptive_metadata: true
   langcode: true
   search_api_excerpt: true

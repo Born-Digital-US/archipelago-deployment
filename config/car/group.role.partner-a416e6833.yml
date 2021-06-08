@@ -8,7 +8,7 @@ dependencies:
     config:
       - user.role.administrator
 id: partner-a416e6833
-label: administrator
+label: Administrator
 weight: 2
 internal: true
 audience: outsider

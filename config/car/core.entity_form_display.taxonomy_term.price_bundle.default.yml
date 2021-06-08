@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.price_bundle.field_price
     - taxonomy.vocabulary.price_bundle
   module:
     - field_layout
@@ -27,6 +28,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_price:
+    weight: 101
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -55,10 +63,4 @@ content:
     weight: 100
     region: content
     third_party_settings: {  }
-  translation:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden:
-  field_price: true
+hidden: {  }
