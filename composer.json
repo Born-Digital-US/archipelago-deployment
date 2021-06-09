@@ -47,6 +47,7 @@
         "drupal/bulk_user_registration": "^1.1@beta",
         "drupal/chosen": "^3.0",
         "drupal/config_filter": "^2.2",
+        "drupal/config_ignore": "^2.3",
         "drupal/config_inspector": "dev-1.x",
         "drupal/config_installer": "^1.7",
         "drupal/config_split": "^2",

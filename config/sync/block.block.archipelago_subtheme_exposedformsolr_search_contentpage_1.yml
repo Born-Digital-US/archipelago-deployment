@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.solr_search_content
   module:
-    - context
     - system
     - views
   theme:
@@ -25,16 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/search_grid*'
-    negate: true
-    context_mapping: {  }
-  request_path_exclusion:
-    id: request_path_exclusion
-    pages: ''
-    negate: null
-    context_mapping: {  }
-  view_inclusion:
-    id: view_inclusion
-    negate: null
-    view_inclusion: {  }
+    pages: '*'
+    negate: false
     context_mapping: {  }

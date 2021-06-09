@@ -1,9 +1,8 @@
-uuid: a2136019-5ee4-48f3-be3e-82183adaeb5b
+uuid: a247268f-dff3-4d65-b3b0-8b0c51b73f1f
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.shipment
     - field.field.node.shipment.body
     - field.field.node.shipment.field_ship_date_recd
     - field.field.node.shipment.field_ship_date_sent
@@ -12,25 +11,69 @@ dependencies:
     - node.type.shipment
   module:
     - content_moderation
+    - datetime
     - field_layout
     - layout_discovery
     - path
+    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
       label: ''
-id: node.shipment.shipment
+id: node.shipment.default
 targetEntityType: node
 bundle: shipment
-mode: shipment
+mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 122
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_ship_date_recd:
+    weight: 124
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ship_date_sent:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_shipment_from:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_shipment_to:
+    weight: 128
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -90,8 +133,4 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
-  body: true
-  field_ship_date_recd: true
-  field_ship_date_sent: true
-  field_shipment_from: true
-  field_shipment_to: true
+  field_descriptive_metadata: true

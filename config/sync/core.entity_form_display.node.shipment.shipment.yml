@@ -1,26 +1,29 @@
-uuid: 44a9b6d4-4467-4a55-af60-213d3ae93660
+uuid: a2136019-5ee4-48f3-be3e-82183adaeb5b
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.node.car_lto
-    - field.field.node.lto_tape.field_descriptive_metadata
-    - node.type.lto_tape
+    - core.entity_form_mode.node.shipment
+    - field.field.node.shipment.body
+    - field.field.node.shipment.field_ship_date_recd
+    - field.field.node.shipment.field_ship_date_sent
+    - field.field.node.shipment.field_shipment_from
+    - field.field.node.shipment.field_shipment_to
+    - node.type.shipment
   module:
     - content_moderation
     - field_layout
     - layout_discovery
     - path
-    - strawberryfield
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings:
       label: ''
-id: node.lto_tape.car_lto
+id: node.shipment.shipment
 targetEntityType: node
-bundle: lto_tape
-mode: car_lto
+bundle: shipment
+mode: shipment
 content:
   created:
     type: datetime_timestamp
@@ -28,14 +31,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_descriptive_metadata:
-    weight: 126
-    settings:
-      rows: '5'
-      placeholder: ''
-    third_party_settings: {  }
-    type: strawberry_textarea
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -94,4 +89,10 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  body: true
+  field_descriptive_metadata: true
+  field_ship_date_recd: true
+  field_ship_date_sent: true
+  field_shipment_from: true
+  field_shipment_to: true

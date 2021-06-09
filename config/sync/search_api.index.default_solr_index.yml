@@ -4,16 +4,15 @@ status: true
 dependencies:
   module:
     - search_api_solr
+    - group
     - node
     - user
     - strawberryfield
+    - taxonomy
     - search_api
-    - file
   config:
     - field.storage.node.field_descriptive_metadata
-    - field.storage.node.field_tags
     - search_api.server.esmero_solr_7_5
-    - core.entity_view_mode.node.digital_object_image_only_for_carousel
     - core.entity_view_mode.node.search_index
 third_party_settings:
   search_api_solr:
@@ -59,18 +58,10 @@ third_party_settings:
 _core:
   default_config_hash: 5gcfQOCjXVt6We4_q02H8VjnECSON5NgKOchFAsncxU
 id: default_solr_index
-name: 'Drupal Content to Solr 8'
+name: 'Drupal Content to Solr 7'
 description: 'Basic Content'
 read_only: false
 field_settings:
-  agents:
-    label: '🍓 Strawberry (Descriptive Metadata source) » agents'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:name_label'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   aggregated_field:
     label: 'Aggregated field'
     property_path: aggregated_field
@@ -78,22 +69,6 @@ field_settings:
     configuration:
       type: union
       fields: {  }
-  as_image_exif_focallength:
-    label: '🍓 Strawberry (Descriptive Metadata source) » as_image_exif_focallength'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:as_image_exif_focallength'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-  as_image_exif_mimetype:
-    label: '🍓 Strawberry (Descriptive Metadata source) » as_image_exif_mimetype'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:as_image_exif_mimetype'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   author:
     label: 'Author name'
     datasource_id: 'entity:node'
@@ -103,19 +78,11 @@ field_settings:
       module:
         - node
         - user
-  author_1:
-    label: '🍓 Strawberry (Descriptive Metadata source) » author'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:author'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   changed:
     label: Changed
     datasource_id: 'entity:node'
     property_path: changed
-    type: date
+    type: string
     dependencies:
       module:
         - node
@@ -124,30 +91,14 @@ field_settings:
     datasource_id: strawberryfield_flavor_datasource
     property_path: checksum
     type: string
-  city:
-    label: '🍓 Strawberry (Descriptive Metadata source) » city'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:city'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   created:
     label: 'Authored on'
     datasource_id: 'entity:node'
     property_path: created
-    type: date
+    type: string
     dependencies:
       module:
         - node
-  date_created_original:
-    label: '🍓 Strawberry (Descriptive Metadata source) » Date created original'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:date_created_original'
-    type: date
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   digital_object_type:
     label: '🍓 Strawberry (Descriptive Metadata source) » digital_object_type'
     datasource_id: 'entity:node'
@@ -156,14 +107,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_descriptive_metadata
-  field_tags:
-    label: Tags
-    datasource_id: 'entity:node'
-    property_path: field_tags
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_tags
   file_uuid:
     label: 'Source File UUID (first one passed in a Post Processor chain)'
     datasource_id: strawberryfield_flavor_datasource
@@ -179,6 +122,16 @@ field_settings:
     datasource_id: strawberryfield_flavor_datasource
     property_path: fulltext
     type: 'solr_text_custom:ocr_highlight'
+  funder:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_sbf_term_reference_obj_funder » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:sbf_term_reference_obj_funder:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
   hocr:
     label: '🍓 Strawberry (Descriptive Metadata source) » hocr'
     datasource_id: 'entity:node'
@@ -195,6 +148,24 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_descriptive_metadata
+  ismemberof__title:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ismemberof » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:sbf_entity_reference_ismemberof:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - node
+  label:
+    label: Title
+    datasource_id: 'entity:group'
+    property_path: label
+    type: string
+    dependencies:
+      module:
+        - group
   label_1:
     label: '🍓 Strawberry (Descriptive Metadata source) » Full text labels'
     datasource_id: 'entity:node'
@@ -211,48 +182,12 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_descriptive_metadata
-  license:
-    label: '🍓 Strawberry (Descriptive Metadata source) » license'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:license'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-  name_1:
-    label: '🍓 Strawberry (Descriptive Metadata source) » name'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:name'
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   nid:
     label: ID
     datasource_id: 'entity:node'
     property_path: nid
     type: integer
     dependencies:
-      module:
-        - node
-  nid_ref:
-    label: '🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ismemberof » ID'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:sbf_entity_reference_ismemberof:nid'
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-      module:
-        - node
-  nid_ref_partof:
-    label: '🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ispartof » ID'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:sbf_entity_reference_ispartof:nid'
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
       module:
         - node
   node_grants:
@@ -262,26 +197,853 @@ field_settings:
     indexed_locked: true
     type_locked: true
     hidden: true
+  obj_access_tech_specs:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_access_tech_specs'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_access_tech_specs'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_add_tech_notes:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_add_tech_notes'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_add_tech_notes'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_administrative_notes:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_administrative_notes'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_administrative_notes'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_alternative_title_:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_alternative_title_'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_alternative_title_'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_ark_identifier:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_ark_identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_ark_identifier'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_asset_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_asset_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_asset_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts__ip_gauge_and_format__tid:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_av_item_parts__ip_gauge_and_format » Term ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts__ip_gauge_and_format:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  obj_av_item_parts_ip_additional_technical_notes:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_additional_technical_notes'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_additional_technical_notes'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_base_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_base_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_base_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_call_number:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_call_number'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_call_number'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_condition_notes:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_condition_notes'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_condition_notes'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_container_item_annotations:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_container_item_annotations'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_container_item_annotations'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_generation:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_generation'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_generation'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_identifiers_delimiter:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_identifiers_delimiter'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_identifiers_delimiter'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_item_part_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_item_part_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_item_part_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_media_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_media_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_media_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_price_bundle:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_price_bundle'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_price_bundle'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  obj_av_item_parts_ip_sides_parts:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_sides_parts'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_sides_parts'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_item_parts_ip_temporary_id:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_item_parts_ip_temporary_id'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_temporary_id'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_av_prd_stream:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_av_prd_stream'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_prd_stream'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_call_number:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_call_number'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_call_number'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_car_notes_for_partner:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_car_notes_for_partner'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_car_notes_for_partner'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_car_qc_notes_for_vendor:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_car_qc_notes_for_vendor'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_car_qc_notes_for_vendor'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_cdm_url_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_cdm_url_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_cdm_url_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_cdm_url_url:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_cdm_url_url'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_cdm_url_url'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_cdnp_identifier:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_cdnp_identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_cdnp_identifier'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_collection_guide_title:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_collection_guide_title'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_collection_guide_title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_collection_guide_url:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_collection_guide_url'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_collection_guide_url'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_condition_list:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_condition_list'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_condition_list'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_condition_note:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_condition_note'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_condition_note'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_container_item_annotations:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_container_item_annotations'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_container_item_annotations'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_copyright_date_date_free:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_copyright_date_date_free'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_copyright_date_date_free'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_copyright_date_date_from:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_copyright_date_date_from'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_copyright_date_date_from'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_copyright_date_date_to:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_copyright_date_date_to'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_copyright_date_date_to'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_copyright_date_date_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_copyright_date_date_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_copyright_date_date_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_copyright_holder_info:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_copyright_holder_info'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_copyright_holder_info'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_copyright_notice:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_copyright_notice'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_copyright_notice'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_copyright_statement:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_copyright_statement'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_copyright_statement'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_country_of_creation_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_country_of_creation_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_country_of_creation_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_country_of_creation_value:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_country_of_creation_value'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_country_of_creation_value'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_created_date_date_free:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_created_date_date_free'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_created_date_date_free'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_created_date_date_from:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_created_date_date_from'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_created_date_date_from'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_created_date_date_to:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_created_date_date_to'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_created_date_date_to'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_created_date_date_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_created_date_date_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_created_date_date_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_creator_agent_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_creator_agent_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_creator_agent_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_creator_name_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_creator_name_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_creator_name_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_creator_role_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_creator_role_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_creator_role_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_description:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_description'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_description'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_genre:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_genre'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_genre'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_grant_cycle__name:
+    label: '🍓 obj_grant_cycle » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_grant_cycle:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  obj_grant_cycle__tid:
+    label: '🍓 obj_grant_cycle » Term ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_grant_cycle:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  obj_ia_url_url:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_ia_url_url'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_ia_url_url'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_language:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_language'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_language'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_media_type__name:
+    label: '🍓 obj_media_type » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_media_type:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  obj_media_type__tid:
+    label: '🍓 obj_media_type » Term ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_media_type:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  obj_node_id_from_d7:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_node_id_from_d7'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_node_id_from_d7'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_notes_from_vendor:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_notes_from_vendor'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_notes_from_vendor'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_notes_to_user:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_notes_to_user'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_notes_to_user'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_notes_to_vendor:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_notes_to_vendor'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_notes_to_vendor'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_object_identifier:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_object_identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_object_identifier'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_oclc_number:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_oclc_number'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_oclc_number'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_overall_image_qc_value:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_overall_image_qc_value'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_overall_image_qc_value'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_overall_image_sound_qc_value:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_overall_image_sound_qc_value'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_overall_image_sound_qc_value'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_partner_admin_notes:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_partner_admin_notes'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_partner_admin_notes'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_partner_qc_notes:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_partner_qc_notes'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_partner_qc_notes'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_print_item_parts_ip_ext_dim_length:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_print_item_parts_ip_ext_dim_length'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_ext_dim_length'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_print_item_parts_ip_ext_dim_units:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_print_item_parts_ip_ext_dim_units'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_ext_dim_units'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_print_item_parts_ip_ext_dim_width:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_print_item_parts_ip_ext_dim_width'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_ext_dim_width'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_print_item_parts_ip_extent_count:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_print_item_parts_ip_extent_count'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_extent_count'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_print_item_parts_ip_extent_count_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_print_item_parts_ip_extent_count_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_extent_count_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_print_item_parts_ip_generation:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_print_item_parts_ip_generation'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_generation'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_project_identifier:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_project_identifier'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_project_identifier'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_project_note:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_project_note'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_project_note'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_prsv_embedded_descriptive_metadata:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_prsv_embedded_descriptive_metadata'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_prsv_embedded_descriptive_metadata'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_prsv_tech_specs:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_prsv_tech_specs'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_prsv_tech_specs'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_publication_location_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_publication_location_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_publication_location_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_published_date_date_free:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_published_date_date_free'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_published_date_date_free'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_published_date_date_from:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_published_date_date_from'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_published_date_date_from'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_published_date_date_to:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_published_date_date_to'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_published_date_date_to'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_published_date_date_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_published_date_date_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_published_date_date_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_pushed_to_car_date:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_pushed_to_car_date'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_pushed_to_car_date'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_qc_state:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_qc_state'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_qc_state'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_serial_issue:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_serial_issue'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_serial_issue'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_serial_volume:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_serial_volume'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_serial_volume'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_series_title:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_series_title'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_series_title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_si_prd_stream:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_si_prd_stream'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_si_prd_stream'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_significance:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_significance'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_significance'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_spatial_coverage_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_spatial_coverage_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_spatial_coverage_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_subject_entity_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_subject_entity_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_subject_entity_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_subject_topic_label:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_subject_topic_label'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_subject_topic_label'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_temporal_coverage_date_free:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_temporal_coverage_date_free'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_temporal_coverage_date_free'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_temporal_coverage_date_from:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_temporal_coverage_date_from'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_temporal_coverage_date_from'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_temporal_coverage_date_to:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_temporal_coverage_date_to'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_temporal_coverage_date_to'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_temporal_coverage_date_type:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_temporal_coverage_date_type'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_temporal_coverage_date_type'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_temporary_id:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_temporary_id'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_temporary_id'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_transcript:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_transcript'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_transcript'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_transcript_url_url:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_transcript_url_url'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_transcript_url_url'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_txt_prd_stream:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_txt_prd_stream'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_txt_prd_stream'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_workflow_state:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_workflow_state'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_workflow_state'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+  obj_xml_from_vendor_validates:
+    label: '🍓 Strawberry (Descriptive Metadata source) » obj_xml_from_vendor_validates'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_xml_from_vendor_validates'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
   ocr_text:
     label: 'FullText test'
     datasource_id: strawberryfield_flavor_datasource
     property_path: fulltext
     type: 'solr_text_custom:ocr_highlight'
     boost: !!float 0
-  parent_digital_object_type:
-    label: '🍓 Strawberry Parent Digital Object Type'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:sbf_entity_reference_ismemberof:field_descriptive_metadata:digital_object_type'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-      module:
-        - node
   parent_id:
     label: 'Parent ID'
     datasource_id: strawberryfield_flavor_datasource
     property_path: parent_id
+    type: string
+  partner__gid:
+    label: 'Reverse reference: <em class="placeholder">Group content</em> using <em class="placeholder">Content</em> » Parent group'
+    datasource_id: 'entity:node'
+    property_path: 'search_api_reverse_entity_references_group_content__entity_id:gid'
+    type: integer
+  partner__label:
+    label: 'Reverse reference: Group content using Content » Parent group » Group » Title'
+    datasource_id: 'entity:node'
+    property_path: 'search_api_reverse_entity_references_group_content__entity_id:gid:entity:label'
+    type: string
+  partner__marc_code:
+    label: 'Reverse reference: Group content using Content » Parent group » Group » MARC Code'
+    datasource_id: 'entity:node'
+    property_path: 'search_api_reverse_entity_references_group_content__entity_id:gid:entity:field_marc_code'
+    type: string
+  partner_gid_wrong:
+    label: 'Reverse reference: Group content using Content » Content » Content » ID'
+    datasource_id: 'entity:node'
+    property_path: 'search_api_reverse_entity_references_group_content__entity_id:entity_id:entity:nid'
+    type: integer
+  partner_title_wrong:
+    label: 'Reverse reference: Group content using Content » Content » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'search_api_reverse_entity_references_group_content__entity_id:entity_id:entity:title'
     type: string
   processor_id:
     label: 'Processor Plugin id that populated this data'
@@ -298,12 +1060,35 @@ field_settings:
       view_mode:
         'entity:file':
           file: ''
+        'entity:group':
+          partner: ''
+          vendor: ''
         'entity:node':
-          article: ''
-          digital_object: default
-          digital_object_collection: ''
-          page: ''
-          webform: ''
+          article: search_index
+          digital_object: search_index
+          digital_object_collection: search_index
+          hdd: search_index
+          lto_tape: search_index
+          page: search_index
+          shipment: search_index
+          webform: search_index
+        'entity:taxonomy_term':
+          av_price_bundle: ''
+          funding_source: ''
+          grant_cycle: ''
+          mail_carrier: ''
+          media_type: ''
+          price_bundle: ''
+          production_stream: ''
+          special_handling: ''
+          strawberryfield_voc_id: ''
+          tags: ''
+          voc_av_generation: ''
+          voc_av_special_handling: ''
+          voc_guage_and_format: ''
+          voc_lto_generation: ''
+          voc_print_format: ''
+          voc_vendor_services: ''
         strawberryfield_flavor_datasource:
           digital_object: ''
           digital_object_collection: ''
@@ -317,45 +1102,38 @@ field_settings:
       view_mode:
         'entity:file':
           file: ''
+        'entity:group':
+          partner: ''
+          vendor: ''
         'entity:node':
-          article: ''
-          digital_object: digital_object_image_only_for_carousel
-          digital_object_collection: ''
-          page: ''
-          webform: ''
-        strawberryfield_flavor_datasource:
+          article: search_index
           digital_object: search_index
           digital_object_collection: search_index
-  sbf_entity_reference_partof_memberof_title:
-    label: '🍓 Strawberry (Descriptive Metadata source) » ispartof » ismemberof » Title'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:sbf_entity_reference_ispartof:field_descriptive_metadata:sbf_entity_reference_ismemberof:title'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-      module:
-        - node
-  sbf_entity_reference_partof_title:
-    label: '🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ispartof » Title'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:sbf_entity_reference_ispartof:title'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-      module:
-        - node
-  sbf_entity_reference_title:
-    label: '🍓 Strawberry (Descriptive Metadata source) » entity_sbf_entity_reference_ismemberof » Title'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:sbf_entity_reference_ismemberof:title'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
-      module:
-        - node
+          hdd: search_index
+          lto_tape: search_index
+          page: search_index
+          shipment: search_index
+          webform: search_index
+        'entity:taxonomy_term':
+          av_price_bundle: ''
+          funding_source: ''
+          grant_cycle: ''
+          mail_carrier: ''
+          media_type: ''
+          price_bundle: ''
+          production_stream: ''
+          special_handling: ''
+          strawberryfield_voc_id: ''
+          tags: ''
+          voc_av_generation: ''
+          voc_av_special_handling: ''
+          voc_guage_and_format: ''
+          voc_lto_generation: ''
+          voc_print_format: ''
+          voc_vendor_services: ''
+        strawberryfield_flavor_datasource:
+          digital_object: ''
+          digital_object_collection: ''
   sequence_id:
     label: 'Sequence ID'
     datasource_id: strawberryfield_flavor_datasource
@@ -394,14 +1172,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_descriptive_metadata
-  subject_labels:
-    label: '🍓 Strawberry (Descriptive Metadata source) » subject_labels'
-    datasource_id: 'entity:node'
-    property_path: 'field_descriptive_metadata:subject_labels'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_descriptive_metadata
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -421,6 +1191,11 @@ field_settings:
         - node
         - strawberryfield
   title_2:
+    label: 'Parent Node » Title'
+    datasource_id: strawberryfield_flavor_datasource
+    property_path: 'target_id:title'
+    type: string
+  title_4:
     label: 'Parent Node » Title'
     datasource_id: strawberryfield_flavor_datasource
     property_path: 'target_id:title'
@@ -487,12 +1262,91 @@ field_settings:
     datasource_id: strawberryfield_flavor_datasource
     property_path: 'target_id:uuid'
     type: string
+  vid:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_print_item_parts_ip_print_format » Vocabulary'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_print_format:vid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  vid_1:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_print_item_parts_ip_print_special_handling » Vocabulary'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_print_special_handling:vid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  vid_2:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_print_item_parts_ip_print_special_handling_2 » Vocabulary'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_print_special_handling_2:vid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  vid_3:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_print_item_parts_ip_print_special_handling_3 » Vocabulary'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_print_special_handling_3:vid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  vid_4:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_print_item_parts_ip_print_special_handling_4 » Vocabulary'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_print_special_handling_4:vid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  vid_5:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_print_item_parts_ip_print_price_bundle » Vocabulary'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_print_item_parts_ip_print_price_bundle:vid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
+  vid_6:
+    label: '🍓 Strawberry (Descriptive Metadata source) » entity_obj_av_item_parts_ip_special_handling » Vocabulary'
+    datasource_id: 'entity:node'
+    property_path: 'field_descriptive_metadata:obj_av_item_parts_ip_special_handling:vid'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_descriptive_metadata
+      module:
+        - taxonomy
 datasource_settings:
-  'entity:file': {  }
-  'entity:node':
+  'entity:group':
     bundles:
       default: true
+      selected:
+        - partner
+    languages:
+      default: true
       selected: {  }
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - digital_object
+        - digital_object_collection
     languages:
       default: true
       selected: {  }
@@ -500,6 +1354,9 @@ datasource_settings:
     bundles:
       default: false
       selected:
+        - '0'
+        - '0'
+        - '0'
         - digital_object
         - digital_object_collection
     languages:
@@ -526,7 +1383,7 @@ processor_settings:
     exclude_fields:
       - fulltext_with_original_ocr
       - ocr_text
-    prefix: '<strong class="purple">'
+    prefix: '<strong>'
     suffix: '</strong>'
     weights:
       postprocess_query: 0
@@ -534,23 +1391,14 @@ processor_settings:
     all_fields: false
     fields:
       - aggregated_field
-      - as_image_exif_focallength
-      - as_image_exif_mimetype
       - author
-      - city
       - digital_object_type
       - hocr
       - ismemberof
       - label_1
-      - label_2
-      - license
-      - name_1
-      - parent_digital_object_type
       - rendered_item
       - rendered_item_iiif_img
-      - sbf_entity_reference_title
       - str_flatten_keys
-      - subject_labels
       - title
       - title_1
       - title_autocomplete
