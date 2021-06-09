@@ -3,8 +3,9 @@ include make.env
 # This is for setting up CAR dev work that does not involve working on archipelago module code (Derek, Jocelyn, etc)
 build_dev_linux:
 	cp docker-compose-linux.yml docker-compose.yml
-	sed "s/image: mysql:8.0.22/image: mysql:5.7.33/" docker-compose.yml
+	sed --silent "s/image: mysql:8.0.22/image: mysql:5.7.33/" docker-compose.yml
 	docker-compose up -d
+	mkdir persistent/iiifcache || true
 	sudo chown -R 100:100 persistent/iiifcache
 	sudo chown -R 8983:8983 persistent/solrcore
 	docker exec -t $(APACHE_CONTAINER) bash -c "chown -R www-data:www-data private"
@@ -22,7 +23,7 @@ build_dev_linux:
 # This is for one-time setup for archipelago module development (Pat)
 build_archipelago_contributor_linux:
 	cp docker-compose-linux.yml docker-compose.yml
-	sed "s/image: mysql:8.0.22/image: mysql:5.7.33/" docker-compose.yml
+	sed --silent "s/image: mysql:8.0.22/image: mysql:5.7.33/" docker-compose.yml
 	docker-compose up -d
 	sudo chown -R 100:100 persistent/iiifcache
 	sudo chown -R 8983:8983 persistent/solrcore
