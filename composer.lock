@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b67e0aa3313c5a91381041529e550d8f",
+    "content-hash": "105f08694896cd8166d666b894d140e6",
     "packages": [
         {
             "name": "archipelago/ami",
@@ -216,16 +216,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.183.14",
+            "version": "3.183.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "5664b49a3338acb1dac095778f4136bd1e514d7d"
+                "reference": "ca0865f4aed816dd54c2101acc32cd4daa176b09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/5664b49a3338acb1dac095778f4136bd1e514d7d",
-                "reference": "5664b49a3338acb1dac095778f4136bd1e514d7d",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ca0865f4aed816dd54c2101acc32cd4daa176b09",
+                "reference": "ca0865f4aed816dd54c2101acc32cd4daa176b09",
                 "shasum": ""
             },
             "require": {
@@ -300,9 +300,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.183.14"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.183.15"
             },
-            "time": "2021-06-07T18:19:21+00:00"
+            "time": "2021-06-08T18:14:14+00:00"
         },
         {
             "name": "behat/mink",
@@ -6958,7 +6958,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/s3fs.git",
-                "reference": "c626cbf855f93c604ddc00d1d55022373e446bbc"
+                "reference": "9f1c4d1043efab0bfa73786404f9b63a7415d3dc"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.18",
@@ -6976,8 +6976,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha17+43-dev",
-                    "datestamp": "1623109760",
+                    "version": "8.x-3.0-alpha17+44-dev",
+                    "datestamp": "1623119688",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -11370,16 +11370,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.48.1",
+            "version": "2.49.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "8d1f50f1436fb4b05e7127360483dd9c6e73da16"
+                "reference": "93d9db91c0235c486875d22f1e08b50bdf3e6eee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8d1f50f1436fb4b05e7127360483dd9c6e73da16",
-                "reference": "8d1f50f1436fb4b05e7127360483dd9c6e73da16",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/93d9db91c0235c486875d22f1e08b50bdf3e6eee",
+                "reference": "93d9db91c0235c486875d22f1e08b50bdf3e6eee",
                 "shasum": ""
             },
             "require": {
@@ -11459,7 +11459,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-26T22:08:38+00:00"
+            "time": "2021-06-02T07:31:40+00:00"
         },
         {
             "name": "nikic/php-parser",

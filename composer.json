@@ -221,6 +221,9 @@
             },
             "drupal/backup_migrate": {
                 "Fix s3fs compatibility": "https://git.drupalcode.org/project/backup_migrate/-/merge_requests/7.patch"
+            },
+            "drupal/config_ignore": {
+                "Support for export filtering via Drush": "https://www.drupal.org/files/issues/2021-01-04/config_ignore_2857247-61.patch"
             }
         }
     }
