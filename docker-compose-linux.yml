@@ -5,7 +5,7 @@
 # If running Linux, make sure /persistent/solrcore has 8983:8983 ownership
 # enabling :cache for the volumens can bypass that need.
 # on OSX brew install minio/stable/mc for the minio client
-version: '3.5'
+version: '3.7'
 services:
   web:
     container_name: esmero-web

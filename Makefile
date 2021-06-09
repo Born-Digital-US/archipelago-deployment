@@ -3,7 +3,7 @@ include make.env
 # This is for setting up CAR dev work that does not involve working on archipelago module code (Derek, Jocelyn, etc)
 build_dev_linux:
 	cp docker-compose-linux.yml docker-compose.yml
-	sed "s/image: mysql:8.0.22/image: mysql:5.7.33" docker-compose.yml
+	sed "s/image: mysql:8.0.22/image: mysql:5.7.33/" docker-compose.yml
 	docker-compose up -d
 	sudo chown -R 100:100 persistent/iiifcache
 	sudo chown -R 8983:8983 persistent/solrcore
@@ -17,11 +17,12 @@ build_dev_linux:
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'drush ucrt demo --password="demo"; drush urol metadata_pro "demo"'
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'drush ucrt jsonapi --password="jsonapi"; drush urol metadata_api "jsonapi"'
 	docker exec -ti $(APACHE_CONTAINER) bash -c 'scripts/archipelago/deploy.sh'
+	# TODO automate pulling db and files from canonical source (sandbox or staging)
 
 # This is for one-time setup for archipelago module development (Pat)
 build_archipelago_contributor_linux:
 	cp docker-compose-linux.yml docker-compose.yml
-	sed "s/image: mysql:8.0.22/image: mysql:5.7.33" docker-compose.yml
+	sed "s/image: mysql:8.0.22/image: mysql:5.7.33/" docker-compose.yml
 	docker-compose up -d
 	sudo chown -R 100:100 persistent/iiifcache
 	sudo chown -R 8983:8983 persistent/solrcore
