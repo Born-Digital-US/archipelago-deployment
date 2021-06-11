@@ -1,0 +1,53 @@
+name: carchi-ci
+
+on:
+  push:
+    branches: [ staging ]
+
+jobs:
+  backup-staging:
+    runs-on: [carchi-stage]
+    env:
+      PROJECT_PATH: /var/www/html/web
+      ENVIRONMENT: staging
+    defaults:
+      run:
+        shell: bash
+        working-directory: /opt/archipelago-deployment
+    steps:
+      - name: Backups current staging db
+      - run: echo "Backing up main database, this file will be used to rollback"
+      - run: docker-compose exec -T web bash -c "mkdir -p ${PROJECT_PATH}/sites/all/db-dumps && rm -fv ${PROJECT_PATH}/sites/all/db-dumps/*"
+      - run: docker-compose exec -T web bash -c "cd ${PROJECT_PATH} && drush sql-dump --gzip --result-file=${PROJECT_PATH}/sites/all/db-dumps/${GITHUB_REF}.${ENVIRONMENT}-$(date +'%m-%d-%Y').sql.gz"`
+  
+  deploy-staging:
+    runs-on: [carchi-stage]
+    defaults:
+      run:
+        shell: bash
+        working-directory: /opt/archipelago-deployment
+    steps:
+      - name: Shutdown running containers on the server and sleep for 15 seconds
+      - run: |
+          docker-compose down
+          sleep 15
+      - name: pull changes to the staging branch
+      - run: | 
+          git pull origin ${{ GITHUB_REF }}
+          sleep 5
+      - name: Start up containers again
+        run: | 
+          docker-compose up -d
+          sleep 15
+      - name: Fix perms
+        run: docker-compose exec -T -w /var/www/html web bash -c "chown -R :www-data ."
+      - name: Run composer install
+        run: docker-compose exec -T php -w /var/www/html bash -c "COMPOSER_MEMORY_LIMIT=-1 composer install -o --prefer-dist --no-interaction"
+      - name: Run drush updb
+        run: docker-compose exec -T php -w /var/www/html/web bash -c "drush updb"
+      - name: Run drush cc all  
+        run: docker-compose exec -T php -w /var/www/html/web bash -c "drush cc all"
+
+# TBD - Manual steps for rollback of code and re-import of db
+# TBD - Make production steps
+# TBD - Make config export steps
