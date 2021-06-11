@@ -1,0 +1,35 @@
+uuid: 0ec765d2-ce95-4fd4-a3d8-3bad337ff29e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.av_price_bundle.field_price
+    - taxonomy.vocabulary.av_price_bundle
+  module:
+    - text
+id: taxonomy_term.av_price_bundle.default
+targetEntityType: taxonomy_term
+bundle: av_price_bundle
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_price:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

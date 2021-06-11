@@ -6,7 +6,7 @@ roles:
     theme: ''
     weight: '-47'
   administrator:
-    theme: ''
+    theme: archipelago_subtheme
     weight: '-50'
   metadata_api:
     theme: ''
@@ -14,3 +14,6 @@ roles:
   metadata_pro:
     theme: archipelago_subtheme
     weight: '-49'
+  partner:
+    theme: ''
+    weight: '0'

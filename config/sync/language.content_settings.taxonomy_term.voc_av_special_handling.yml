@@ -1,0 +1,16 @@
+uuid: a0eb088e-8b1d-4c13-a761-84ad9c004f49
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.voc_av_special_handling
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.voc_av_special_handling
+target_entity_type_id: taxonomy_term
+target_bundle: voc_av_special_handling
+default_langcode: site_default
+language_alterable: false

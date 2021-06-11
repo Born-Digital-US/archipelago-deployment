@@ -1,0 +1,16 @@
+uuid: a9286b9a-5373-4acd-8bce-c41856c04133
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.av_price_bundle
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.av_price_bundle
+target_entity_type_id: taxonomy_term
+target_bundle: av_price_bundle
+default_langcode: site_default
+language_alterable: false

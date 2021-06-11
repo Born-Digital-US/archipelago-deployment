@@ -1,0 +1,21 @@
+uuid: 22b757cf-604c-45da-9fa8-218e03ec193d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_field_ts_pub_email_date
+    - node.type.partner_set
+  module:
+    - datetime
+id: node.partner_set.field_field_ts_pub_email_date
+field_name: field_field_ts_pub_email_date
+entity_type: node
+bundle: partner_set
+label: 'Published/"Your files online" email (date)'
+description: 'Record of when the partner was sent an email notifying them that all items have been uploaded/published. Value is entered automatically. Also enter a date into "time to order files" field, 30 days hence.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

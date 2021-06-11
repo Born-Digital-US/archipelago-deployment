@@ -1,0 +1,7 @@
+name: 'CAR AMI Extensions'
+type: module
+description: 'CAR extensions for Archipelago Multi Importer.'
+package: 'CAR'
+core_version_requirement: ^8.8
+dependencies:
+  - 'ami'

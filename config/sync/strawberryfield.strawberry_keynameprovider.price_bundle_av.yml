@@ -1,0 +1,12 @@
+uuid: 4f799972-90d0-4cd4-b314-b38377df11ea
+langcode: en
+status: true
+dependencies: {  }
+id: price_bundle_av
+label: 'Price Bundle - AV'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_price_bundle'
+  entity_type: taxonomy_term
+  exposed_key: obj_av_item_parts_ip_price_bundle
+active: true

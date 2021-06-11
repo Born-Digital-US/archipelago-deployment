@@ -1,0 +1,11 @@
+uuid: cfe8c4c1-3e9a-4ac3-88f2-12d55e4b849c
+langcode: en
+status: true
+dependencies: {  }
+id: language
+label: Language
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_language
+  exposed_key: obj_language
+active: true

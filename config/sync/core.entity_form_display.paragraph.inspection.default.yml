@@ -1,0 +1,59 @@
+uuid: 4a5a6f3b-3216-47d5-ab41-73369eaf447c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.inspection.field_inspected_by
+    - field.field.paragraph.inspection.field_inspected_date
+    - field.field.paragraph.inspection.field_inspected_notes
+    - field.field.paragraph.inspection.field_inspected_result
+    - paragraphs.paragraphs_type.inspection
+  module:
+    - datetime
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.inspection.default
+targetEntityType: paragraph
+bundle: inspection
+mode: default
+content:
+  field_inspected_by:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_inspected_date:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_inspected_notes:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_inspected_result:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

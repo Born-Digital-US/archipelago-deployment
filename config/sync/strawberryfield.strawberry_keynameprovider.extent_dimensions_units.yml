@@ -1,0 +1,11 @@
+uuid: 0ef793c2-8646-4d42-85b4-bbea740cc1e8
+langcode: en
+status: true
+dependencies: {  }
+id: extent_dimensions_units
+label: 'Extent dimensions - units'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_print_item_parts[*].ip_ext_dim_units'
+  exposed_key: obj_print_item_parts_ip_ext_dim_units
+active: true

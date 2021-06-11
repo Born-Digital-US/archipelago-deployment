@@ -5,7 +5,7 @@
 # If running Linux, make sure /persistent/solrcore has 8983:8983 ownership
 # enabling :cache for the volumens can bypass that need.
 # on OSX brew install minio/stable/mc for the minio client
-version: '3.5'
+version: '3.7'
 services:
   web:
     container_name: esmero-web
@@ -26,7 +26,7 @@ services:
   php:
     container_name: esmero-php
     restart: always
-    image: "esmero/php-7.3-fpm:1.0.0-RC1"
+    image: "esmero/php-7.4-fpm:1.0.0-RC1"
     tty: true
     networks:
       - host-net
@@ -67,7 +67,7 @@ services:
       - ${PWD}/persistent/db:/var/lib/mysql:cached
   iiif:
     container_name: esmero-cantaloupe
-    image: "esmero/cantaloupe-s3:4.1.7"
+    image: "esmero/cantaloupe-s3:4.1.9RC"
     restart: always
     ports:
       - "8183:8182"

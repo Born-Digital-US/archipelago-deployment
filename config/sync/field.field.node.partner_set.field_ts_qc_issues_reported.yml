@@ -1,0 +1,23 @@
+uuid: e51e0d4a-65f6-41f4-b74f-9d748a7235f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_qc_issues_reported
+    - node.type.partner_set
+id: node.partner_set.field_ts_qc_issues_reported
+field_name: field_ts_qc_issues_reported
+entity_type: node
+bundle: partner_set
+label: 'QC issues reported to vendor?'
+description: 'Check here if rework is needed.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

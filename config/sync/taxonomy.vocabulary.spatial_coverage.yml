@@ -1,0 +1,8 @@
+uuid: 3a975653-dd96-4f61-8682-807ae950ca74
+langcode: en
+status: true
+dependencies: {  }
+name: 'Spatial Coverage'
+vid: spatial_coverage
+description: ''
+weight: 0

@@ -1,0 +1,28 @@
+uuid: 7036fa6a-b4b4-476b-84c4-a8b31b77e22f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_partner
+    - group.type.partner
+    - node.type.partner_set
+id: node.partner_set.field_ts_partner
+field_name: field_ts_partner
+entity_type: node
+bundle: partner_set
+label: Partner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      partner: partner
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

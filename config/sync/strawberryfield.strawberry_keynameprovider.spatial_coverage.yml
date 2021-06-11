@@ -1,0 +1,11 @@
+uuid: 304e2f31-5c0a-4d16-990c-b41ba2b3e4d3
+langcode: en
+status: true
+dependencies: {  }
+id: spatial_coverage
+label: 'Spatial Coverage'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_spatial_coverage[*].label'
+  exposed_key: obj_spatial_coverage_label
+active: true

@@ -1,0 +1,8 @@
+uuid: fd3a7df5-f9ea-4c8d-8d59-e97bbe2fe15c
+langcode: en
+status: true
+dependencies: {  }
+name: 'AV Price Bundle'
+vid: av_price_bundle
+description: 'Vendor specific price category for audiovisual materials being digitized or preserved.'
+weight: 0

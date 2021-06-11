@@ -1,0 +1,11 @@
+uuid: bc81d605-9c28-4c30-a5fc-3316199aad8c
+langcode: en
+status: true
+dependencies: {  }
+id: workflow_state
+label: 'Workflow State'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_workflow_state.label
+  exposed_key: obj_workflow_state
+active: true

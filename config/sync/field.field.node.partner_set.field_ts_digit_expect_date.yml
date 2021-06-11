@@ -1,0 +1,21 @@
+uuid: 3cba222c-2db5-468c-baae-8af71a19f28e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_digit_expect_date
+    - node.type.partner_set
+  module:
+    - datetime
+id: node.partner_set.field_ts_digit_expect_date
+field_name: field_ts_digit_expect_date
+entity_type: node
+bundle: partner_set
+label: 'Expected return date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

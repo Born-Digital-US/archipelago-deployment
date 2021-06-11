@@ -1,0 +1,11 @@
+uuid: 1064fcc8-226a-4875-86d7-f87208e9ebad
+langcode: en
+status: true
+dependencies: {  }
+id: condition_notes_av_ip
+label: 'Condition Notes - AV IP'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_condition_notes'
+  exposed_key: obj_av_item_parts_ip_condition_notes
+active: true

@@ -1,0 +1,23 @@
+uuid: 43e25650-69fa-41de-97b0-56bfd283fa9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hdd_tech_specs_checked
+    - node.type.hdd
+id: node.hdd.field_hdd_tech_specs_checked
+field_name: field_hdd_tech_specs_checked
+entity_type: node
+bundle: hdd
+label: 'Technical specifications checked'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

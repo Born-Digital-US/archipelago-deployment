@@ -1,0 +1,11 @@
+uuid: 7eceaa5a-8059-4cad-88f0-951d0a5dfcc4
+langcode: en
+status: true
+dependencies: {  }
+id: title
+label: Title
+pluginid: jmespath
+pluginconfig:
+  source_key: label
+  exposed_key: label
+active: true

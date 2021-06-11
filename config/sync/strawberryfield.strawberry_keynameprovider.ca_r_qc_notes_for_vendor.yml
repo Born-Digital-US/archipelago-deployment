@@ -1,0 +1,11 @@
+uuid: 81d69f9d-f299-46a3-a349-e283b3d0ce26
+langcode: en
+status: true
+dependencies: {  }
+id: ca_r_qc_notes_for_vendor
+label: 'CA-R QC Notes for Vendor'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_car_qc_notes_for_vendor
+  exposed_key: obj_car_qc_notes_for_vendor
+active: true

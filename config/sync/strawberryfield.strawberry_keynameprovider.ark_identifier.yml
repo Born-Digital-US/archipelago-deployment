@@ -1,0 +1,11 @@
+uuid: d8a7ecf7-f1c0-4e8d-8557-e2afa2333990
+langcode: en
+status: true
+dependencies: {  }
+id: ark_identifier
+label: 'ARK Identifier'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_ark_identifier
+  exposed_key: obj_ark_identifier
+active: true

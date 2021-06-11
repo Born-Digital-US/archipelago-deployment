@@ -1,0 +1,8 @@
+uuid: c938648f-c2ac-45cd-9bc8-2c8d1c32d42d
+langcode: en
+status: true
+dependencies: {  }
+name: Generation
+vid: generation
+description: 'Selected values from the PBCore instantiationGenerations vocabulary'
+weight: 0

@@ -1,0 +1,11 @@
+uuid: cdcb7290-930a-4003-8195-b81b7afabd56
+langcode: en
+status: true
+dependencies: {  }
+id: strawberry_field_widget_source_entity_uuid
+label: 'Strawberry field widget source entity UUID'
+pluginid: jmespath
+pluginconfig:
+  source_key: strawberry_field_widget_source_entity_uuid
+  exposed_key: strawberry_field_widget_source_entity_uuid
+active: true

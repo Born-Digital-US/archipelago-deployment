@@ -1,0 +1,8 @@
+uuid: 5d6d9cca-d51b-4a1d-be0d-773287d001a5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Guage and Format'
+vid: voc_guage_and_format
+description: ''
+weight: 0

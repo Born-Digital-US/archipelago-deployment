@@ -1,0 +1,21 @@
+uuid: 8f8e9edd-9ff5-4a99-9c3b-d8b8f08d53e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_wfs_counts
+    - node.type.partner_set
+  module:
+    - strawberryfield
+id: node.partner_set.field_ts_wfs_counts
+field_name: field_ts_wfs_counts
+entity_type: node
+bundle: partner_set
+label: 'Workflow state counts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: strawberryfield_field

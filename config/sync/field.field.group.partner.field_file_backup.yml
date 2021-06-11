@@ -1,0 +1,21 @@
+uuid: 74fc24eb-b3ef-4662-bbf8-f361d6078fb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_file_backup
+    - group.type.partner
+  module:
+    - text
+id: group.partner.field_file_backup
+field_name: field_file_backup
+entity_type: group
+bundle: partner
+label: 'File backup'
+description: 'If relevant please note the type(s) of file backup storage used by your organization.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

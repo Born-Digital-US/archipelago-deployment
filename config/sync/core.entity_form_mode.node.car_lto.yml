@@ -1,0 +1,10 @@
+uuid: 92326675-ce3b-42c2-b6a1-64d39c42ad1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.car_lto
+label: 'CAR LTO'
+targetEntityType: node
+cache: true

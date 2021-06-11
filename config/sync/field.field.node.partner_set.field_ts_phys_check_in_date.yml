@@ -1,0 +1,21 @@
+uuid: 7e67f0bf-140f-4e2a-bdcf-29795af56482
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_phys_check_in_date
+    - node.type.partner_set
+  module:
+    - datetime
+id: node.partner_set.field_ts_phys_check_in_date
+field_name: field_ts_phys_check_in_date
+entity_type: node
+bundle: partner_set
+label: 'Check in Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

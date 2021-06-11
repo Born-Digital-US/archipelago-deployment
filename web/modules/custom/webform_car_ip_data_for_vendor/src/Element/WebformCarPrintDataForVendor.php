@@ -61,6 +61,11 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
           '#options' => ['cm' => 'cm', 'in' => 'in'],
           '#title' => t('Units'),
           '#required' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
       ];
 
@@ -77,13 +82,18 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
         'ip_extent_count_type' => [
           '#type' => 'select',
           '#options' => [
-            'Disc' => 'Disc',
-            'File' => 'File',
-            'Page' => 'Page',
-            'Reel' => 'Reel'
+            'disc' => 'Disc',
+            'file' => 'File',
+            'page' => 'Page',
+            'reel' => 'Reel'
           ],
           '#title' => t('Type'),
           '#required' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
       ];
 
@@ -92,6 +102,12 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
         '#vocabulary' => 'voc_print_format',
         '#title' => t('Format'),
         '#required' => TRUE,
+        '#choices' => TRUE,
+        '#attributes' => [
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
       ];
 
       $elements['ip_print_price_bundle'] = [
@@ -100,6 +116,12 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
         // This is the print price bundle vocabulary.
         '#title' => t('Price Bundle'),
         '#element_validate' => [[get_called_class(), 'print_price_bundle_validate']],
+        '#choices' => TRUE,
+        '#attributes' => [
+          'class' =>[
+            'chosen-disabled'
+          ],
+        ],
       ];
 
       /*
@@ -117,25 +139,49 @@ class WebformCarPrintDataForVendor extends WebformCompositeBase {
           '#type' => 'webform_term_select',
           '#vocabulary' => 'special_handling',
           '#title' => t('Special Handling 1'),
-          '#title_display' => 'invisible'
+          '#title_display' => 'invisible',
+          '#choices' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
         'ip_print_special_handling_2' => [
           '#type' => 'webform_term_select',
           '#vocabulary' => 'special_handling',
           '#title' => t('Special Handling 2'),
-          '#title_display' => 'invisible'
+          '#title_display' => 'invisible',
+          '#choices' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
         'ip_print_special_handling_3' => [
           '#type' => 'webform_term_select',
           '#vocabulary' => 'special_handling',
           '#title' => t('Special Handling 3'),
-          '#title_display' => 'invisible'
+          '#title_display' => 'invisible',
+          '#choices' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
         'ip_print_special_handling_4' => [
           '#type' => 'webform_term_select',
           '#vocabulary' => 'special_handling',
           '#title' => t('Special Handling 3'),
-          '#title_display' => 'invisible'
+          '#title_display' => 'invisible',
+          '#choices' => TRUE,
+          '#attributes' => [
+            'class' =>[
+              'chosen-disabled'
+            ],
+          ],
         ],
       ];
       $elements['ip_generation'] = [

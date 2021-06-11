@@ -1,0 +1,11 @@
+uuid: c9e1f3ac-fa77-45eb-8876-be11bf44e080
+langcode: en
+status: true
+dependencies: {  }
+id: identifiers_delimiter_av_ip
+label: 'Identifiers delimiter - AV IP'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_identifiers_delimiter'
+  exposed_key: obj_av_item_parts_ip_identifiers_delimiter
+active: true

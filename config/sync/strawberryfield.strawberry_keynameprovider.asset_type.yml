@@ -1,0 +1,11 @@
+uuid: f47df1a1-eb3c-443f-ac7f-e57a7d9f1faf
+langcode: en
+status: true
+dependencies: {  }
+id: asset_type
+label: 'Asset Type'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_asset_type
+  exposed_key: obj_asset_type
+active: true

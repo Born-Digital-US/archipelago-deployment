@@ -1,0 +1,18 @@
+uuid: 62b3843a-74f0-4568-bfb9-8d7b2a241f15
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hdd
+id: node.hdd.title
+field_name: title
+entity_type: node
+bundle: hdd
+label: 'Drive Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

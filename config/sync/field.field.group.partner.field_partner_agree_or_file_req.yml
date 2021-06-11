@@ -1,0 +1,29 @@
+uuid: 80023ce6-6503-4695-9c93-bfbb6bdbbd27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_partner_agree_or_file_req
+    - group.type.partner
+    - media.type.file
+id: group.partner.field_partner_agree_or_file_req
+field_name: field_partner_agree_or_file_req
+entity_type: group
+bundle: partner
+label: 'Signed Partner Agreements and File request forms'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+    sort:
+      field: name
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

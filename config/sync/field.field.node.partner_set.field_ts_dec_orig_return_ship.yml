@@ -1,0 +1,28 @@
+uuid: 6bb68593-0985-4f02-beda-315938ed76d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_dec_orig_return_ship
+    - node.type.partner_set
+    - node.type.shipment
+id: node.partner_set.field_ts_dec_orig_return_ship
+field_name: field_ts_dec_orig_return_ship
+entity_type: node
+bundle: partner_set
+label: 'Shipment back to partner from CAR'
+description: 'Record shipments of originals back to partner.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      shipment: shipment
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

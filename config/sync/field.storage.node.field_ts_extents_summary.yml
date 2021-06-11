@@ -1,0 +1,23 @@
+uuid: 41bbda22-9c2f-4b1b-8974-5ead4f0d0535
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - strawberryfield
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_ts_extents_summary
+field_name: field_ts_extents_summary
+entity_type: node
+type: strawberryfield_field
+settings: {  }
+module: strawberryfield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

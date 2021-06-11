@@ -1,0 +1,10 @@
+uuid: 7eccb60f-9532-434b-a525-1621ac3bca3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.clone_for_twig_testing
+label: 'Clone for TWIG testing'
+targetEntityType: node
+cache: true

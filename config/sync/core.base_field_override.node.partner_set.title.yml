@@ -1,0 +1,18 @@
+uuid: 01fd5c5a-4f9f-4a20-9d2a-7131e9e106c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partner_set
+id: node.partner_set.title
+field_name: title
+entity_type: node
+bundle: partner_set
+label: ConcatID
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

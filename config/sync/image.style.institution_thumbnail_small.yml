@@ -1,0 +1,15 @@
+uuid: d52b0c9b-3f6e-4701-9d48-9fc2f4638edb
+langcode: en
+status: true
+dependencies: {  }
+name: institution_thumbnail_small
+label: 'Institution thumbnail small'
+effects:
+  b6bb4d61-038b-454e-92ea-1eca379751bd:
+    uuid: b6bb4d61-038b-454e-92ea-1eca379751bd
+    id: image_scale
+    weight: 1
+    data:
+      width: 110
+      height: 25
+      upscale: false

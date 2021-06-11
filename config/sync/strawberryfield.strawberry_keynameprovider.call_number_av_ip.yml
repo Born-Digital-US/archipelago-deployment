@@ -1,0 +1,11 @@
+uuid: 65c504f8-1a2d-4bff-9a3e-fa3e70d50070
+langcode: en
+status: true
+dependencies: {  }
+id: call_number_av_ip
+label: 'Call Number - AV ip'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_call_number'
+  exposed_key: obj_av_item_parts_ip_call_number
+active: true

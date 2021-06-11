@@ -1,0 +1,28 @@
+uuid: b025c881-a589-4769-b120-837cd9b43e0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_physproc_user
+    - node.type.partner_set
+id: node.partner_set.field_ts_physproc_user
+field_name: field_ts_physproc_user
+entity_type: node
+bundle: partner_set
+label: 'Processor name'
+description: 'This is an autocomplete field. Begin typing the user name and then select from the options presented.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

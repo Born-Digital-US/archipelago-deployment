@@ -1,0 +1,8 @@
+name: CLS Migrations
+description: Custom migration module for migrating data from repository.californialightandsound.org Drupal 7 site.
+package: CAR
+type: module
+core: 8.x
+dependencies:
+  - migrate
+  - migrate_drupal

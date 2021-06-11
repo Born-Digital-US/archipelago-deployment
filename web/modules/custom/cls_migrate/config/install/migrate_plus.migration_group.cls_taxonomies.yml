@@ -1,0 +1,10 @@
+uuid: dd05466d-0069-49f3-9ec2-560836596175
+langcode: en
+status: true
+dependencies: {  }
+id: cls_taxonomies
+label: 'CLS Taxonomies'
+description: ''
+source_type: 'Drupal 7'
+module: null
+shared_configuration: null

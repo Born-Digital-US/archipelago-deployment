@@ -1,0 +1,11 @@
+uuid: 355ecdd8-fb57-46d5-b051-a06a5ebc27dc
+langcode: en
+status: true
+dependencies: {  }
+id: collection_guide_title
+label: 'Collection Guide Title'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_collection_guide.title
+  exposed_key: obj_collection_guide_title
+active: true

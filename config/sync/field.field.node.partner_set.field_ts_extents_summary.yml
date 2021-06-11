@@ -1,0 +1,21 @@
+uuid: f08014bc-4007-4d51-8e5f-09028ea433df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_extents_summary
+    - node.type.partner_set
+  module:
+    - strawberryfield
+id: node.partner_set.field_ts_extents_summary
+field_name: field_ts_extents_summary
+entity_type: node
+bundle: partner_set
+label: 'Extents Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: strawberryfield_field

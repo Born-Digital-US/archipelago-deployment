@@ -1,0 +1,10 @@
+uuid: 7417ad07-d47a-479d-a332-72d2b5bc93e1
+langcode: en
+status: true
+dependencies: {  }
+id: cls_fields
+label: 'CLS Fields'
+description: ''
+source_type: 'Drupal 7'
+module: null
+shared_configuration: null

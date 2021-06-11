@@ -1,0 +1,11 @@
+uuid: 95c61e4e-41ec-471c-a437-2d08a0749884
+langcode: en
+status: true
+dependencies: {  }
+id: copyright_date_date_to
+label: 'Copyright Date - date to'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_copyright_date.date_to
+  exposed_key: obj_copyright_date_date_to
+active: true

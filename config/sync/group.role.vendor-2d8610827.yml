@@ -1,0 +1,17 @@
+uuid: 45436559-4dc4-4776-bc25-024db14dc931
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.vendor
+  enforced:
+    config:
+      - user.role.partner
+id: vendor-2d8610827
+label: Partner
+weight: 5
+internal: true
+audience: outsider
+group_type: vendor
+permissions_ui: false
+permissions: {  }

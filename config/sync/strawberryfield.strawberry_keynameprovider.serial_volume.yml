@@ -1,0 +1,11 @@
+uuid: ea19cb62-d9fd-4e78-8884-6c5175c276c0
+langcode: en
+status: true
+dependencies: {  }
+id: serial_volume
+label: 'Serial Volume'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_serial_volume
+  exposed_key: obj_serial_volume
+active: true

@@ -1,0 +1,10 @@
+uuid: 3f77bc66-995b-492a-804b-f5ec25ad1fd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: group.admin
+label: Admin
+targetEntityType: group
+cache: true

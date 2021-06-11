@@ -1,0 +1,27 @@
+uuid: 4d36d647-1b7d-4b6b-8744-28b1098601f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_migrate_dest
+    - node.type.lto
+id: node.lto.field_lto_migrate_dest
+field_name: field_lto_migrate_dest
+entity_type: node
+bundle: lto
+label: 'Migration destination'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      lto: lto
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

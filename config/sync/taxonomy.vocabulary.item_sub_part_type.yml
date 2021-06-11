@@ -1,0 +1,8 @@
+uuid: 36228e22-c252-4b91-baad-e8bfffb5bed6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Item Sub-Part Type'
+vid: item_sub_part_type
+description: ''
+weight: 0

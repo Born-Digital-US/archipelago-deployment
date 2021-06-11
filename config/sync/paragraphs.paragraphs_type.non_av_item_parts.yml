@@ -1,0 +1,10 @@
+uuid: 68ec2bc1-36c5-4f9c-8ff4-af28974f3da3
+langcode: en
+status: true
+dependencies: {  }
+id: non_av_item_parts
+label: 'Non-AV Item Parts'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from paragraph bundle Non-AV Item Parts'
+behavior_plugins: {  }

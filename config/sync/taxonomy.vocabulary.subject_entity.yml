@@ -1,0 +1,8 @@
+uuid: 3534d63d-fbcf-4bb1-9fc1-c4f437a2cc01
+langcode: en
+status: true
+dependencies: {  }
+name: 'Subject Entity'
+vid: subject_entity
+description: ''
+weight: 0

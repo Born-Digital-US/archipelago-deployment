@@ -1,0 +1,29 @@
+uuid: 14b5b84f-85a5-48b8-b2e9-e128b9e34f05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_metadata_shares
+    - group.type.partner
+    - taxonomy.vocabulary.metadata_shares
+id: group.partner.field_metadata_shares
+field_name: field_metadata_shares
+entity_type: group
+bundle: partner
+label: 'Metadata shares'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      metadata_shares: metadata_shares
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

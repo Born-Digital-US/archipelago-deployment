@@ -1,0 +1,11 @@
+uuid: b824fb82-afee-4299-a226-2ec3e8f7c5d8
+langcode: en
+status: true
+dependencies: {  }
+id: internet_archive_url
+label: 'Internet Archive URL'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_ia_url.url
+  exposed_key: obj_ia_url_url
+active: true

@@ -1,0 +1,11 @@
+uuid: 11c93992-f9f2-404d-b5e5-ba44bda8cd73
+langcode: en
+status: true
+dependencies: {  }
+id: megapelago_solr_index_trial_call_number
+label: 'Call Number'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_call_number
+  exposed_key: obj_call_number
+active: true
