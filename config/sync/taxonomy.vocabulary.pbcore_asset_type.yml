@@ -1,0 +1,8 @@
+uuid: 206b4d4e-2e88-4afc-900f-104267fa9834
+langcode: en
+status: true
+dependencies: {  }
+name: 'PBCore Asset Type'
+vid: pbcore_asset_type
+description: ''
+weight: 0

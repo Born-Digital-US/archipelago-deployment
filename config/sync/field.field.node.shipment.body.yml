@@ -1,0 +1,23 @@
+uuid: 989375c8-747b-45bd-a817-37e8ee7aa465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.shipment
+  module:
+    - text
+id: node.shipment.body
+field_name: body
+entity_type: node
+bundle: shipment
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

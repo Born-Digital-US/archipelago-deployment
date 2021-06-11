@@ -1,0 +1,17 @@
+uuid: 5aa5294f-8b79-4ae2-a14c-60f10488af64
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.vendor
+  enforced:
+    config:
+      - user.role.metadata_api
+id: vendor-063667ce4
+label: 'Metadata API'
+weight: 4
+internal: true
+audience: outsider
+group_type: vendor
+permissions_ui: false
+permissions: {  }

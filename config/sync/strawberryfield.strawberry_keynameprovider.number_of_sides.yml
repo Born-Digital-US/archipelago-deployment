@@ -1,0 +1,11 @@
+uuid: fa207c9e-deec-4441-85dd-10a6011dd7da
+langcode: en
+status: true
+dependencies: {  }
+id: number_of_sides
+label: 'Number of Sides'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_sides_parts'
+  exposed_key: obj_av_item_parts_ip_sides_parts
+active: true

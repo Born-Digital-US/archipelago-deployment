@@ -1,0 +1,28 @@
+uuid: 83e5dceb-8831-4dd5-80ba-c7c46607c4d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_rework_drive
+    - node.type.hdd
+    - node.type.partner_set
+id: node.partner_set.field_ts_rework_drive
+field_name: field_ts_rework_drive
+entity_type: node
+bundle: partner_set
+label: 'Rework drive'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      hdd: hdd
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

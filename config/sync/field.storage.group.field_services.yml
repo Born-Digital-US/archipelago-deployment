@@ -1,0 +1,24 @@
+uuid: 629d6f7f-e327-4206-8ea4-c0cf03e3275b
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - group
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: group.field_services
+field_name: field_services
+entity_type: group
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

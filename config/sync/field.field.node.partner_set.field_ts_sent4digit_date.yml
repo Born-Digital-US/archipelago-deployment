@@ -1,0 +1,21 @@
+uuid: 089be7fd-2a9b-4ad0-ba84-e0e0ef781a3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_sent4digit_date
+    - node.type.partner_set
+  module:
+    - datetime
+id: node.partner_set.field_ts_sent4digit_date
+field_name: field_ts_sent4digit_date
+entity_type: node
+bundle: partner_set
+label: 'Sent for digitization'
+description: 'The date that the items in this set were sent to the digitization vendor.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

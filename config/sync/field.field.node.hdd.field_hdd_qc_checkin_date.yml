@@ -1,0 +1,21 @@
+uuid: efefea43-a595-4d99-a7a0-abad16090374
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hdd_qc_checkin_date
+    - node.type.hdd
+  module:
+    - datetime
+id: node.hdd.field_hdd_qc_checkin_date
+field_name: field_hdd_qc_checkin_date
+entity_type: node
+bundle: hdd
+label: 'QC Check-In Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

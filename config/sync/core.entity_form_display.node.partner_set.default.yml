@@ -1,0 +1,706 @@
+uuid: 61412ab2-9a63-44c7-a18a-ecb66a5c1e30
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.partner_set.field_field_ts_partner_qc_deadli
+    - field.field.node.partner_set.field_field_ts_pfr_orig_ret_ship
+    - field.field.node.partner_set.field_field_ts_pub_email_date
+    - field.field.node.partner_set.field_grant_cycle
+    - field.field.node.partner_set.field_ts_cost_estimates
+    - field.field.node.partner_set.field_ts_dec_orig_return_ship
+    - field.field.node.partner_set.field_ts_digit_expect_date
+    - field.field.node.partner_set.field_ts_expected_delivery
+    - field.field.node.partner_set.field_ts_extents_summary
+    - field.field.node.partner_set.field_ts_hd_recd_date
+    - field.field.node.partner_set.field_ts_lto
+    - field.field.node.partner_set.field_ts_nomination_notes
+    - field.field.node.partner_set.field_ts_nominations
+    - field.field.node.partner_set.field_ts_partner
+    - field.field.node.partner_set.field_ts_partner_wants_copies
+    - field.field.node.partner_set.field_ts_phys_check_in_date
+    - field.field.node.partner_set.field_ts_phys_proc_date
+    - field.field.node.partner_set.field_ts_phys_proc_feedback
+    - field.field.node.partner_set.field_ts_phys_proc_md_chk
+    - field.field.node.partner_set.field_ts_phys_proc_ship
+    - field.field.node.partner_set.field_ts_phys_recd_by
+    - field.field.node.partner_set.field_ts_physproc_user
+    - field.field.node.partner_set.field_ts_pub_upload_person
+    - field.field.node.partner_set.field_ts_qc_complete_date
+    - field.field.node.partner_set.field_ts_qc_issues_reported
+    - field.field.node.partner_set.field_ts_qc_person
+    - field.field.node.partner_set.field_ts_qcvr_hdd
+    - field.field.node.partner_set.field_ts_rework_drive
+    - field.field.node.partner_set.field_ts_rework_hd_recd_date
+    - field.field.node.partner_set.field_ts_sent4digit_date
+    - field.field.node.partner_set.field_ts_ship_from_partner
+    - field.field.node.partner_set.field_ts_ship_to_vendor
+    - field.field.node.partner_set.field_ts_stream
+    - field.field.node.partner_set.field_ts_wfs_counts
+    - node.type.partner_set
+  module:
+    - content_moderation
+    - datetime
+    - field_group
+    - field_layout
+    - inline_entity_form
+    - layout_discovery
+    - path
+    - strawberryfield
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  field_group:
+    group_administrative_information:
+      children:
+        - title
+        - field_ts_partner
+        - field_grant_cycle
+        - field_ts_stream
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Administrative Information'
+    group_workflow:
+      children:
+        - group_nominated
+        - group_declined
+        - group_awarded
+        - group_withdrawn
+        - group_physical_received
+        - group_physical_processed
+        - group_sent_for_digitization
+        - group_darkened
+        - group_qc_version_received
+        - group_qc_complete
+        - group_published
+        - group_not_digitized
+        - group_rework
+        - group_preservation_file_requeste
+        - group_preservation_file_accepted
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      region: content
+      format_settings:
+        description: ''
+        weight: '0'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: 0
+        direction: vertical
+      label: Workflow
+    group_nominated:
+      children:
+        - field_ts_nomination_notes
+        - field_ts_nominations
+      parent_name: group_workflow
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Nominated
+    group_declined:
+      children:
+        - field_ts_dec_orig_return_ship
+      parent_name: group_workflow
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        description: ''
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Declined
+    group_awarded:
+      children:
+        - field_ts_expected_delivery
+        - field_ts_ship_from_partner
+      parent_name: group_workflow
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Awarded
+    group_withdrawn:
+      children: {  }
+      parent_name: group_workflow
+      weight: 23
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Withdrawn
+    group_physical_received:
+      children:
+        - field_ts_partner_wants_copies
+        - field_ts_phys_check_in_date
+        - field_ts_phys_recd_by
+      parent_name: group_workflow
+      weight: 24
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Physical Received'
+    group_physical_processed:
+      children:
+        - field_ts_phys_proc_date
+        - field_ts_physproc_user
+        - field_ts_phys_proc_md_chk
+        - field_ts_phys_proc_feedback
+        - field_ts_phys_proc_ship
+      parent_name: group_workflow
+      weight: 25
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Physical Processed'
+    group_sent_for_digitization:
+      children:
+        - field_ts_ship_to_vendor
+        - field_ts_sent4digit_date
+        - field_ts_digit_expect_date
+      parent_name: group_workflow
+      weight: 26
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Sent for Digitization'
+    group_darkened:
+      children: {  }
+      parent_name: group_workflow
+      weight: 27
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Darkened
+    group_qc_version_received:
+      children:
+        - field_ts_hd_recd_date
+        - field_ts_qcvr_hdd
+      parent_name: group_workflow
+      weight: 28
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'QC Version Received'
+    group_qc_complete:
+      children:
+        - field_ts_qc_person
+        - field_ts_qc_complete_date
+        - field_ts_qc_issues_reported
+      parent_name: group_workflow
+      weight: 29
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'QC Complete'
+    group_published:
+      children:
+        - field_ts_pub_upload_person
+        - field_field_ts_pub_email_date
+        - field_field_ts_partner_qc_deadli
+      parent_name: group_workflow
+      weight: 30
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Published
+    group_not_digitized:
+      children: {  }
+      parent_name: group_workflow
+      weight: 32
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Not Digitized'
+    group_rework:
+      children:
+        - field_ts_rework_hd_recd_date
+        - field_ts_rework_drive
+      parent_name: group_workflow
+      weight: 33
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Rework
+    group_preservation_file_requeste:
+      children:
+        - field_field_ts_pfr_orig_ret_ship
+        - field_ts_lto
+      parent_name: group_workflow
+      weight: 34
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Preservation File Requested'
+    group_preservation_file_accepted:
+      children: {  }
+      parent_name: group_workflow
+      weight: 35
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Preservation File Accepted'
+    group_items:
+      children: {  }
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: false
+      label: Items
+    group_calculated_data:
+      children:
+        - field_ts_wfs_counts
+        - field_ts_cost_estimates
+        - field_ts_extents_summary
+      parent_name: ''
+      weight: 20
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Calculated data'
+id: node.partner_set.default
+targetEntityType: node
+bundle: partner_set
+mode: default
+content:
+  field_field_ts_partner_qc_deadli:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_field_ts_pfr_orig_ret_ship:
+    weight: 14
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_field_ts_pub_email_date:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_grant_cycle:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ts_cost_estimates:
+    weight: 8
+    settings:
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+    type: strawberry_textarea
+    region: content
+  field_ts_dec_orig_return_ship:
+    weight: 9
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_ts_digit_expect_date:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_expected_delivery:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_extents_summary:
+    weight: 9
+    settings:
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+    type: strawberry_textarea
+    region: content
+  field_ts_hd_recd_date:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_lto:
+    weight: 15
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_ts_nomination_notes:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_ts_nominations:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_ts_partner:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ts_partner_wants_copies:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ts_phys_check_in_date:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_phys_proc_date:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_phys_proc_feedback:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_ts_phys_proc_md_chk:
+    weight: 14
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ts_phys_proc_ship:
+    weight: 16
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ts_phys_recd_by:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ts_physproc_user:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ts_pub_upload_person:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ts_qc_complete_date:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_qc_issues_reported:
+    weight: 19
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ts_qc_person:
+    weight: 17
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ts_qcvr_hdd:
+    weight: 7
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_ts_rework_drive:
+    weight: 12
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_ts_rework_hd_recd_date:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_sent4digit_date:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_ship_from_partner:
+    weight: 12
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_ts_ship_to_vendor:
+    weight: 8
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_ts_stream:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ts_wfs_counts:
+    weight: 7
+    settings:
+      rows: '5'
+      placeholder: ''
+    third_party_settings: {  }
+    type: strawberry_textarea
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 5
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

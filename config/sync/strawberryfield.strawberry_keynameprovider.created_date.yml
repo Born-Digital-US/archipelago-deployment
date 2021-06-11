@@ -1,0 +1,11 @@
+uuid: 85894f0c-cf90-469c-bc33-61b3bc32b0c9
+langcode: en
+status: true
+dependencies: {  }
+id: created_date
+label: 'Created Date'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_created_date
+  exposed_key: obj_created_date
+active: true

@@ -24,20 +24,20 @@
       {% if content.ip_container_item_annotations %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_container_item_annotations }}</div></div>
       {% endif %}
-      {% if content.ip_relation_type %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_related_entity }}{{ content.ip_language_of_material }}{{ content.ip_relation_type }}</div></div>
-      {% endif %}
       {% if content.ip_media_type %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_media_type }}</div></div>
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_media_type }}{{ content.ip_aspect_ratio }}</div></div>
       {% endif %}
       {% if content.ip_gauge_and_format %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_gauge_and_format }}</div></div>
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_gauge_and_format }}{{ content.ip_running_speed }}</div></div>
       {% endif %}
       {% if content.ip_generation %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_generation }}</div></div>
       {% endif %}
-      {% if content.ip_sides_parts %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_sides_parts }}</div></div>
+      {% if content.ip_sides %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_sides }}</div></div>
+      {% endif %}
+      {% if content.parts_wrapper %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.parts_wrapper }}</div></div>
       {% endif %}
     </div>
     <div class="webform-flexbox">
@@ -56,8 +56,8 @@
       {% if content.ip_price_bundle %}
         <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_price_bundle }}</div></div>
       {% endif %}
-      {% if content.special_handling_group %}
-        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.special_handling_group }}</div></div>
+      {% if content.ip_special_handling %}
+        <div class="webform-flex webform-flex--1"><div class="webform-flex--container">{{ content.ip_special_handling }}</div></div>
       {% endif %}
     </div>
 

@@ -1,0 +1,14 @@
+uuid: de201a18-db2a-4c39-9c9b-f8fc0a776aff
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vendor
+  module:
+    - user
+id: user_remove_role_action.vendor
+label: 'Remove the vendor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: vendor

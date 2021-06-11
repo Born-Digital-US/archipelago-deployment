@@ -1,0 +1,11 @@
+uuid: 22318be3-d9c6-40c3-b6bb-bdcf0e7c8b18
+langcode: en
+status: true
+dependencies: {  }
+id: creator_type
+label: 'Creator Type'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_creator[*].agent_type'
+  exposed_key: obj_creator_agent_type
+active: true

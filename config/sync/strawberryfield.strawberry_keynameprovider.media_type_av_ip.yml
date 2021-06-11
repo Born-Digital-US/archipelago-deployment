@@ -1,0 +1,11 @@
+uuid: 738660b7-5d4d-4808-8b3d-a7716d9bc114
+langcode: en
+status: true
+dependencies: {  }
+id: media_type_av_ip
+label: 'Media Type - AV IP'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_media_type'
+  exposed_key: obj_av_item_parts_ip_media_type
+active: true

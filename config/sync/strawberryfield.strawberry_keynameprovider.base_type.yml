@@ -1,0 +1,11 @@
+uuid: 68bc999c-cbce-40b5-abdc-072454dcbc43
+langcode: en
+status: true
+dependencies: {  }
+id: base_type
+label: 'Base Type'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_base_type'
+  exposed_key: obj_av_item_parts_ip_base_type
+active: true

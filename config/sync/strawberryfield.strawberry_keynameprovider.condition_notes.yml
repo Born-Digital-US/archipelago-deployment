@@ -1,0 +1,11 @@
+uuid: 28a721e6-32cc-429f-b176-4fc82429bc55
+langcode: en
+status: true
+dependencies: {  }
+id: condition_notes
+label: 'Condition Notes'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_condition_note
+  exposed_key: obj_condition_note
+active: true

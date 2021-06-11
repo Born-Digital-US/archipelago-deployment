@@ -1,0 +1,16 @@
+uuid: b5de707d-02b0-425c-93de-46f7dd2af6e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.voc_guage_and_format
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.voc_guage_and_format
+target_entity_type_id: taxonomy_term
+target_bundle: voc_guage_and_format
+default_langcode: site_default
+language_alterable: false

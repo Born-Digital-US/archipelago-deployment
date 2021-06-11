@@ -1,0 +1,29 @@
+uuid: 7e485571-5f65-400a-af43-5f0064ce9ab8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_stream
+    - node.type.partner_set
+    - taxonomy.vocabulary.production_stream
+id: node.partner_set.field_ts_stream
+field_name: field_ts_stream
+entity_type: node
+bundle: partner_set
+label: 'Production Stream'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      production_stream: production_stream
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

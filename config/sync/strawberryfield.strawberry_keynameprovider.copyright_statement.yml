@@ -1,0 +1,11 @@
+uuid: a6515f5d-aa83-4827-a7cc-8c7030879d91
+langcode: en
+status: true
+dependencies: {  }
+id: copyright_statement
+label: 'Copyright Statement'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_copyright_statement
+  exposed_key: obj_copyright_statement
+active: true

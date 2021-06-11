@@ -1,0 +1,28 @@
+uuid: f8c7e3bf-9459-4e27-a564-b48d4fabb4a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_items
+    - node.type.digital_object
+    - node.type.lto
+id: node.lto.field_lto_items
+field_name: field_lto_items
+entity_type: node
+bundle: lto
+label: 'Member objects'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      digital_object: digital_object
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

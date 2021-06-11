@@ -1,0 +1,11 @@
+uuid: d83e0980-2ff6-497e-85b7-e1325d19fd35
+langcode: en
+status: true
+dependencies: {  }
+id: alternative_title
+label: 'Alternative Title'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_alternative_title[*]'
+  exposed_key: obj_alternative_title_
+active: true

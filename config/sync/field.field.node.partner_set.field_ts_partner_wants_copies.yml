@@ -1,0 +1,23 @@
+uuid: 3289ab3d-acd5-428a-9076-8a82af22109f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_partner_wants_copies
+    - node.type.partner_set
+  module:
+    - options
+id: node.partner_set.field_ts_partner_wants_copies
+field_name: field_ts_partner_wants_copies
+entity_type: node
+bundle: partner_set
+label: 'Partner wants copies of files'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Not reported'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

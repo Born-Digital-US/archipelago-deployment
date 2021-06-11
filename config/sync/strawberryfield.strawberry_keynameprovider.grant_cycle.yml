@@ -1,0 +1,12 @@
+uuid: 75deb2fa-de8b-42e1-a4d9-17d463a10600
+langcode: en
+status: true
+dependencies: {  }
+id: grant_cycle
+label: 'Grant Cycle'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: obj_grant_cycle
+  entity_type: taxonomy_term
+  exposed_key: obj_grant_cycle
+active: true

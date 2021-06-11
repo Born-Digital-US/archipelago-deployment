@@ -1,0 +1,344 @@
+uuid: 7903f4a9-5963-453c-ae53-790f60846912
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.partner_set.field_field_ts_partner_qc_deadli
+    - field.field.node.partner_set.field_field_ts_pfr_orig_ret_ship
+    - field.field.node.partner_set.field_field_ts_pub_email_date
+    - field.field.node.partner_set.field_grant_cycle
+    - field.field.node.partner_set.field_ts_cost_estimates
+    - field.field.node.partner_set.field_ts_dec_orig_return_ship
+    - field.field.node.partner_set.field_ts_digit_expect_date
+    - field.field.node.partner_set.field_ts_expected_delivery
+    - field.field.node.partner_set.field_ts_extents_summary
+    - field.field.node.partner_set.field_ts_hd_recd_date
+    - field.field.node.partner_set.field_ts_lto
+    - field.field.node.partner_set.field_ts_nomination_notes
+    - field.field.node.partner_set.field_ts_nominations
+    - field.field.node.partner_set.field_ts_partner
+    - field.field.node.partner_set.field_ts_partner_wants_copies
+    - field.field.node.partner_set.field_ts_phys_check_in_date
+    - field.field.node.partner_set.field_ts_phys_proc_date
+    - field.field.node.partner_set.field_ts_phys_proc_feedback
+    - field.field.node.partner_set.field_ts_phys_proc_md_chk
+    - field.field.node.partner_set.field_ts_phys_proc_ship
+    - field.field.node.partner_set.field_ts_phys_recd_by
+    - field.field.node.partner_set.field_ts_physproc_user
+    - field.field.node.partner_set.field_ts_pub_upload_person
+    - field.field.node.partner_set.field_ts_qc_complete_date
+    - field.field.node.partner_set.field_ts_qc_issues_reported
+    - field.field.node.partner_set.field_ts_qc_person
+    - field.field.node.partner_set.field_ts_qcvr_hdd
+    - field.field.node.partner_set.field_ts_rework_drive
+    - field.field.node.partner_set.field_ts_rework_hd_recd_date
+    - field.field.node.partner_set.field_ts_sent4digit_date
+    - field.field.node.partner_set.field_ts_ship_from_partner
+    - field.field.node.partner_set.field_ts_ship_to_vendor
+    - field.field.node.partner_set.field_ts_stream
+    - field.field.node.partner_set.field_ts_wfs_counts
+    - node.type.partner_set
+  module:
+    - datetime
+    - options
+    - strawberryfield
+    - user
+id: node.partner_set.default
+targetEntityType: node
+bundle: partner_set
+mode: default
+content:
+  field_field_ts_partner_qc_deadli:
+    weight: 108
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_field_ts_pfr_orig_ret_ship:
+    weight: 116
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_field_ts_pub_email_date:
+    weight: 109
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_grant_cycle:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_cost_estimates:
+    weight: 134
+    label: above
+    settings:
+      limit_access: edit
+    third_party_settings: {  }
+    type: strawberry_default_formatter
+    region: content
+  field_ts_dec_orig_return_ship:
+    weight: 117
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_digit_expect_date:
+    weight: 103
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_expected_delivery:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_extents_summary:
+    weight: 135
+    label: above
+    settings:
+      limit_access: edit
+    third_party_settings: {  }
+    type: strawberry_default_formatter
+    region: content
+  field_ts_hd_recd_date:
+    weight: 105
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_lto:
+    weight: 118
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_nomination_notes:
+    weight: 129
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_ts_nominations:
+    weight: 128
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_ts_partner:
+    weight: 131
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_partner_wants_copies:
+    weight: 127
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_ts_phys_check_in_date:
+    weight: 106
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_phys_proc_date:
+    weight: 110
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_phys_proc_feedback:
+    weight: 130
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_ts_phys_proc_md_chk:
+    weight: 107
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ts_phys_proc_ship:
+    weight: 113
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ts_phys_recd_by:
+    weight: 119
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_physproc_user:
+    weight: 120
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_pub_upload_person:
+    weight: 121
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_qc_complete_date:
+    weight: 111
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_qc_issues_reported:
+    weight: 114
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ts_qc_person:
+    weight: 122
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_qcvr_hdd:
+    weight: 123
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_rework_drive:
+    weight: 124
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_rework_hd_recd_date:
+    weight: 112
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_sent4digit_date:
+    weight: 115
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ts_ship_from_partner:
+    weight: 125
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_ship_to_vendor:
+    weight: 126
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_stream:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts_wfs_counts:
+    weight: 133
+    label: above
+    settings:
+      limit_access: edit
+    third_party_settings: {  }
+    type: strawberry_default_formatter
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

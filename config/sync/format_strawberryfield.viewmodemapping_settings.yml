@@ -79,3 +79,23 @@ type_to_viewmode:
     view_mode: digital_object_with_a_v_player
     active: true
     weight: 16
+  -
+    jsontype: Text
+    view_mode: digital_object_with_pdf
+    active: true
+    weight: 17
+  -
+    jsontype: Sound
+    view_mode: digital_object_with_a_v_player
+    active: true
+    weight: 18
+  -
+    jsontype: StillImage
+    view_mode: digital_object_with_mirador_viewer
+    active: true
+    weight: 19
+  -
+    jsontype: 'Moving Image'
+    view_mode: digital_object_with_video_player
+    active: true
+    weight: 20

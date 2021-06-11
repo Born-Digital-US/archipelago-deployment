@@ -1,0 +1,11 @@
+uuid: fb388419-8eb5-4c55-a330-02a1450639a7
+langcode: en
+status: true
+dependencies: {  }
+id: preservation_master_technical_specifications_met
+label: 'Preservation Master Technical Specifications Met'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_prsv_tech_specs
+  exposed_key: obj_prsv_tech_specs
+active: true

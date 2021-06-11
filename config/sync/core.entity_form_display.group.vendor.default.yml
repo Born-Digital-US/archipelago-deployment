@@ -1,0 +1,90 @@
+uuid: 6fa4b2e6-703b-4808-8285-fd5fcf7f1482
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.vendor.field_institution_email
+    - field.field.group.vendor.field_instutional_phone_number
+    - field.field.group.vendor.field_instutional_website
+    - field.field.group.vendor.field_partner_shipping_address
+    - field.field.group.vendor.field_services
+    - group.type.vendor
+  module:
+    - address
+    - field_layout
+    - layout_discovery
+    - link
+    - path
+    - telephone
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: group.vendor.default
+targetEntityType: group
+bundle: vendor
+mode: default
+content:
+  field_institution_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_instutional_phone_number:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_instutional_website:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_partner_shipping_address:
+    type: address_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_services:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

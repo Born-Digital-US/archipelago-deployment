@@ -1,0 +1,5 @@
+services:
+  car_ami_extensions.twig.TwigExtension:
+    class: Drupal\car_ami_extensions\TwigExtension
+    tags:
+      - {name: twig.extension}

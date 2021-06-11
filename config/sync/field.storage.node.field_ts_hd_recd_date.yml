@@ -1,0 +1,24 @@
+uuid: 4c17711e-929d-4d74-891d-008a70ced166
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_ts_hd_recd_date
+field_name: field_ts_hd_recd_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

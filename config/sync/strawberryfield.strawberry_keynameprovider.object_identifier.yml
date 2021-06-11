@@ -1,0 +1,11 @@
+uuid: f35992b4-04e1-46f5-abb1-4127e04d8bf2
+langcode: en
+status: true
+dependencies: {  }
+id: object_identifier
+label: 'Object Identifier'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_object_identifier
+  exposed_key: obj_object_identifier
+active: true

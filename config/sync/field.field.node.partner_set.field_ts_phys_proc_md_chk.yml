@@ -1,0 +1,23 @@
+uuid: 8c2237f5-9ea9-4b50-aeb0-1a6051c2e1d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_phys_proc_md_chk
+    - node.type.partner_set
+id: node.partner_set.field_ts_phys_proc_md_chk
+field_name: field_ts_phys_proc_md_chk
+entity_type: node
+bundle: partner_set
+label: 'Metadata checked'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

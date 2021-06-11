@@ -1,0 +1,11 @@
+uuid: 74b3df8f-f6bf-47d2-a0fe-798f7d76994c
+langcode: en
+status: true
+dependencies: {  }
+id: partner_qc_notes
+label: 'Partner QC Notes'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_partner_qc_notes
+  exposed_key: obj_partner_qc_notes
+active: true

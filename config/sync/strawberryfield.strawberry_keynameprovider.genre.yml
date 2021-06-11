@@ -1,0 +1,11 @@
+uuid: 42fb6400-553b-436a-ab48-a4de00a308f2
+langcode: en
+status: true
+dependencies: {  }
+id: genre
+label: Genre
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_genre[*].label'
+  exposed_key: obj_genre
+active: true

@@ -1,0 +1,9 @@
+uuid: 3d648bf4-ddd6-4390-92d6-833bb8b04345
+langcode: en
+status: true
+dependencies: {  }
+id: print_formats
+label: 'Print Formats'
+category: CAR
+likert: false
+options: "'Aperture Card': 'Aperture Card'\nArticle: Article\nBook: Book\nBooklet: Booklet\n'Bound book of Newspapers': 'Bound book of Newspapers'\nBrochure: Brochure\nCard: Card\nCatalog: Catalog\nClipping: Clipping\n'Color transparency': 'Color transparency'\nCorrespondence: Correspondence\nDocument: Document\nDrawing: Drawing\nEphemera: Ephemera\nFlyer: Flyer\n'Glass Negative': 'Glass Negative'\nInvitation: Invitation\nLetter: Letter\nLithograph: Lithograph\nMap: Map\nManuscript: Manuscript\nMicrofiche: Microfiche\nMicrofilm: Microfilm\nNewsletter: Newsletter\nNewspaper: Newspaper\nPainting: Painting\nPamphlet: Pamphlet\nPeriodical: Periodical\nPhotograph: Photograph\n'Photograph Album': 'Photograph Album'\n'Photographic Negative': 'Photographic Negative'\nPlaque: Plaque\nPostcard: Postcard\nPoster: Poster\nPrint: Print\nProgram: Program\nReport: Report\nRoster: Roster\nSlide: Slide\n'Stereograph card': 'Stereograph card'\nTranscript: Transcript\nYearbook: Yearbook\n.doc: .doc\n.docx: .docx\n.jp2: .jp2\n.jpg: .jpg\n.pdf: .pdf\n.pdfa: .pdfa\n.png: .png\n.tif/.tiff: .tif/.tiff\nUnknown: Unknown"

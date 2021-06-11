@@ -1,0 +1,14 @@
+uuid: 09a4c265-f4a9-42b8-b36f-f576a53377e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.vendor
+id: vendor-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: vendor
+permissions_ui: true
+permissions: {  }

@@ -1,0 +1,8 @@
+uuid: fb899266-9cfc-41f4-9910-fc36186776d8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Base Type'
+vid: base_type
+description: ''
+weight: 0

@@ -1,0 +1,8 @@
+uuid: 5c10e7a8-247d-4cdd-bee1-647a6701af44
+langcode: en
+status: true
+dependencies: {  }
+name: 'AV Special Handling'
+vid: voc_av_special_handling
+description: 'Special handling types and their costs for audiovisual materials.'
+weight: 0

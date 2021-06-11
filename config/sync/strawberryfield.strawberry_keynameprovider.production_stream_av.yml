@@ -1,0 +1,11 @@
+uuid: e876799b-74d1-4b3b-a3a6-0b548caf8bf1
+langcode: en
+status: true
+dependencies: {  }
+id: production_stream_av
+label: 'Production Stream AV'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_av_prd_stream
+  exposed_key: obj_av_prd_stream
+active: true

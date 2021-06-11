@@ -1,0 +1,19 @@
+uuid: cd28419b-8b21-48e4-8db3-b3ae56de4848
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_inspected_result
+    - paragraphs.paragraphs_type.inspection
+id: paragraph.inspection.field_inspected_result
+field_name: field_inspected_result
+entity_type: paragraph
+bundle: inspection
+label: Result
+description: 'A brief indication of the results of this inspection. E.g. "<em>Passed</em>"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

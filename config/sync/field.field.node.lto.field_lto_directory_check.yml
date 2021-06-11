@@ -1,0 +1,23 @@
+uuid: 64dedf1a-fc11-4c45-b279-d9d5b3d83e1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lto_directory_check
+    - node.type.lto
+id: node.lto.field_lto_directory_check
+field_name: field_lto_directory_check
+entity_type: node
+bundle: lto
+label: 'Directories are properly structured'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

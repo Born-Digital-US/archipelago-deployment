@@ -1,0 +1,10 @@
+uuid: 0fb1f5a0-1f98-4a38-82f4-d0f25a595833
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.megapelago
+label: Megapelago
+targetEntityType: node
+cache: true

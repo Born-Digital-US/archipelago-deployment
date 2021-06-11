@@ -1,0 +1,23 @@
+uuid: e617732f-c3ca-41c7-b324-120048e3b51a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_ca_r_node_id
+    - group.type.partner
+id: group.partner.field_ca_r_node_id
+field_name: field_ca_r_node_id
+entity_type: group
+bundle: partner
+label: 'CA-R Node ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

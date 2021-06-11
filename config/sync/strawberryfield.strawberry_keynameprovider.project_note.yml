@@ -1,0 +1,11 @@
+uuid: b586b6cd-dac3-4063-ad8c-d5e4354ab439
+langcode: en
+status: true
+dependencies: {  }
+id: project_note
+label: 'Project Note'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_project_note
+  exposed_key: obj_project_note
+active: true

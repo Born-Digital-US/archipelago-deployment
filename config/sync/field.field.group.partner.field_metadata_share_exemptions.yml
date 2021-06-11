@@ -1,0 +1,21 @@
+uuid: 56aaadfd-d85d-4bc2-b717-392f2142dd42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_metadata_share_exemptions
+    - group.type.partner
+  module:
+    - text
+id: group.partner.field_metadata_share_exemptions
+field_name: field_metadata_share_exemptions
+entity_type: group
+bundle: partner
+label: 'Metadata Share Exemptions'
+description: 'If your organization wishes not to have metadata harvested via OAI-PMH, please note which one and the reason why. Please add a new entry for each harvester (California Digital Public Library/Digital Public Library of America; WorldCat; Home Movie Registry). '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

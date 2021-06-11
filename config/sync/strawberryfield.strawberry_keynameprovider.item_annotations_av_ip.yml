@@ -1,0 +1,11 @@
+uuid: c394773d-ac3b-41f8-ae08-0d00c06fd044
+langcode: en
+status: true
+dependencies: {  }
+id: item_annotations_av_ip
+label: 'Item Annotations - AV IP'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_container_item_annotations'
+  exposed_key: obj_av_item_parts_ip_container_item_annotations
+active: true

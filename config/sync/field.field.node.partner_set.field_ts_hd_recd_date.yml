@@ -1,0 +1,21 @@
+uuid: 250e2daf-9556-4a61-a5ec-013bfe07d2fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_hd_recd_date
+    - node.type.partner_set
+  module:
+    - datetime
+id: node.partner_set.field_ts_hd_recd_date
+field_name: field_ts_hd_recd_date
+entity_type: node
+bundle: partner_set
+label: 'Initial hard drive arrival'
+description: 'The date when the hard drive(s) with the digitized content is received back from the digitization vendor.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

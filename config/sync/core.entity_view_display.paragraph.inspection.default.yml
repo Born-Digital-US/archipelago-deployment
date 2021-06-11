@@ -1,0 +1,51 @@
+uuid: 0ab45726-07c7-493a-a2f8-7a31b01e4967
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.inspection.field_inspected_by
+    - field.field.paragraph.inspection.field_inspected_date
+    - field.field.paragraph.inspection.field_inspected_notes
+    - field.field.paragraph.inspection.field_inspected_result
+    - paragraphs.paragraphs_type.inspection
+  module:
+    - datetime
+id: paragraph.inspection.default
+targetEntityType: paragraph
+bundle: inspection
+mode: default
+content:
+  field_inspected_by:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_inspected_date:
+    weight: 0
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_inspected_notes:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_inspected_result:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

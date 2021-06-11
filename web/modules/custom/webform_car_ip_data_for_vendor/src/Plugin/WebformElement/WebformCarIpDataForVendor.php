@@ -13,7 +13,7 @@ use Drupal\webform\WebformSubmissionInterface;
  *   id = "webform_car_ip_data_for_vendor",
  *   label = @Translation("Item part data for vendor"),
  *   description = @Translation("Provides a webform element for item part metadata."),
- *   category = @Translation("CAR elements"),
+ *   category = @Translation("CAR Elements"),
  *   multiline = TRUE,
  *   composite = TRUE,
  *   states_wrapper = TRUE,

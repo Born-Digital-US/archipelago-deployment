@@ -1,0 +1,11 @@
+uuid: 73322b97-7140-4cb9-910f-ca330eba7cc3
+langcode: en
+status: true
+dependencies: {  }
+id: generation_print
+label: 'Generation - Print'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_print_item_parts[*].ip_generation'
+  exposed_key: obj_print_item_parts_ip_generation
+active: true

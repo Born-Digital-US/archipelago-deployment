@@ -1,0 +1,18 @@
+uuid: 6a9b1591-7972-47b8-8f48-2fe27a84c9bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Hard Disk Drives (HDD)'
+type: hdd
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

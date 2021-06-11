@@ -1,0 +1,11 @@
+uuid: 021015ed-92e2-47b7-b3e4-ed50d11ad15f
+langcode: en
+status: true
+dependencies: {  }
+id: notes_to_vendor
+label: 'Notes to Vendor'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_notes_to_vendor
+  exposed_key: obj_notes_to_vendor
+active: true

@@ -1,0 +1,21 @@
+uuid: 0b52e524-af56-4b63-a9f0-d813f4b7ad4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ship_date_recd
+    - node.type.shipment
+  module:
+    - datetime
+id: node.shipment.field_ship_date_recd
+field_name: field_ship_date_recd
+entity_type: node
+bundle: shipment
+label: 'Date received'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

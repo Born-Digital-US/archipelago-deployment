@@ -1,0 +1,9 @@
+uuid: a1aa36a6-7df8-4a94-b4c1-aa7187c319af
+langcode: en
+status: true
+dependencies: {  }
+id: sl_condition
+label: Condition
+category: CAR
+likert: false
+options: "Excellent: Excellent\nGood: Good\nFair: Fair\nPoor: Poor\nUnknown: Unknown"

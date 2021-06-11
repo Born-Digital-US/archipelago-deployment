@@ -1,0 +1,11 @@
+uuid: 0e6eef64-d218-448a-a136-c4285eda7165
+langcode: en
+status: true
+dependencies: {  }
+id: partner_administrative_notes
+label: 'Partner Administrative Notes'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_partner_admin_notes
+  exposed_key: obj_partner_admin_notes
+active: true

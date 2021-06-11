@@ -1,0 +1,19 @@
+uuid: 3fd3a957-611f-4a24-ac42-dd4f7cd89ddb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_nomination_notes
+    - node.type.partner_set
+id: node.partner_set.field_ts_nomination_notes
+field_name: field_ts_nomination_notes
+entity_type: node
+bundle: partner_set
+label: 'Nomination notes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - comment.type.comment
-    - field.field.comment.comment.comment_body
   module:
     - field_layout
-    - text
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -19,18 +17,12 @@ targetEntityType: comment
 bundle: comment
 mode: default
 content:
-  comment_body:
-    label: hidden
-    type: text_default
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   links:
     weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  comment_body: true
   langcode: true
   search_api_excerpt: true

@@ -1,0 +1,8 @@
+uuid: 1762dca9-6894-4230-862c-db17f0be79e9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media Type'
+vid: media_type
+description: 'The general type of intermediation device required to view, play, run, etc., the content of a resource.'
+weight: 0

@@ -1,0 +1,30 @@
+uuid: 7047ec1c-b328-4277-a2d3-ecf3b1f38f86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shipment_to
+    - group.type.partner
+    - group.type.vendor
+    - node.type.shipment
+id: node.shipment.field_shipment_to
+field_name: field_shipment_to
+entity_type: node
+bundle: shipment
+label: To
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:group'
+  handler_settings:
+    target_bundles:
+      partner: partner
+      vendor: vendor
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: partner
+field_type: entity_reference

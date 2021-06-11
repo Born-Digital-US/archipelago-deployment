@@ -1,0 +1,28 @@
+uuid: 5d5cbcc9-b1e1-4691-8b5a-cc0b20cdf995
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_phys_recd_by
+    - node.type.partner_set
+id: node.partner_set.field_ts_phys_recd_by
+field_name: field_ts_phys_recd_by
+entity_type: node
+bundle: partner_set
+label: Receiver
+description: 'The name of the person who checked in the material. Begin typing user name and pick from the autocomplete list.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

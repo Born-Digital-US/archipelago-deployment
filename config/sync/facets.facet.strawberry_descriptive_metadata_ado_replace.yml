@@ -10,7 +10,7 @@ dependencies:
 id: strawberry_descriptive_metadata_ado_replace
 name: '🍓 Strawberry (Descriptive Metadata source) » digital_object_type for Search and Replace'
 url_alias: descriptive_metadata_object_types
-weight: -3
+weight: -1
 min_count: 1
 show_only_one_result: false
 field_identifier: digital_object_type
@@ -28,6 +28,7 @@ widget:
     hide_reset_when_no_selection: false
 query_operator: and
 use_hierarchy: false
+keep_hierarchy_parents_active: false
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0

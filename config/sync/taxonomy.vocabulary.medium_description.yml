@@ -1,0 +1,8 @@
+uuid: 2220079d-abba-485f-a200-ca84f7825eea
+langcode: en
+status: true
+dependencies: {  }
+name: 'Medium Description'
+vid: medium_description
+description: ''
+weight: 0

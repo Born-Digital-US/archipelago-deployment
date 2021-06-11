@@ -1,0 +1,10 @@
+uuid: 667e7bfc-1d8d-4171-839e-38948cd493ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: group.member
+label: Member
+targetEntityType: group
+cache: true

@@ -1,0 +1,12 @@
+uuid: 1b2872fb-c241-4694-a08e-edd977a703b1
+langcode: en
+status: true
+dependencies: {  }
+id: price_bundle_print
+label: 'Price Bundle - Print'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: 'obj_print_item_parts[*].ip_print_price_bundle'
+  entity_type: taxonomy_term
+  exposed_key: obj_print_item_parts_ip_print_price_bundle
+active: true

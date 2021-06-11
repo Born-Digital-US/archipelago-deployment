@@ -1,0 +1,11 @@
+uuid: 97f94675-0f2d-48e9-8f08-dedce2b48e9c
+langcode: en
+status: true
+dependencies: {  }
+id: additional_technical_information_print
+label: 'Additional Technical Information - Print'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_add_tech_notes
+  exposed_key: obj_add_tech_notes
+active: true

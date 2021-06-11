@@ -1,8 +1,0 @@
-uuid: 124ffd36-c370-4d2a-87e4-2f7612f561f7
-langcode: en
-status: true
-dependencies: {  }
-name: 'Price Bundle'
-vid: price_bundle
-description: ''
-weight: 0

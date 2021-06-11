@@ -1,0 +1,166 @@
+uuid: c367eecf-eed7-45e2-a25b-0d73bb8e4ff4
+langcode: en
+status: true
+dependencies: {  }
+id: cls_node_complete_partner
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: cls_nodes
+label: 'Node complete (Partner)'
+source:
+  key: cls
+#  key: cls_remote
+  plugin: d7_node_complete
+  node_type: partner
+process:
+  id: nid
+  label: title
+  path: alias
+  uid:
+    -
+      plugin: default_value
+      default_value: 1
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_partner/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_marc_code:
+    -
+      plugin: get
+      source: field_marc_code
+  field_partner_shipping_address:
+    -
+      plugin: addressfield
+      source: field_shipping_address
+  field_instutional_phone_number:
+    -
+      plugin: get
+      source: field_phone_number
+  field_instutional_website:
+    -
+      plugin: field_link
+      source: field_institution_url
+  field_ia_email:
+    -
+      plugin: sub_process
+      source: field_ia_email
+      process:
+        value: email
+  field_file_backup:
+    -
+      plugin: get
+      source: field_file_backups
+  field_partner_other:
+    -
+      plugin: get
+      source: field_partner_other
+  field_ia_collection_names:
+    -
+      plugin: get
+      source: field_ia_collection
+  field_metadata_shares:
+    -
+      plugin: sub_process
+      source: field_metadata_shares
+      process:
+        target_id: tid
+  group_access:
+    -
+      plugin: get
+      source: group_access
+  field_worldcat_url:
+    -
+      plugin: field_link
+      source: field_worldcat_url
+  field_calisphere_url:
+    -
+      plugin: field_link
+      source: field_calisphere_url
+  field_dpla_link:
+    -
+      plugin: field_link
+      source: field_dpla_url
+  field_push_to_cr:
+    -
+      plugin: get
+      source: field_push_to_cr
+  field_partner_description:
+    -
+      plugin: get
+      source: field_collection_description
+  field_partner_agreement_signed:
+    -
+      plugin: get
+      source: field_partner_agreement_signed
+  field_instutional_rights_stateme:
+    -
+      plugin: get
+      source: field_institutional_rights_state
+  field_partner_logo:
+    -
+      plugin: sub_process
+      source: field_partner_logo
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: cls_file
+          source: fid
+        alt: alt
+        title: title
+        height: height
+        width: width
+destination:
+  plugin: 'entity:group'
+#  translations: true
+  default_bundle: partner
+migration_dependencies:
+  required:
+    - cls_taxonomy_term_metadata_shares
+#    - cls_user
+    - cls_file
+  optional:
+    - cls_comment_field_instance

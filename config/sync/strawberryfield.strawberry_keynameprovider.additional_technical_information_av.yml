@@ -1,0 +1,11 @@
+uuid: 75b6e028-995f-4294-a088-d57ab0c216c3
+langcode: en
+status: true
+dependencies: {  }
+id: additional_technical_information_av
+label: 'Additional Technical Information - AV'
+pluginid: jmespath
+pluginconfig:
+  source_key: 'obj_av_item_parts[*].ip_additional_technical_notes'
+  exposed_key: obj_av_item_parts_ip_additional_technical_notes
+active: true

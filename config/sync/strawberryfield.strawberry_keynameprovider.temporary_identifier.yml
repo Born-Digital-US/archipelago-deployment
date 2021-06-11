@@ -1,0 +1,11 @@
+uuid: b28f4c27-d212-4784-84f0-c74629bd4919
+langcode: en
+status: true
+dependencies: {  }
+id: temporary_identifier
+label: 'Temporary Identifier'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_temporary_id
+  exposed_key: obj_temporary_id
+active: true

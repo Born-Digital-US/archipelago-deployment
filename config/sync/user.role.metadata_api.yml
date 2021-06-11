@@ -30,6 +30,8 @@ permissions:
   - 'administer workflows'
   - 'create article content'
   - 'create audio media'
+  - 'create car workflow_transition'
+  - 'create carevealed_workflow workflow_transition'
   - 'create content translations'
   - 'create digital_object content'
   - 'create digital_object_collection content'

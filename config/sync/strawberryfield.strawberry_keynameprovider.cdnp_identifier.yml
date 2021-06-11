@@ -1,0 +1,11 @@
+uuid: 24638bad-c616-4cdb-8007-10dbb0c18e4d
+langcode: en
+status: true
+dependencies: {  }
+id: cdnp_identifier
+label: 'CDNP Identifier'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_cdnp_identifier
+  exposed_key: obj_cdnp_identifier
+active: true

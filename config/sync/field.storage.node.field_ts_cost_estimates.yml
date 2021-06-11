@@ -1,0 +1,23 @@
+uuid: 6c77193b-3ac2-413b-8f69-beca06e0f2fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - strawberryfield
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_ts_cost_estimates
+field_name: field_ts_cost_estimates
+entity_type: node
+type: strawberryfield_field
+settings: {  }
+module: strawberryfield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

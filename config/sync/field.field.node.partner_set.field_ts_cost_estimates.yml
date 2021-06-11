@@ -1,0 +1,21 @@
+uuid: c32ac9d1-9a95-4b6a-b9ab-825c474e35af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_cost_estimates
+    - node.type.partner_set
+  module:
+    - strawberryfield
+id: node.partner_set.field_ts_cost_estimates
+field_name: field_ts_cost_estimates
+entity_type: node
+bundle: partner_set
+label: 'Cost Estimates'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: strawberryfield_field

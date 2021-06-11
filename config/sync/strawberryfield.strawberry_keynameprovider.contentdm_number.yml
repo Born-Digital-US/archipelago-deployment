@@ -1,0 +1,11 @@
+uuid: 7e3913b4-af3c-4536-8a57-47cf94668dcf
+langcode: en
+status: true
+dependencies: {  }
+id: contentdm_number
+label: 'ContentDM Number'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_cdm_url.label
+  exposed_key: obj_cdm_url_label
+active: true

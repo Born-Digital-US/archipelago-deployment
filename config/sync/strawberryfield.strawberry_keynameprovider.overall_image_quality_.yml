@@ -1,0 +1,11 @@
+uuid: 0dcdd68b-1acc-4730-85d1-5ada7ee2580f
+langcode: en
+status: true
+dependencies: {  }
+id: overall_image_quality_
+label: 'Overall Image Quality '
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_overall_image_qc.value
+  exposed_key: obj_overall_image_qc_value
+active: true

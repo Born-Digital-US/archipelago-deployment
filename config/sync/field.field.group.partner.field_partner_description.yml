@@ -1,0 +1,21 @@
+uuid: 0e4c643d-92b8-44bc-bbc9-f89d71c01191
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_partner_description
+    - group.type.partner
+  module:
+    - text
+id: group.partner.field_partner_description
+field_name: field_partner_description
+entity_type: group
+bundle: partner
+label: 'Collection Description'
+description: 'Contents of this field display on the collection description page of California Revealed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

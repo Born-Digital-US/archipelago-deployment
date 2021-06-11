@@ -1,0 +1,11 @@
+uuid: e331fd30-fe80-422e-a01a-4efdfda61242
+langcode: en
+status: true
+dependencies: {  }
+id: published_date_date_to
+label: 'Published Date - date to'
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_published_date.date_to
+  exposed_key: obj_published_date_date_to
+active: true

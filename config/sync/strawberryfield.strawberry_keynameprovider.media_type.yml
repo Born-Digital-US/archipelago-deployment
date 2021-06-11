@@ -1,0 +1,12 @@
+uuid: 5166ea24-79e6-48a9-b320-689965a2ffd1
+langcode: en
+status: true
+dependencies: {  }
+id: media_type
+label: 'Media Type'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: obj_media_type
+  entity_type: taxonomy_term
+  exposed_key: obj_media_type
+active: true

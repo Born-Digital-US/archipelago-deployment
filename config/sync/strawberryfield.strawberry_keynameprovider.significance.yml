@@ -1,0 +1,11 @@
+uuid: cabc7c61-e291-48c9-83df-53fd3a936525
+langcode: en
+status: true
+dependencies: {  }
+id: significance
+label: Significance
+pluginid: jmespath
+pluginconfig:
+  source_key: obj_significance
+  exposed_key: obj_significance
+active: true

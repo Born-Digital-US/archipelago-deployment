@@ -1,0 +1,28 @@
+uuid: 82be6e97-5d6a-465b-b4bc-aa52c6f12cb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ts_qcvr_hdd
+    - node.type.hdd
+    - node.type.partner_set
+id: node.partner_set.field_ts_qcvr_hdd
+field_name: field_ts_qcvr_hdd
+entity_type: node
+bundle: partner_set
+label: 'Hard disk drive'
+description: 'QC version disk drive'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:nodewithstrawberry'
+  handler_settings:
+    target_bundles:
+      hdd: hdd
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

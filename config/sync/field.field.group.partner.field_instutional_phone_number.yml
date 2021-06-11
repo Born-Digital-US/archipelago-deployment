@@ -1,0 +1,21 @@
+uuid: f2af2a9f-4285-4ce2-b425-9b1dbb40f7d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_instutional_phone_number
+    - group.type.partner
+  module:
+    - telephone
+id: group.partner.field_instutional_phone_number
+field_name: field_instutional_phone_number
+entity_type: group
+bundle: partner
+label: 'Instutional Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

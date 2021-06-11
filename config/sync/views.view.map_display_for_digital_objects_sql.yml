@@ -9,7 +9,6 @@ dependencies:
   module:
     - format_strawberryfield
     - node
-    - user
 id: map_display_for_digital_objects_sql
 label: 'Map Display for Digital Objects SQL'
 module: views
@@ -25,9 +24,8 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
@@ -110,16 +108,16 @@ display:
           click_sort_column: value
           type: strawberry_map_formatter
           settings:
-            json_key_source: geographic_location
+            json_key_source: obj_spatial_coverage.uri
             tilemap_url: 'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'
             tilemap_attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
             mediasource:
               metadataexposeentity: metadataexposeentity
-              geojsonurl: '0'
+              geojsonurl: geojsonurl
               geojsonnodelist: '0'
-            main_mediasource: metadataexposeentity
+            main_mediasource: geojsonurl
             metadataexposeentity_source: geojson
-            geojsonurl_json_key_source: geojson
+            geojsonurl_json_key_source: obj_spatial_coverage.uri
             geojsonnodelist_json_key_source: locatedat
             max_width: '0'
             max_height: '480'
@@ -127,7 +125,7 @@ display:
             min_zoom: 2
             max_zoom: 12
             use_iiif_globals: '1'
-            iiif_base_url: 'http://localhost:8183/iiif/2'
+            iiif_base_url: 'http://sandbox.californiarevealed.org:8183/iiif/2'
             iiif_base_url_internal: 'http://esmero-cantaloupe:8182/iiif/2'
           group_column: value
           group_columns: {  }
@@ -184,22 +182,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
+      sorts: {  }
       title: 'Geolocated data for this Object'
       header: {  }
       footer: {  }
@@ -254,7 +237,6 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
       tags:
         - 'config:field.storage.node.field_descriptive_metadata'
   block_1:
@@ -271,6 +253,5 @@ display:
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'
-        - user.permissions
       tags:
         - 'config:field.storage.node.field_descriptive_metadata'
