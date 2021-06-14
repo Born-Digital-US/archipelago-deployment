@@ -1,0 +1,7 @@
+name: CAR Partners
+description: Miscelaneous CAR Partner functionality
+package: CAR
+type: module
+core: 8.x
+dependencies:
+  - group
